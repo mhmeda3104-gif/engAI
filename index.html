@@ -5,87 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دليل طلاب هندسة الذكاء الاصطناعي</title>
     <style>
+        :root {
+            --primary-color: #38bdf8;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-light: #f1f5f9;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0f172a; /* لون داكن تقني */
-            color: #f1f5f9;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
             margin: 0;
             padding: 0;
         }
+
+        /* تنسيق الهيدر مع الشعار */
         header {
-            background: linear-gradient(90deg, #1e293b, #334155);
-            padding: 40px 20px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            padding: 60px 20px;
             text-align: center;
-            border-bottom: 2px solid #38bdf8;
+            border-bottom: 3px solid var(--primary-color);
+            position: relative;
         }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 2px solid var(--primary-color);
+            object-fit: cover;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+        }
+
         .container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
         }
+
         .card {
-            background-color: #1e293b;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
             border: 1px solid #334155;
-            transition: transform 0.3s;
+            transition: all 0.3s ease;
         }
+
         .card:hover {
             transform: translateY(-5px);
-            border-color: #38bdf8;
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
         }
-        h1 { color: #38bdf8; }
+
+        h1 { color: var(--primary-color); margin-top: 0; }
         h2 { color: #7dd3fc; border-bottom: 1px solid #334155; padding-bottom: 10px; }
+
         .btn {
             display: inline-block;
-            background-color: #38bdf8;
-            color: #0f172a;
-            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--bg-dark);
+            padding: 12px 25px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-weight: bold;
-            margin-top: 10px;
+            margin: 10px 5px 0 0;
+            transition: opacity 0.3s;
         }
-        .tag {
-            background: #0ea5e9;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.8em;
-            margin-left: 5px;
+
+        .btn:hover { opacity: 0.9; }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 15px;
+            border: 1px solid #334155;
+        }
+
+        .footer-social {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            border-top: 1px solid #334155;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>منصة إرشاد هندسة الذكاء الاصطناعي 🤖</h1>
-    <p>مرحباً بمهندسي المستقبل.. هنا نتبادل المعرفة والخبرات.</p>
+    <img src="logo.png" alt="الشعار" class="logo" onerror="this.src='https://via.placeholder.com/70?text=AI'">
+    <h1>منصة هندسة الذكاء الاصطناعي 🤖</h1>
+    <p>المصدر الأول لطلاب الدفعة - شروحات، ملفات، وإرشاد أكاديمي</p>
 </header>
 
 <div class="container">
+    
     <div class="card">
-        <h2>📌 مواضيع هامة</h2>
-        <p><span class="tag">جديد</span> خارطة طريق لتعلم Math for AI في الفصل الأول.</p>
-        <p><span class="tag">نصيحة</span> كيف تختار اللابتوب المناسب لتدريب موديلات الـ Deep Learning؟</p>
-        <a href="#" class="btn">اقرأ المزيد</a>
+        <h2>📢 إعلانات الدفعة</h2>
+        <p>• تم رفع ملخصات مادة الرياضيات المتقطعة (Discrete Math).</p>
+        <p>• موعد تسليم مشروع البرمجة بلغة Python هو الأسبوع القادم.</p>
     </div>
 
     <div class="card">
-        <h2>📚 مصادر ومراجع</h2>
-        <p>روابط مباشرة للكتب المقررة، ملخصات الدفعة، ونماذج امتحانات سابقة.</p>
-        <a href="#" class="btn">انتقل للمكتبة</a>
+        <h2>📚 المصادر والمواد</h2>
+        <p>اضغط على الأزرار أدناه للوصول للمجلدات مباشرة:</p>
+        <a href="#" class="btn">كتب الذكاء الاصطناعي</a>
+        <a href="#" class="btn">ملخصات الطلاب</a>
+        <a href="#" class="btn">نماذج امتحانات</a>
     </div>
 
     <div class="card">
-        <h2>🛠 أدوات وتطبيقات</h2>
-        <p>أدوات برمجية (IDE)، بيئات عمل (Environments)، ومصادر بيانات (Datasets).</p>
-        <a href="#" class="btn">استكشف الأدوات</a>
+        <h2>📸 معرض القسم</h2>
+        <div class="image-container">
+            <img src="ai-header.jpg" alt="AI Department" onerror="this.src='https://via.placeholder.com/800x400?text=AI+Engineering+Lab'">
+        </div>
+        <p style="margin-top:15px;">جانب من مختبرات القسم ومشاريع الطلاب المتميزة.</p>
     </div>
+
+</div>
+
+<div class="footer-social">
+    <p>تواصل معنا عبر تلغرام لمزيد من الاستفسارات</p>
+    <a href="https://t.me/your_channel" class="btn" style="background-color: #229ED9; color: white;">قناة التلغرام</a>
 </div>
 
 </body>
-
 </html>
