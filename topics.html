@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مواضيع هامة - هندسة الذكاء الاصطناعي</title>
+    <style>
+        :root {
+            --bg-body: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f1f5f9;
+            --primary: #38bdf8;
+            --border: #334155;
+        }
+
+        .light-mode {
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --primary: #0284c7;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .container { max-width: 800px; margin: auto; }
+
+        header { text-align: center; margin-bottom: 40px; }
+
+        .article-card {
+            background-color: var(--bg-card);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid var(--border);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        h1, h2 { color: var(--primary); }
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background: var(--primary);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body id="pageBody">
+
+<div class="container">
+    <a href="index.html" class="back-btn">← العودة للرئيسية</a>
+
+    <header>
+        <h1>📌 مواضيع هامة ونصائح</h1>
+        <p>مقالات تفصيلية لمساعدتكم في رحلة تعلم الذكاء الاصطناعي</p>
+    </header>
+
+    <div class="article-card">
+        <span class="tag">الرياضيات</span>
+        <h2>كيف تبدأ مع الرياضيات المتقطعة (Discrete Math)؟</h2>
+        <p>تعتبر هذه المادة حجر الأساس في هندسة البرمجيات والذكاء الاصطناعي. ننصح بالتركيز على المنطق الرياضي (Logic) ونظرية المجموعات لأنها ستتكرر معكم في البرمجة المتقدمة...</p>
+    </div>
+
+    <div class="article-card">
+        <span class="tag">عتاد</span>
+        <h2>اختيار اللابتوب المناسب لمهندس الـ AI</h2>
+        <p>إذا كنت تنوي تدريب موديلات Deep Learning، ابحث دائماً عن لابتوب يحتوي على كارت شاشة من نوع NVIDIA يدعم تقنية CUDA، وبذاكرة عشوائية (RAM) لا تقل عن 16 جيجابايت.</p>
+    </div>
+</div>
+
+<script>
+    // كود بسيط ليتذكر الموقع إذا كنت في النمط الفاتح أو الداكن من الصفحة السابقة
+    if (localStorage.getItem('theme') === 'light') {
+        document.getElementById('pageBody').classList.add('light-mode');
+    }
+</script>
+
+</body>
+</html>
