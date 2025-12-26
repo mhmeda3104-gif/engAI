@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من أنا - About Me</title>
+    <style>
+        :root {
+            --bg-body: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f1f5f9;
+            --primary: #38bdf8;
+            --border: #334155;
+        }
 
+        /* الكود يدعم النمط الفاتح أيضاً إذا كنت تريد استخدامه */
+        .light-mode {
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --primary: #0284c7;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .container { max-width: 800px; margin: auto; }
+
+        .back-link { color: var(--primary); text-decoration: none; font-weight: bold; }
+
+        /* تنسيق الـ Panel الخاص بالـ GIF */
+        .gif-panel {
+            background-color: var(--bg-card);
+            border: 2px solid var(--primary);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+        }
+
+        .gif-panel img {
+            width: 100%; /* سيجعل الـ GIF يأخذ عرض اللوحة بالكامل */
+            max-width: 500px; /* يمكنك التحكم في أكبر عرض هنا */
+            border-radius: 15px;
+            border: 1px solid var(--border);
+        }
+
+        .bio-card {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 20px;
+            border: 1px solid var(--border);
+        }
+
+        h1 { color: var(--primary); margin-bottom: 10px; }
+        p { line-height: 1.8; font-size: 1.1em; }
+    </style>
+</head>
+<body id="pageBody">
+
+<div class="container">
+    <a href="index.html" class="back-link">← العودة للرئيسية</a>
+
+    <div class="gif-panel">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXF4ZzRyeXF4ZzRyeXF4ZzRyeXF4ZzRyeXF4ZzRyeXF4ZzRyeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7TKSjNGBhNDMqyC4/giphy.gif" alt="AI Animation">
+        <p style="margin-top: 15px; font-weight: bold; color: var(--primary);">مرحباً بكم في عالم الذكاء الاصطناعي 🚀</p>
+    </div>
+
+    <div class="bio-card">
+        <h1>من أنا؟</h1>
+        <p>
+            أنا طالب في هندسة الذكاء الاصطناعي، مهتم ببناء الأنظمة الذكية وتطوير الويب. 
+            أسعى من خلال هذا الموقع لمشاركة كل ما أتعلمه مع زملائي لتعميم الفائدة.
+        </p>
+        <h2>المهارات التقنية:</h2>
+        <ul>
+            <li>لغة Python و C++</li>
+            <li>تطوير واجهات المواقع (HTML/CSS)</li>
+            <li>تحليل البيانات</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    // مزامنة النمط مع الصفحة الرئيسية
+    if (localStorage.getItem('theme') === 'light') {
+        document.getElementById('pageBody').classList.add('light-mode');
+    }
+</script>
+
+</body>
+</html>
