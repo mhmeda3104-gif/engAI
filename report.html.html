@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سجل التقارير - هندسة الذكاء الاصطناعي</title>
+    <style>
+        /* 1. تعريف الهوية البصرية (نفس المتغيرات في موقعك) */
+        :root {
+            --bg-body: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f1f5f9;
+            --primary: #38bdf8;
+            --border: #334155;
+            --accent: #7dd3fc;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container { max-width: 900px; margin: auto; }
+
+        /* 2. تنسيق العنوان الرئيسي بنفس نمط الهيدر */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid var(--primary);
+            margin-bottom: 40px;
+        }
+
+        header h1 { color: var(--primary); font-size: 2.5em; margin: 0; }
+
+        /* 3. تنسيق الخط الزمني (Timeline) بالهوية البصرية */
+        .timeline {
+            position: relative;
+            border-right: 3px solid var(--border); /* الخط العمودي */
+            margin-right: 30px;
+            padding-right: 30px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        /* النقطة المضيئة بنفس اللون الأساسي للموقع */
+        .timeline-dot {
+            position: absolute;
+            right: -42px; /* لتوسيط النقطة على الخط تماماً */
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--primary);
+            z-index: 1;
+        }
+
+        .timeline-date {
+            color: var(--accent);
+            font-weight: bold;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        /* بطاقة المحتوى بنفس نمط الكروت في صفحة index */
+        .timeline-content {
+            background-color: var(--bg-card);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .timeline-content:hover {
+            transform: translateX(-10px); /* حركة لليسار عند التمرير */
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
+        }
+
+        .timeline-content h3 {
+            margin: 0 0 10px 0;
+            color: var(--primary);
+        }
+
+        .timeline-content p {
+            line-height: 1.6;
+            color: #94a3b8;
+            margin-bottom: 15px;
+        }
+
+        /* تنسيق الزر بالهوية البصرية */
+        .btn-download {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--bg-body);
+            padding: 8px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9em;
+            transition: 0.3s;
+        }
+
+        .btn-download:hover {
+            background-color: var(--accent);
+            transform: scale(1.05);
+        }
+
+        .back-link {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="index.html" class="back-link">← العودة للرئيسية</a>
+    
+    <header>
+        <h1>سجل تقارير المبدعين 🤖</h1>
+        <p>تسلسل زمني لأحدث الأبحاث والتقارير المقدمة من طلابنا.</p>
+    </header>
+
+    <div class="timeline">
+        
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-date">ديسمبر 2025</span>
+            <div class="timeline-content">
+                <h3>تطبيقات الشبكات العصبية 🧠</h3>
+                <p>بحث مفصل حول كيفية عمل الخلايا العصبية الاصطناعية في تشخيص الصور الطبية. إعداد الطالب: <strong>أحمد الراوي</strong></p>
+                <a href="reports/report1.pdf" class="btn-download">فتح ملف التقرير 📄</a>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-date">نوفمبر 2025</span>
+            <div class="timeline-content">
+                <h3>أمن المعلومات والذكاء الاصطناعي 🛡️</h3>
+                <p>دراسة حول استخدام خوارزميات التعلم الآلي في كشف الهجمات السيبرانية. إعداد الطالبة: <strong>سارة يوسف</strong></p>
+                <a href="#" class="btn-download">فتح ملف التقرير 📄</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
