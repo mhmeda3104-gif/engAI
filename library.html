@@ -1,127 +1,107 @@
-<div class="library-container">
-    <header class="library-header">
-        <h1>المكتبة الرقمية 📚</h1>
-        <p>مستودع المصادر والكتب المنهجية لطلاب الذكاء الاصطناعي</p>
+<div class="container">
+    <header style="border-bottom: 2px solid #38bdf8; padding-bottom: 20px; text-align: center;">
+        <h1 style="color: #38bdf8;">المكتبة الهندسية 🛠️</h1>
+        <p>المصادر الرقمية والكتب البرمجية</p>
     </header>
 
-    <div class="library-explorer">
-        <div class="search-bar">
-            <input type="text" placeholder="ابحث عن كتاب أو مصدر...">
+    <div class="library-grid">
+        
+        <div class="lib-card">
+            <div class="lib-header">
+                <span class="lib-icon">📚</span>
+                <h3>كتب المنهج</h3>
+            </div>
+            <ul class="lib-list">
+                <li><a href="#">كتاب التفاضل والتكامل</a></li>
+                <li><a href="#">أساسيات البرمجة C++</a></li>
+                <li><a href="#">مقدمة في الذكاء الاصطناعي</a></li>
+            </ul>
         </div>
 
-        <div class="file-list">
-            <div class="file-group">
-                <div class="group-title">📘 الكتب المنهجية</div>
-                
-                <div class="file-item">
-                    <div class="file-info">
-                        <span class="file-icon">📕</span>
-                        <div class="file-details">
-                            <span class="file-name">Python for Data Science</span>
-                            <span class="file-size">12.5 MB</span>
-                        </div>
-                    </div>
-                    <a href="books/python-ds.pdf" class="download-link">تحميل</a>
-                </div>
-
-                <div class="file-item">
-                    <div class="file-info">
-                        <span class="file-icon">📗</span>
-                        <div class="file-details">
-                            <span class="file-name">Mathematics for Machine Learning</span>
-                            <span class="file-size">8.2 MB</span>
-                        </div>
-                    </div>
-                    <a href="#" class="download-link">تحميل</a>
-                </div>
+        <div class="lib-card">
+            <div class="lib-header">
+                <span class="lib-icon">📝</span>
+                <h3>ملخصات الطلاب</h3>
             </div>
-
-            <div class="file-group">
-                <div class="group-title">📝 ملخصات ومحاضرات</div>
-                <div class="file-item">
-                    <div class="file-info">
-                        <span class="file-icon">📄</span>
-                        <div class="file-details">
-                            <span class="file-name">تلخيص مادة Logic Design - الفصل الأول</span>
-                            <span class="file-size">2.1 MB</span>
-                        </div>
-                    </div>
-                    <a href="#" class="download-link">تحميل</a>
-                </div>
-            </div>
+            <ul class="lib-list">
+                <li><a href="#">تلخيص مادة المنطق الرقمي</a></li>
+                <li><a href="#">مراجعة العملي - بايثون</a></li>
+                <li><a href="#">شرح خوارزميات البحث</a></li>
+            </ul>
         </div>
+
+        <div class="lib-card">
+            <div class="lib-header">
+                <span class="lib-icon">📑</span>
+                <h3>نماذج امتحانات</h3>
+            </div>
+            <ul class="lib-list">
+                <li><a href="#">امتحان الفصل الأول 2024</a></li>
+                <li><a href="#">أسئلة مقترحة للنهائي</a></li>
+            </ul>
+        </div>
+
     </div>
 </div>
 
 <style>
-    /* تنسيق المكتبة بالهوية البصرية */
-    .library-container { max-width: 900px; margin: auto; padding: 20px; }
-    
-    .library-header { text-align: center; margin-bottom: 30px; border-bottom: 2px solid var(--primary); padding-bottom: 20px; }
-
-    .library-explorer {
-        background: var(--bg-card);
-        border: 1px solid var(--border);
-        border-radius: 15px;
-        overflow: hidden;
+    /* تطبيق الهوية البصرية الأساسية */
+    .library-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
     }
 
-    .search-bar { padding: 15px; background: rgba(56, 189, 248, 0.05); border-bottom: 1px solid var(--border); }
-    .search-bar input {
-        width: 100%;
-        padding: 10px;
-        background: var(--bg-body);
-        border: 1px solid var(--border);
-        border-radius: 8px;
-        color: white;
-        outline: none;
-    }
-
-    .file-group { padding: 15px; }
-    .group-title {
-        color: var(--primary);
-        font-weight: bold;
-        font-size: 0.9em;
-        margin-bottom: 10px;
-        display: flex;
-        align-items: center;
-    }
-
-    .file-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px;
-        background: rgba(15, 23, 42, 0.5);
-        border-radius: 8px;
-        margin-bottom: 8px;
-        border: 1px solid transparent;
+    .lib-card {
+        background-color: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 12px;
+        padding: 20px;
         transition: 0.3s;
     }
 
-    .file-item:hover {
-        border-color: var(--primary);
-        background: rgba(56, 189, 248, 0.05);
+    .lib-card:hover {
+        border-color: #38bdf8;
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(56, 189, 248, 0.1);
     }
 
-    .file-info { display: flex; align-items: center; gap: 15px; }
-    .file-icon { font-size: 1.5em; }
-    .file-name { display: block; font-weight: 500; }
-    .file-size { font-size: 0.8em; color: #64748b; }
+    .lib-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #334155;
+        padding-bottom: 10px;
+    }
 
-    .download-link {
-        color: var(--primary);
+    .lib-icon { font-size: 1.5em; }
+    .lib-header h3 { color: #38bdf8; margin: 0; }
+
+    .lib-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .lib-list li {
+        margin-bottom: 12px;
+    }
+
+    .lib-list li a {
+        color: #f1f5f9;
         text-decoration: none;
-        font-weight: bold;
-        font-size: 0.9em;
-        padding: 5px 15px;
-        border: 1px solid var(--primary);
-        border-radius: 5px;
-        transition: 0.3s;
+        font-size: 0.95em;
+        display: block;
+        padding: 5px;
+        border-radius: 4px;
+        transition: 0.2s;
     }
 
-    .download-link:hover {
-        background: var(--primary);
-        color: var(--bg-body);
+    .lib-list li a:hover {
+        background-color: rgba(56, 189, 248, 0.1);
+        color: #38bdf8;
+        padding-right: 10px; /* حركة بسيطة عند التمرير */
     }
 </style>
