@@ -1,0 +1,127 @@
+<div class="library-container">
+    <header class="library-header">
+        <h1>المكتبة الرقمية 📚</h1>
+        <p>مستودع المصادر والكتب المنهجية لطلاب الذكاء الاصطناعي</p>
+    </header>
+
+    <div class="library-explorer">
+        <div class="search-bar">
+            <input type="text" placeholder="ابحث عن كتاب أو مصدر...">
+        </div>
+
+        <div class="file-list">
+            <div class="file-group">
+                <div class="group-title">📘 الكتب المنهجية</div>
+                
+                <div class="file-item">
+                    <div class="file-info">
+                        <span class="file-icon">📕</span>
+                        <div class="file-details">
+                            <span class="file-name">Python for Data Science</span>
+                            <span class="file-size">12.5 MB</span>
+                        </div>
+                    </div>
+                    <a href="books/python-ds.pdf" class="download-link">تحميل</a>
+                </div>
+
+                <div class="file-item">
+                    <div class="file-info">
+                        <span class="file-icon">📗</span>
+                        <div class="file-details">
+                            <span class="file-name">Mathematics for Machine Learning</span>
+                            <span class="file-size">8.2 MB</span>
+                        </div>
+                    </div>
+                    <a href="#" class="download-link">تحميل</a>
+                </div>
+            </div>
+
+            <div class="file-group">
+                <div class="group-title">📝 ملخصات ومحاضرات</div>
+                <div class="file-item">
+                    <div class="file-info">
+                        <span class="file-icon">📄</span>
+                        <div class="file-details">
+                            <span class="file-name">تلخيص مادة Logic Design - الفصل الأول</span>
+                            <span class="file-size">2.1 MB</span>
+                        </div>
+                    </div>
+                    <a href="#" class="download-link">تحميل</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* تنسيق المكتبة بالهوية البصرية */
+    .library-container { max-width: 900px; margin: auto; padding: 20px; }
+    
+    .library-header { text-align: center; margin-bottom: 30px; border-bottom: 2px solid var(--primary); padding-bottom: 20px; }
+
+    .library-explorer {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    .search-bar { padding: 15px; background: rgba(56, 189, 248, 0.05); border-bottom: 1px solid var(--border); }
+    .search-bar input {
+        width: 100%;
+        padding: 10px;
+        background: var(--bg-body);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        color: white;
+        outline: none;
+    }
+
+    .file-group { padding: 15px; }
+    .group-title {
+        color: var(--primary);
+        font-weight: bold;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .file-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+        background: rgba(15, 23, 42, 0.5);
+        border-radius: 8px;
+        margin-bottom: 8px;
+        border: 1px solid transparent;
+        transition: 0.3s;
+    }
+
+    .file-item:hover {
+        border-color: var(--primary);
+        background: rgba(56, 189, 248, 0.05);
+    }
+
+    .file-info { display: flex; align-items: center; gap: 15px; }
+    .file-icon { font-size: 1.5em; }
+    .file-name { display: block; font-weight: 500; }
+    .file-size { font-size: 0.8em; color: #64748b; }
+
+    .download-link {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.9em;
+        padding: 5px 15px;
+        border: 1px solid var(--primary);
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .download-link:hover {
+        background: var(--primary);
+        color: var(--bg-body);
+    }
+</style>
