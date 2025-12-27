@@ -3,195 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اتصل بنا | AI Engineering</title>
+    <title>دليل طلاب هندسة الذكاء الاصطناعي</title>
     <style>
-        /* الهوية البصرية الصارمة لموقعك */
+        /* المتغيرات للألوان - لتسهيل التبديل بين الأنماط */
         :root {
-            --bg-body: #0f172a;    /* الأزرق الكحلي الداكن جداً (الخلفية) */
-            --bg-card: #1e293b;    /* أزرق داكن (للبطاقات) */
-            --primary: #38bdf8;    /* الأزرق السماوي المضيء */
-            --border: #334155;     /* لون الحدود الداكن */
-            --text: #f1f5f9;       /* الأبيض الناعم للنصوص */
+            --bg-body: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f1f5f9;
+            --primary: #38bdf8;
+            --nav-bg: #1e293b;
+            --border: #334155;
+        }
+
+        /*   (Light Mode) */
+        .light-mode {
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --primary: #0284c7;
+            --nav-bg: #ffffff;
+            --border: #e2e8f0;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            background-color: var(--bg-body); /* هنا اللون الداكن الذي طلبته */
-            color: var(--text);
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-
-        /* تنسيق العنوان الرئيسي */
-        header {
-            text-align: center;
-            padding-bottom: 30px;
-            border-bottom: 1px solid var(--border);
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            color: var(--primary);
-            font-size: 2.2em;
-            text-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
-        }
-
-        /* شبكة الاتصال */
-        .contact-wrapper {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 30px;
-        }
-
-        /* تصميم البطاقات */
-        .card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
-
-        .card h2 {
-            color: var(--primary);
-            margin-top: 0;
-            font-size: 1.5em;
-            border-right: 4px solid var(--primary);
-            padding-right: 15px;
-        }
-
-        /* الحقول المدخلة */
-        .input-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 0.9em;
-            color: var(--primary);
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 12px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg-body);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            color: white;
-            font-family: inherit;
+            color: var(--text-main);
+            margin: 0;
+            padding-top: 70px; /* مساحة للقائمة الثابتة */
             transition: 0.3s;
         }
-
-        input:focus, textarea:focus {
-            border-color: var(--primary);
-            outline: none;
-            box-shadow: 0 0 8px rgba(56, 189, 248, 0.2);
-        }
-
-        /* زر الإرسال */
-        .submit-btn {
-            background-color: var(--primary);
-            color: var(--bg-body);
-            border: none;
-            padding: 12px 30px;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 1em;
-            cursor: pointer;
-            width: 100%;
-            transition: 0.3s;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
-            background-color: #7dd3fc;
-        }
-
-        /* قنوات التواصل */
-        .social-item {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            margin-bottom: 15px;
-            background: rgba(15, 23, 42, 0.4);
-            border-radius: 10px;
-            text-decoration: none;
-            color: var(--text);
-            border: 1px solid transparent;
-            transition: 0.3s;
-        }
-
-        .social-item:hover {
-            border-color: var(--primary);
-            background: rgba(56, 189, 248, 0.05);
-            transform: translateX(-5px);
-        }
-
-        .icon {
-            font-size: 1.5em;
-            margin-left: 15px;
-        }
-
-        @media (max-width: 768px) {
-            .contact-wrapper { grid-template-columns: 1fr; }
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <header>
-        <h1>تواصل مع مهندسي الذكاء الاصطناعي 🤖</h1>
-        <p>نحن هنا للإجابة على تساؤلاتكم التقنية والدراسية</p>
-    </header>
-
-    <div class="contact-wrapper">
-        <div class="card">
-            <h2>أرسل استفسارك</h2>
-            <form action="#">
-                <div class="input-group">
-                    <label>الاسم الكامل</label>
-                    <input type="text" placeholder="اكتب اسمك هنا..." required>
-                </div>
-                <div class="input-group">
-                    <label>البريد الإلكتروني</label>
-                    <input type="email" placeholder="email@example.com" required>
-                </div>
-                <div class="input-group">
-                    <label>نص الرسالة</label>
-                    <textarea rows="5" placeholder=" ?any ideas "></textarea>
-                </div>
-                <button type="submit" class="submit-btn">إرسال الآن</button>
-            </form>
-        </div>
-
-        <div class="card">
-            <h2>روابط سريعة</h2>
-            <div style="margin-top: 20px;">
-                <a href="#" class="social-item">
-                    <span class="icon">📢</span>
-                    <span>قناة التليجرام</span>
-                </a>
-                <a href="#" class="social-item">
-                    <span class="icon">✉️</span>
-                    <span>البريد الإلكتروني</span>
-                </a>
-                <a href="index.html" class="social-item" style="border-color: var(--border); margin-top: 30px;">
-                    <span class="icon">🏠</span>
-                    <span>العودة للرئيسية</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
-</body>
-</html>
