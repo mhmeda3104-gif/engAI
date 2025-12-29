@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact With Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-container {
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      width: 100%;
+      max-width: 900px;
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .contact-info h2 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+
+    .contact-info p {
+      line-height: 1.7;
+      color: #dddddd;
+    }
+
+    .info-item {
+      margin: 20px 0;
+    }
+
+    .info-item strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #00c6ff;
+    }
+
+    form h2 {
+      margin-top: 0;
+      font-size: 26px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      font-size: 14px;
+    }
+
+    form textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    form button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      background: #00c6ff;
+      color: #000;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background: #00a3d9;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-container">
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h2>Contact With Us</h2>
+      <p>
+        If you have any questions, feedback, or business inquiries,
+        feel free to contact us. We will respond as soon as possible.
+      </p>
+
+      <div class="info-item">
+        <strong>Email</strong>
+        info@example.com
+      </div>
+
+      <div class="info-item">
+        <strong>Phone</strong>
+        +964 7XX XXX XXXX
+      </div>
+
+      <div class="info-item">
+        <strong>Location</strong>
+        Iraq
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <form>
+      <h2>Send Message</h2>
+
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject">
+      <textarea placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+
+</body>
+</html>
