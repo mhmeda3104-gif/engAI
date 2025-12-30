@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Fundamentals of Electrical Engineering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Flowbite (Accordion) -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.3/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-gradient-to-l from-sky-500 to-blue-600 text-white py-12 text-center">
+    <h1 class="text-3xl font-bold mb-2">Fundamentals of Electrical Engineering</h1>
+    <p class="opacity-90 max-w-2xl mx-auto">
+        مادة تمهيدية لفهم أساسيات الكهرباء والدوائر الكهربائية، وهي حجر الأساس للأنظمة الذكية والروبوتات لاحقاً.
+    </p>
+</header>
+
+<!-- ================= CONTENT ================= -->
+<main class="max-w-screen-lg mx-auto p-6 space-y-8">
+
+<!-- ===== WHY IMPORTANT ===== -->
+<section class="bg-white dark:bg-gray-800 rounded-xl shadow p-6">
+    <h2 class="text-xl font-bold text-sky-500 mb-3">لماذا هذه المادة مهمة؟</h2>
+    <ul class="list-disc pr-6 space-y-2">
+        <li>تفهمك أساس الـ Hardware وأنظمة التحكم</li>
+        <li>مهمة للروبوتات والأنظمة الذكية</li>
+        <li>تفيد في Embedded Systems و IoT</li>
+        <li>تساعدك تربط بين البرمجة والعالم الحقيقي</li>
+    </ul>
+</section>
+
+<!-- ===== ACCORDION SYLLABUS ===== -->
+<section class="bg-white dark:bg-gray-800 rounded-xl shadow p-6">
+    <h2 class="text-xl font-bold text-sky-500 mb-4">محاور المادة</h2>
+
+    <div id="accordion-collapse" data-accordion="collapse">
+
+        <!-- Item 1 -->
+        <h3>
+            <button type="button" class="flex items-center justify-between w-full p-4 font-medium border rounded-lg mb-2"
+                data-accordion-target="#item-1">
+                <span>Basic Electrical Concepts</span>
+            </button>
+        </h3>
+        <div id="item-1" class="hidden p-4 border rounded-lg mb-3">
+            <ul class="list-disc pr-6">
+                <li>Electric Charge</li>
+                <li>Current (DC / AC)</li>
+                <li>Voltage</li>
+                <li>Power & Energy</li>
+            </ul>
+        </div>
+
+        <!-- Item 2 -->
+        <h3>
+            <button type="button" class="flex items-center justify-between w-full p-4 font-medium border rounded-lg mb-2"
+                data-accordion-target="#item-2">
+                <span>Circuit Elements</span>
+            </button>
+        </h3>
+        <div id="item-2" class="hidden p-4 border rounded-lg mb-3">
+            <ul class="list-disc pr-6">
+                <li>Resistors</li>
+                <li>Capacitors</li>
+                <li>Inductors</li>
+                <li>Sources</li>
+            </ul>
+        </div>
+
+        <!-- Item 3 -->
+        <h3>
+            <button type="button" class="flex items-center justify-between w-full p-4 font-medium border rounded-lg mb-2"
+                data-accordion-target="#item-3">
+                <span>Laws & Theorems</span>
+            </button>
+        </h3>
+        <div id="item-3" class="hidden p-4 border rounded-lg mb-3">
+            <ul class="list-disc pr-6">
+                <li>Ohm’s Law</li>
+                <li>KCL / KVL</li>
+                <li>Voltage & Current Division</li>
+                <li>Thevenin & Norton</li>
+            </ul>
+        </div>
+
+        <!-- Item 4 -->
+        <h3>
+            <button type="button" class="flex items-center justify-between w-full p-4 font-medium border rounded-lg mb-2"
+                data-accordion-target="#item-4">
+                <span>DC & AC Circuits</span>
+            </button>
+        </h3>
+        <div id="item-4" class="hidden p-4 border rounded-lg">
+            <ul class="list-disc pr-6">
+                <li>Series & Parallel Circuits</li>
+                <li>Mesh & Nodal Analysis</li>
+                <li>AC Signals & RMS</li>
+                <li>Impedance & Phase</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== PDF DOWNLOADS ===== -->
+<section class="bg-white dark:bg-gray-800 rounded-xl shadow p-6">
+    <h2 class="text-xl font-bold text-sky-500 mb-4">محاضرات PDF</h2>
+
+    <div class="grid md:grid-cols-2 gap-4">
+        <a href="pdfs/lecture1.pdf" download class="block p-4 border rounded-lg hover:bg-sky-50 dark:hover:bg-gray-700">
+            📄 Lecture 1 – Electrical Basics
+        </a>
+        <a href="pdfs/lecture2.pdf" download class="block p-4 border rounded-lg hover:bg-sky-50 dark:hover:bg-gray-700">
+            📄 Lecture 2 – Circuit Laws
+        </a>
+        <a href="pdfs/lecture3.pdf" download class="block p-4 border rounded-lg hover:bg-sky-50 dark:hover:bg-gray-700">
+            📄 Lecture 3 – DC Circuits
+        </a>
+        <a href="pdfs/lecture4.pdf" download class="block p-4 border rounded-lg hover:bg-sky-50 dark:hover:bg-gray-700">
+            📄 Lecture 4 – AC Circuits
+        </a>
+    </div>
+</section>
+
+<!-- ===== TOOLS ===== -->
+<section class="bg-white dark:bg-gray-800 rounded-xl shadow p-6">
+    <h2 class="text-xl font-bold text-sky-500 mb-3">برامج وأدوات مفيدة</h2>
+    <ul class="list-disc pr-6 space-y-1">
+        <li>Multisim</li>
+        <li>Proteus</li>
+        <li>LTspice</li>
+        <li>Falstad Online Simulator</li>
+    </ul>
+</section>
+
+<!-- ===== NEXT MATERIAL ===== -->
+<section class="bg-sky-500 text-white rounded-xl shadow p-6 text-center">
+    <h2 class="text-xl font-bold mb-2">المادة التالية بنفس القالب</h2>
+    <p class="mb-4">Computer Fundamentals</p>
+    <a href="computer-fundamentals.html"
+       class="inline-block bg-white text-sky-600 px-6 py-2 rounded-lg font-bold hover:bg-gray-100">
+        الانتقال للمادة
+    </a>
+</section>
+
+</main>
+
+<!-- Flowbite JS -->
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.3/dist/flowbite.min.js"></script>
+
+</body>
+</html>
