@@ -4,104 +4,212 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دليل طلاب هندسة الذكاء الاصطناعي</title>
+    <style>
+        /* المتغيرات للألوان - لتسهيل التبديل بين الأنماط */
+        :root {
+            --bg-body: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f1f5f9;
+            --primary: #38bdf8;
+            --nav-bg: #1e293b;
+            --border: #334155;
+        }
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+        /*   (Light Mode) */
+        .light-mode {
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --primary: #0284c7;
+            --nav-bg: #ffffff;
+            --border: #e2e8f0;
+        }
 
-    <!-- Flowbite CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.3/dist/flowbite.min.css" rel="stylesheet" />
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            margin: 0;
+            padding-top: 70px; /* مساحة للقائمة الثابتة */
+            transition: 0.3s;
+        }
 
-    <meta name="description" content="منصة إرشاد لطلاب هندسة الذكاء الاصطناعي">
+        /* القائمة الرئيسية (Main Menu) */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: var(--nav-bg);
+            border-bottom: 2px solid var(--primary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .menu-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .menu-links a:hover {
+            color: var(--primary);
+        }
+
+        /* زر تبديل النمط */
+        .theme-toggle {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        header {
+            background: linear-gradient(90deg, var(--bg-card), var(--bg-body));
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        h1 { color: var(--primary); }
+        h2 { color: var(--primary); border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .tag {
+            background: #0ea5e9;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-left: 5px;
+        }
+    </style>
 </head>
+<body>
 
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
-
-<!-- ================== NAVBAR ================== -->
-<nav class="bg-white border-b border-gray-200 dark:bg-gray-900 dark:border-gray-700 fixed w-full z-50">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-
-    <!-- Logo -->
-    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <span class="self-center text-xl font-bold text-sky-500">
-        هندسة الذكاء الاصطناعي
-      </span>
-    </a>
-
-    <!-- Mobile Button -->
-    <button data-collapse-toggle="main-menu" type="button"
-      class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-sky-500"
-      aria-controls="main-menu" aria-expanded="false">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-
-    <!-- Menu -->
-    <div class="hidden w-full md:block md:w-auto" id="main-menu">
-      <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 font-medium">
-        <li><a href="#" class="block py-2 px-3 hover:text-sky-500">الرئيسية</a></li>
-        <li><a href="#" class="block py-2 px-3 hover:text-sky-500">المواد</a></li>
-        <li><a href="library.html" class="block py-2 px-3 hover:text-sky-500">المكتبة</a></li>
-        <li><a href="ContactWithUs.html" class="block py-2 px-3 hover:text-sky-500">تواصل معنا</a></li>
-        <li><a href="about.html" class="block py-2 px-3 hover:text-sky-500">حول القسم</a></li>
-      </ul>
+<nav>
+    <div class="menu-links">
+        <a href="#">main</a>
+        <a href="#">Materials</a>
+        <a href="ContactWithUs.html">contact us</a>
+        <a href="about.html">about</a>
+         <a href="library.html">library</a>
     </div>
-
-  </div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">النمط الفاتح ☀️</button>
 </nav>
-<!-- ================== END NAVBAR ================== -->
 
-
-<!-- ================== HEADER ================== -->
-<header class="pt-28 pb-16 bg-gradient-to-l from-sky-500 to-blue-600 text-white text-center">
-    <h1 class="text-3xl font-bold mb-3">منصة إرشاد هندسة الذكاء الاصطناعي</h1>
-    <p class="opacity-90">مرحباً بمهندسي المستقبل — الموقع قيد الإنشاء</p>
+<header>
+    <h1>منصة إرشاد هندسة الذكاء الاصطناعي </h1>
+    <p>مرحباً بمهندسي المستقبل...الموقع قيد الانشاء </p>
 </header>
 
-<!-- ================== CONTENT ================== -->
-<main class="max-w-screen-lg mx-auto p-6 space-y-6">
-
-    <!-- Card -->
-    <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition">
-        <h2 class="text-xl font-bold text-sky-500 mb-2">مواضيع هامة</h2>
-        <p class="mb-2">خارطة طريق لتعلم Math for AI في الفصل الأول.</p>
-        <p class="mb-4">كيف تختار اللابتوب المناسب لتدريب نماذج Deep Learning؟</p>
-        <a href="#" class="inline-block bg-sky-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-sky-600">
-            اقرأ المزيد
-        </a>
+<div class="container">
+    <div class="card">
+        <h2>📌 مواضيع هامة</h2>
+        <p><span class="tag">جديد</span> خارطة طريق لتعلم Math for AI في الفصل الأول.</p>
+        <p><span class="tag">نصيحة</span> كيف تختار اللابتوب المناسب لتدريب موديلات الـ Deep Learning؟</p>
+        <a href="topics.html" class="btn">read more</a>
     </div>
 
-    <!-- Card -->
-    <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition">
-        <h2 class="text-xl font-bold text-sky-500 mb-2">مصادر ومراجع</h2>
-        <p class="mb-4">كتب، ملخصات، نماذج امتحانات سابقة وروابط مفيدة.</p>
-        <a href="#" class="inline-block bg-sky-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-sky-600">
-            تصفح المصادر
-        </a>
+    <div class="card">
+        <h2>📚 مصادر ومراجع</h2>
+        <p>روابط مباشرة للكتب المقررة، ملخصات الدفعة، ونماذج امتحانات سابقة.</p>
+        <a href="#" class="btn">read more</a>
     </div>
-
-    <!-- Card -->
-    <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition">
-        <h2 class="text-xl font-bold text-sky-500 mb-2">تقارير الطلاب</h2>
-        <p class="mb-4">تقارير الكروبات ونشاطاتهم داخل الجامعة.</p>
-        <a href="report.html" class="inline-block bg-sky-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-sky-600">
-            عرض التقارير
-        </a>
+         <div class="card">
+        <h2>📋 تقارير الطلاب </h2>
+        <p>تقارير الكروبات الموجودة في الجامعة وبيان نشاطهم .</p>
+        <a href="report.html.html" class="btn">read more</a>
     </div>
-
-    <!-- Card -->
-    <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition">
-        <h2 class="text-xl font-bold text-sky-500 mb-2">أساسيات الحاسوب</h2>
-        <p class="mb-4">مفاهيم مهمة لطلبة المرحلة الأولى.</p>
-        <a href="#" class="inline-block bg-sky-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-sky-600">
-            الدخول
-        </a>
+      <div class="card">
+        <h2>📋 computer Fundamentals </h2>
+        <p></p>
+        <a href="report.html.html" class="btn">read more</a>
     </div>
+</div>
 
-</main>
-
-<!-- Flowbite JS -->
-<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.3/dist/flowbite.min.js"></script>
+<script>
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('themeBtn');
+        
+        // تبديل الكلاس الخاص بالنمط الفاتح
+        body.classList.toggle('light-mode');
+        
+        // تغيير نص الزر
+        if (body.classList.contains('light-mode')) {
+            btn.innerHTML = "dark mode 🌙";
+        } else {
+            btn.innerHTML = "light mode ☀️";
+        }
+    }
+</script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
