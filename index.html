@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>منصة هندسة الذكاء الاصطناعي</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل طلاب هندسة الذكاء الاصطناعي</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,171 +11,97 @@
     <!-- Flowbite CSS -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.3/dist/flowbite.min.css" rel="stylesheet" />
 
-    <!-- SEO -->
-    <meta name="description" content="منصة إرشاد لطلاب هندسة الذكاء الاصطناعي، مواد، تقارير، ومصادر تعليمية." />
+    <meta name="description" content="منصة إرشاد لطلاب هندسة الذكاء الاصطناعي">
 </head>
 
-<body class="bg-slate-900 text-slate-100">
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
 
-<!-- ================= NAVBAR ================= -->
-<nav class="bg-slate-800 border-b border-sky-500 fixed w-full z-50">
+<!-- ================== NAVBAR ================== -->
+<nav class="bg-white border-b border-gray-200 dark:bg-gray-900 dark:border-gray-700 fixed w-full z-50">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 
     <!-- Logo -->
-    <a href="#" class="flex items-center">
-      <span class="self-center text-xl font-bold text-sky-400">
+    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <span class="self-center text-xl font-bold text-sky-500">
         هندسة الذكاء الاصطناعي
       </span>
     </a>
 
-    <!-- Mobile button -->
+    <!-- Mobile Button -->
     <button data-collapse-toggle="main-menu" type="button"
-      class="inline-flex items-center p-2 w-10 h-10 justify-center text-slate-300 rounded-lg md:hidden hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-sky-500"
+      class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-sky-500"
       aria-controls="main-menu" aria-expanded="false">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        <path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
 
     <!-- Menu -->
-   <!-- Menu -->
-<div class="hidden w-full md:block md:w-auto" id="main-menu">
-  <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 font-medium">
+    <div class="hidden w-full md:block md:w-auto" id="main-menu">
+      <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 font-medium">
+        <li><a href="#" class="block py-2 px-3 hover:text-sky-500">الرئيسية</a></li>
+        <li><a href="#" class="block py-2 px-3 hover:text-sky-500">المواد</a></li>
+        <li><a href="library.html" class="block py-2 px-3 hover:text-sky-500">المكتبة</a></li>
+        <li><a href="ContactWithUs.html" class="block py-2 px-3 hover:text-sky-500">تواصل معنا</a></li>
+        <li><a href="about.html" class="block py-2 px-3 hover:text-sky-500">حول القسم</a></li>
+      </ul>
+    </div>
 
-    <li>
-      <a href="index.html" class="block py-2 px-3 hover:text-sky-500">
-        الرئيسية
-      </a>
-    </li>
+  </div>
+</nav>
+<!-- ================== END NAVBAR ================== -->
 
-    <!-- ===== DROPDOWN MATERIALS ===== -->
-    <li class="relative group">
-      <button class="flex items-center py-2 px-3 hover:text-sky-500">
-        المواد
-        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-width="2" d="m6 9 6 6 6-6"/>
-        </svg>
-      </button>
 
-      <!-- Dropdown Menu -->
-      <div
-        class="absolute right-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-lg shadow-lg border
-               opacity-0 invisible group-hover:opacity-100 group-hover:visible
-               transition duration-200 z-50">
-
-        <ul class="py-2 text-sm">
-
-          <li>
-            <a href="fundamentals-electrical-engineering.html"
-               class="block px-4 py-2 hover:bg-sky-50 dark:hover:bg-gray-700">
-              ⚡ Fundamentals of Electrical Engineering
-            </a>
-          </li>
-
-          <li>
-            <a href="computer-fundamentals.html"
-               class="block px-4 py-2 hover:bg-sky-50 dark:hover:bg-gray-700">
-              💻 Computer Fundamentals
-            </a>
-          </li>
-
-          <li>
-            <a href="#"
-               class="block px-4 py-2 hover:bg-sky-50 dark:hover:bg-gray-700">
-              🧮 Linear Algebra
-            </a>
-          </li>
-
-          <li>
-            <a href="#"
-               class="block px-4 py-2 hover:bg-sky-50 dark:hover:bg-gray-700">
-              📊 Probability & Statistics
-            </a>
-          </li>
-
-        </ul>
-      </div>
-    </li>
-    <!-- ===== END DROPDOWN ===== -->
-
-    <li>
-      <a href="library.html" class="block py-2 px-3 hover:text-sky-500">
-        المكتبة
-      </a>
-    </li>
-
-    <li>
-      <a href="ContactWithUs.html" class="block py-2 px-3 hover:text-sky-500">
-        تواصل معنا
-      </a>
-    </li>
-
-    <li>
-      <a href="about.html" class="block py-2 px-3 hover:text-sky-500">
-        حول القسم
-      </a>
-    </li>
-
-  </ul>
-</div>
-
-<!-- ================= HEADER ================= -->
-<header class="pt-32 pb-16 text-center bg-gradient-to-l from-slate-800 to-slate-900 border-b border-sky-500">
-    <h1 class="text-3xl font-bold text-sky-400 mb-4">
-        منصة إرشاد هندسة الذكاء الاصطناعي
-    </h1>
-    <p class="text-slate-300">
-        مرحباً بمهندسي المستقبل – الموقع قيد الإنشاء
-    </p>
+<!-- ================== HEADER ================== -->
+<header class="pt-28 pb-16 bg-gradient-to-l from-sky-500 to-blue-600 text-white text-center">
+    <h1 class="text-3xl font-bold mb-3">منصة إرشاد هندسة الذكاء الاصطناعي</h1>
+    <p class="opacity-90">مرحباً بمهندسي المستقبل — الموقع قيد الإنشاء</p>
 </header>
 
-<!-- ================= CONTENT ================= -->
+<!-- ================== CONTENT ================== -->
 <main class="max-w-screen-lg mx-auto p-6 space-y-6">
 
-    <!-- Card 1 -->
-    <div class="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-sky-500 transition">
-        <h2 class="text-xl font-bold text-sky-400 mb-3">
-            مواضيع هامة
-        </h2>
+    <!-- Card -->
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition">
+        <h2 class="text-xl font-bold text-sky-500 mb-2">مواضيع هامة</h2>
         <p class="mb-2">خارطة طريق لتعلم Math for AI في الفصل الأول.</p>
-        <p>كيف تختار اللابتوب المناسب لتدريب نماذج الذكاء الاصطناعي.</p>
-        <a href="topics.html" class="inline-block mt-4 bg-sky-500 text-white px-5 py-2 rounded-lg font-bold hover:bg-sky-600">
+        <p class="mb-4">كيف تختار اللابتوب المناسب لتدريب نماذج Deep Learning؟</p>
+        <a href="#" class="inline-block bg-sky-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-sky-600">
             اقرأ المزيد
         </a>
     </div>
 
-    <!-- Card 2 -->
-    <div class="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-sky-500 transition">
-        <h2 class="text-xl font-bold text-sky-400 mb-3">
-            مصادر ومراجع
-        </h2>
-        <p>كتب، ملخصات، ونماذج امتحانات سابقة.</p>
-        <a href="library.html" class="inline-block mt-4 bg-sky-500 text-white px-5 py-2 rounded-lg font-bold hover:bg-sky-600">
-            دخول المكتبة
+    <!-- Card -->
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition">
+        <h2 class="text-xl font-bold text-sky-500 mb-2">مصادر ومراجع</h2>
+        <p class="mb-4">كتب، ملخصات، نماذج امتحانات سابقة وروابط مفيدة.</p>
+        <a href="#" class="inline-block bg-sky-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-sky-600">
+            تصفح المصادر
         </a>
     </div>
 
-    <!-- Card 3 -->
-    <div class="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-sky-500 transition">
-        <h2 class="text-xl font-bold text-sky-400 mb-3">
-            تقارير الطلاب
-        </h2>
-        <p>نشاطات الكروبات وتقاريرهم داخل الجامعة.</p>
-        <a href="report.html" class="inline-block mt-4 bg-sky-500 text-white px-5 py-2 rounded-lg font-bold hover:bg-sky-600">
+    <!-- Card -->
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition">
+        <h2 class="text-xl font-bold text-sky-500 mb-2">تقارير الطلاب</h2>
+        <p class="mb-4">تقارير الكروبات ونشاطاتهم داخل الجامعة.</p>
+        <a href="report.html" class="inline-block bg-sky-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-sky-600">
             عرض التقارير
         </a>
     </div>
 
-</main>
+    <!-- Card -->
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition">
+        <h2 class="text-xl font-bold text-sky-500 mb-2">أساسيات الحاسوب</h2>
+        <p class="mb-4">مفاهيم مهمة لطلبة المرحلة الأولى.</p>
+        <a href="#" class="inline-block bg-sky-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-sky-600">
+            الدخول
+        </a>
+    </div>
 
-<!-- ================= FOOTER ================= -->
-<footer class="text-center p-4 mt-10 border-t border-slate-700 text-slate-400">
-    © 2025 – قسم هندسة الذكاء الاصطناعي
-</footer>
+</main>
 
 <!-- Flowbite JS -->
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.3/dist/flowbite.min.js"></script>
 
 </body>
 </html>
-
