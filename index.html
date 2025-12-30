@@ -38,49 +38,86 @@
     </button>
 
     <!-- Menu -->
-    <div class="hidden w-full md:block md:w-auto" id="main-menu">
-      <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 font-medium">
+   <!-- Menu -->
+<div class="hidden w-full md:block md:w-auto" id="main-menu">
+  <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 font-medium">
 
-        <li>
-          <a href="index.html" class="block py-2 px-3 hover:text-sky-400">
-            الرئيسية
-          </a>
-        </li>
+    <li>
+      <a href="index.html" class="block py-2 px-3 hover:text-sky-500">
+        الرئيسية
+      </a>
+    </li>
 
-        <li>
-          <a href="materials.html" class="block py-2 px-3 hover:text-sky-400">
-            المواد
-          </a>
-        </li>
+    <!-- ===== DROPDOWN MATERIALS ===== -->
+    <li class="relative group">
+      <button class="flex items-center py-2 px-3 hover:text-sky-500">
+        المواد
+        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-width="2" d="m6 9 6 6 6-6"/>
+        </svg>
+      </button>
 
-        <li>
-          <a href="library.html" class="block py-2 px-3 hover:text-sky-400">
-            المكتبة
-          </a>
-        </li>
+      <!-- Dropdown Menu -->
+      <div
+        class="absolute right-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-lg shadow-lg border
+               opacity-0 invisible group-hover:opacity-100 group-hover:visible
+               transition duration-200 z-50">
 
-        <li>
-          <a href="report.html" class="block py-2 px-3 hover:text-sky-400">
-            التقارير
-          </a>
-        </li>
+        <ul class="py-2 text-sm">
 
-        <li>
-          <a href="ContactWithUs.html" class="block py-2 px-3 hover:text-sky-400">
-            تواصل معنا
-          </a>
-        </li>
+          <li>
+            <a href="fundamentals-electrical-engineering.html"
+               class="block px-4 py-2 hover:bg-sky-50 dark:hover:bg-gray-700">
+              ⚡ Fundamentals of Electrical Engineering
+            </a>
+          </li>
 
-        <li>
-          <a href="about.html" class="block py-2 px-3 hover:text-sky-400">
-            حول القسم
-          </a>
-        </li>
+          <li>
+            <a href="computer-fundamentals.html"
+               class="block px-4 py-2 hover:bg-sky-50 dark:hover:bg-gray-700">
+              💻 Computer Fundamentals
+            </a>
+          </li>
 
-      </ul>
-    </div>
-  </div>
-</nav>
+          <li>
+            <a href="#"
+               class="block px-4 py-2 hover:bg-sky-50 dark:hover:bg-gray-700">
+              🧮 Linear Algebra
+            </a>
+          </li>
+
+          <li>
+            <a href="#"
+               class="block px-4 py-2 hover:bg-sky-50 dark:hover:bg-gray-700">
+              📊 Probability & Statistics
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </li>
+    <!-- ===== END DROPDOWN ===== -->
+
+    <li>
+      <a href="library.html" class="block py-2 px-3 hover:text-sky-500">
+        المكتبة
+      </a>
+    </li>
+
+    <li>
+      <a href="ContactWithUs.html" class="block py-2 px-3 hover:text-sky-500">
+        تواصل معنا
+      </a>
+    </li>
+
+    <li>
+      <a href="about.html" class="block py-2 px-3 hover:text-sky-500">
+        حول القسم
+      </a>
+    </li>
+
+  </ul>
+</div>
 
 <!-- ================= HEADER ================= -->
 <header class="pt-32 pb-16 text-center bg-gradient-to-l from-slate-800 to-slate-900 border-b border-sky-500">
@@ -141,3 +178,4 @@
 
 </body>
 </html>
+
