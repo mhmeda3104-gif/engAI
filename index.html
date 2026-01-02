@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Engineering Hub | Home</title>
+    <title>بوابة هندسة الذكاء الاصطناعي | الرئيسية</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.3/dist/flowbite.min.css" rel="stylesheet" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Noto+Sans+Arabic:wght@300;400;700&display=swap');
         
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Noto Sans Arabic', sans-serif;
             background: radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%);
             background-attachment: fixed;
             min-height: 100vh;
         }
-        .heading-font { font-family: 'Orbitron', sans-serif; }
+        .heading-font { font-family: 'Orbitron', 'Noto Sans Arabic', sans-serif; }
         
         .glass-nav {
             background: rgba(15, 23, 42, 0.8);
@@ -34,7 +34,6 @@
             border-color: #38bdf8;
             transform: translateY(-10px);
             box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
-            background: rgba(30, 41, 59, 0.6);
         }
 
         .btn-cyber {
@@ -53,8 +52,8 @@
 
 <nav class="glass-nav fixed w-full z-50 top-0">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="#" class="flex items-center space-x-3 group">
-      <div class="w-10 h-10 bg-sky-500 rounded-lg flex items-center justify-center group-hover:rotate-90 transition duration-500">
+    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse group">
+      <div class="w-10 h-10 bg-sky-500 rounded-lg flex items-center justify-center group-hover:rotate-90 transition duration-500 shadow-[0_0_15px_rgba(56,189,248,0.5)]">
         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5-10-5-10 5z"></path></svg>
       </div>
       <span class="heading-font self-center text-xl font-bold text-white tracking-tighter">AI <span class="text-sky-400">HUB</span></span>
@@ -65,71 +64,84 @@
     </button>
 
     <div class="hidden w-full md:block md:w-auto" id="main-menu">
-      <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 font-bold text-xs uppercase tracking-widest">
-        <li><a href="#" class="block py-2 px-3 text-sky-400 border-b-2 border-sky-500">Home</a></li>
-        <li><a href="library.html" class="block py-2 px-3 hover:text-sky-400 transition">Library</a></li>
-        <li><a href="ContactWithUs.html" class="block py-2 px-3 hover:text-sky-400 transition">Contact</a></li>
-        <li><a href="about.html" class="block py-2 px-3 hover:text-sky-400 transition">About Us</a></li>
+      <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse font-bold text-sm tracking-wide">
+        <li><a href="#" class="block py-2 px-3 text-sky-400 border-b-2 border-sky-500">الرئيسية</a></li>
+        <li><a href="library.html" class="block py-2 px-3 hover:text-sky-400 transition">المكتبة الرقمية</a></li>
+        <li><a href="ContactWithUs.html" class="block py-2 px-3 hover:text-sky-400 transition">تواصل معنا</a></li>
+        <li><a href="about.html" class="block py-2 px-3 hover:text-sky-400 transition">من نحن</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <header class="pt-40 pb-20 relative overflow-hidden text-center">
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
     <div class="relative z-10 px-4">
-        <h1 class="heading-font text-4xl md:text-6xl font-black text-white mb-4 drop-shadow-[0_0_20px_rgba(56,189,248,0.4)]">
-            AI ENGINEERING <span class="text-sky-400">PORTAL</span>
+        <h1 class="heading-font text-3xl md:text-6xl font-black text-white mb-4 drop-shadow-[0_0_20px_rgba(56,189,248,0.4)]">
+            بوابة هندسة <span class="text-sky-400 text-6xl">الذكاء الاصطناعي</span>
         </h1>
         <p class="text-sky-200/60 max-w-2xl mx-auto italic font-light tracking-wide">
-            Empowering the next generation of engineers with advanced resources and digital tools.
+            تمكين جيل المهندسين القادم بالأدوات الرقمية والمصادر المتقدمة.
         </p>
         <div class="mt-8 flex justify-center gap-2">
-            <span class="h-1 w-12 bg-sky-500 rounded-full"></span>
+            <span class="h-1 w-12 bg-sky-500 rounded-full animate-pulse"></span>
             <span class="h-1 w-4 bg-sky-500/30 rounded-full"></span>
         </div>
     </div>
 </header>
 
 <main class="max-w-screen-xl mx-auto p-6 md:p-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
         <div class="hero-card rounded-[2rem] p-8 relative overflow-hidden group">
             <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:scale-125 transition duration-500">
                 <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/></svg>
             </div>
-            <h2 class="heading-font text-2xl font-bold text-sky-400 mb-4">Core Mathematics</h2>
-            <p class="text-slate-400 mb-6 text-sm leading-relaxed italic">Roadmap for learning Linear Algebra and Calculus for AI in the first semester.</p>
-            <a href="#" class="btn-cyber inline-block text-white text-[10px] font-black px-6 py-3 rounded-xl tracking-widest uppercase">Explore Roadmap</a>
+            <h2 class="text-2xl font-bold text-sky-400 mb-4">الرياضيات الأساسية</h2>
+            <p class="text-slate-400 mb-6 text-sm leading-relaxed">خارطة طريق لتعلم الجبر الخطي والتفاضل والتكامل الموجه لأنظمة الذكاء الاصطناعي.</p>
+            <a href="#" class="btn-cyber inline-block text-white text-xs font-bold px-8 py-3 rounded-xl tracking-widest uppercase">تصفح الخارطة</a>
         </div>
 
         <div class="hero-card rounded-[2rem] p-8 relative overflow-hidden group border-indigo-500/20">
-            <h2 class="heading-font text-2xl font-bold text-indigo-400 mb-4">Deep Learning Gear</h2>
-            <p class="text-slate-400 mb-6 text-sm leading-relaxed italic">How to choose the perfect laptop for training heavy neural networks?</p>
-            <a href="#" class="btn-cyber inline-block text-white text-[10px] font-black px-6 py-3 rounded-xl tracking-widest uppercase">Hardware Guide</a>
+            <h2 class="text-2xl font-bold text-indigo-400 mb-4">عتاد التعلم العميق</h2>
+            <p class="text-slate-400 mb-6 text-sm leading-relaxed">كيف تختار الحاسوب المحمول المثالي لتدريب الشبكات العصبية الثقيلة والمعالجات الرسومية؟</p>
+            <a href="#" class="btn-cyber inline-block text-white text-xs font-bold px-8 py-3 rounded-xl tracking-widest uppercase">دليل العتاد</a>
         </div>
 
         <div class="hero-card rounded-[2rem] p-8 relative overflow-hidden group border-green-500/20">
             <div class="flex items-center gap-2 mb-4">
-                <span class="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
-                <h2 class="heading-font text-2xl font-bold text-green-400">Electrical Basics</h2>
+                <span class="flex h-3 w-3 rounded-full bg-green-500 animate-pulse"></span>
+                <h2 class="text-2xl font-bold text-green-400">أسس الكهرباء</h2>
             </div>
-            <p class="text-slate-400 mb-6 text-sm leading-relaxed italic">Essential concepts, 3D measurements, and lab tutorials for freshman engineers.</p>
-            <a href="electricity.html" class="btn-cyber inline-block text-white text-[10px] font-black px-6 py-3 rounded-xl tracking-widest uppercase">Enter Laboratory</a>
+            <p class="text-slate-400 mb-6 text-sm leading-relaxed">المفاهيم الأساسية، القياسات ثلاثية الأبعاد، وتجارب المختبر لطلاب المرحلة الأولى.</p>
+            <a href="electricity.html" class="btn-cyber inline-block text-white text-xs font-bold px-8 py-3 rounded-xl tracking-widest uppercase">دخول المختبر</a>
         </div>
 
         <div class="hero-card rounded-[2rem] p-8 relative overflow-hidden group border-purple-500/20">
-            <h2 class="heading-font text-2xl font-bold text-purple-400">Team Reports</h2>
-            <p class="text-slate-400 mb-6 text-sm leading-relaxed italic">Showcasing group activities, research reports, and university projects.</p>
-            <a href="report.html" class="btn-cyber inline-block text-white text-[10px] font-black px-6 py-3 rounded-xl tracking-widest uppercase">View Archives</a>
+            <h2 class="text-2xl font-bold text-purple-400">تقارير الفرق</h2>
+            <p class="text-slate-400 mb-6 text-sm leading-relaxed">استعراض نشاطات المجموعات، التقارير البحثية، والمشاريع الجامعية المتميزة.</p>
+            <button onclick="checkAccess()" class="btn-cyber inline-block text-white text-xs font-bold px-8 py-3 rounded-xl tracking-widest uppercase">فتح الأرشيف 🔒</button>
         </div>
 
     </div>
 </main>
 
 <footer class="mt-20 border-t border-sky-500/20 py-10 text-center">
-    <p class="text-sky-500/40 text-[10px] tracking-[0.6em] uppercase font-bold">University of the Future | AI Engineering v2.0</p>
+    <p class="text-sky-500/40 text-[10px] tracking-[0.6em] uppercase font-bold">جامعة المستقبل | مختبر هندسة الذكاء الاصطناعي</p>
 </footer>
+
+<script>
+    function checkAccess() {
+        const password = "AI-LAB-2024"; 
+        const userInput = prompt("قسم التقارير محمي! أدخل كود المصادقة للدخول:");
+
+        if (userInput === password) {
+            alert("تم التحقق بنجاح! يتم الآن فتح الأرشيف...");
+            window.location.href = "report.html";
+        } else if (userInput != null) {
+            alert("كود خاطئ! الدخول غير مصرح به.");
+        }
+    }
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.3/dist/flowbite.min.js"></script>
 </body>
