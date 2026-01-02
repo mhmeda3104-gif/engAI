@@ -5,79 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>أسس الكهرباء - AI Engineering</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.3/dist/flowbite.min.css" rel="stylesheet" />
-    <style>
-        .embed-wrapper {
-            position: relative;
-            width: 100%;
-            padding-top: 60%; /* يحافظ على أبعاد الإطار */
-            background: #000;
-            border-radius: 1.5rem;
-            overflow: hidden;
-            border: 2px solid #3b82f6;
-        }
-        .embed-wrapper iframe {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-        }
-    </style>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
+<body class="bg-gray-900 text-white">
 
-<nav class="bg-white dark:bg-gray-800 border-b p-4 sticky top-0 z-50">
-    <div class="max-w-screen-xl mx-auto flex justify-between items-center">
-        <span class="text-xl font-bold text-sky-500">مختبر الأسس الكهربائية ⚡</span>
-        <a href="index.html" class="text-sky-500 hover:underline text-sm">العودة للرئيسية</a>
-    </div>
-</nav>
+    <nav class="p-4 border-b border-gray-800 flex justify-between items-center bg-gray-900">
+        <h1 class="text-xl font-bold text-sky-500 italic">مختبر الأسس الكهربائية ⚡</h1>
+        <a href="index.html" class="text-sm text-gray-400 hover:text-white">العودة للرئيسية</a>
+    </nav>
 
-<main class="max-w-4xl mx-auto p-6 space-y-10">
-
-    <section>
-        <h2 class="text-2xl font-bold mb-4 text-center">جهاز المولتيميتر الرقمي (3D Interactive)</h2>
-        <div class="embed-wrapper shadow-2xl">
-            <iframe 
-                title="Digital Multimeter" 
-                frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share 
-                src=https://sketchfab.com/models/0daed66fe7694398800b6bc2b3e823af/embed"> 
-            </iframe>
-        </div>
-        <p class="text-center text-sm text-gray-500 mt-2 italic">يمكنك تدوير الجهاز وتقريبه لاستكشاف أزرار القياس.</p>
-    </section>
-
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border-r-4 border-sky-500">
-            <h3 class="text-lg font-bold mb-3 italic">الكميات الكهربائية الأساسية:</h3>
-            <ul class="space-y-3 text-sm">
-                <li><strong>Voltage (V):</strong> فرق الجهد، يقاس بالفولت.</li>
-                <li><strong>Current (I):</strong> تدفق الشحنات، يقاس بالأمبير.</li>
-                <li><strong>Resistance (R):</strong> المقاومة، وتقاس بالأوم ($\Omega$).</li>
-            </ul>
-        </div>
-
-        <div class="p-6 bg-sky-500 text-white rounded-2xl shadow-lg">
-            <h3 class="text-lg font-bold mb-2 italic underline">قاعدة التناسب (I ∝ V):</h3>
-            <p class="text-sm leading-relaxed">
-                كما ورد في المحاضرة: التيار يتناسب طردياً مع الجهد وعكسياً مع المقاومة. هذا هو أساس عمل أجهزة القياس التي تراها بالأعلى.
-            </p>
-        </div>
-    </section>
-
-    <section class="text-center p-8 bg-gray-100 dark:bg-gray-800 rounded-3xl border-2 border-dashed border-gray-300">
-        <h3 class="text-xl font-black mb-4 italic text-sky-500">ملاحظة هامة للمختبر</h3>
+    <main class="max-w-4xl mx-auto p-6 space-y-10">
         
-        <p class="mt-4 text-gray-600 dark:text-gray-400">
-            تذكر دائماً: الفولتميتر يوصل على <strong>التوازي</strong>، والأميتر يوصل على <strong>التوالي</strong>.
-        </p>
-    </section>
+        <section>
+            <h2 class="text-2xl font-bold mb-6 text-center text-sky-400 italic">جهاز الفولتميتر 3D</h2>
+            <div style="position: relative; padding-top: 56.25%; background: #000; border-radius: 20px; overflow: hidden; border: 2px solid #3b82f6;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                    title="Voltmeter"
+                    src="https://sketchfab.com/models/0daed66fe7694398800b6bc2b3e823af/embed?autostart=1&ui_theme=dark"
+                    frameborder="0" 
+                    allowfullscreen="true" 
+                    mozallowfullscreen="true" 
+                    webkitallowfullscreen="true" 
+                    allow="autoplay; fullscreen; xr-spatial-tracking">
+                </iframe>
+            </div>
+        </section>
 
-</main>
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-6 bg-gray-800 rounded-2xl border-r-4 border-yellow-500">
+                <h3 class="text-lg font-bold mb-4 text-yellow-500 italic">ملخص المحاضرة 1:</h3>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li><strong class="text-white">Voltage (V):</strong> فرق الجهد المقاس بالفولت.</li>
+                    <li><strong class="text-white">Current (I):</strong> تدفق الشحنات المقاس بالأمبير.</li>
+                    <li><strong class="text-white">Resistance (R):</strong> المقاومة المقاسة بالأوم.</li>
+                </ul>
+            </div>
+            <div class="p-6 bg-sky-900/40 rounded-2xl border-r-4 border-sky-500 flex flex-col justify-center text-center">
+                <p class="text-sm mb-2 italic">قانون التناسب حسب المحاضرة:</p>
+                <p class="text-3xl font-mono font-bold">I ∝ V</p>
+                <p class="text-xs text-gray-400 mt-2">التيار يتناسب طردياً مع الجهد</p>
+            </div>
+        </section>
+        
+        
 
-<footer class="p-10 text-center text-gray-500 text-xs">
-    دليل طلاب هندسة الذكاء الاصطناعي - جامعة المستقبل
-</footer>
+    </main>
+
+    <footer class="p-10 text-center text-gray-600 text-xs italic">
+        جامعة المستقبل - قسم هندسة تقنيات الذكاء الاصطناعي
+    </footer>
 
 </body>
-
 </html>
-
