@@ -1,101 +1,117 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>من أنا - About Me</title>
+    <title>About Us | AI Revolution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root {
-            --bg-body: #0f172a;
-            --bg-card: #1e293b;
-            --text-main: #f1f5f9;
-            --primary: #38bdf8;
-            --border: #334155;
-        }
-
-        /* الكود يدعم النمط الفاتح أيضاً إذا كنت تريد استخدامه */
-        .light-mode {
-            --bg-body: #f8fafc;
-            --bg-card: #ffffff;
-            --text-main: #1e293b;
-            --primary: #0284c7;
-            --border: #e2e8f0;
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+        
         body {
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            margin: 0;
-            padding: 20px;
-            transition: 0.3s;
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
         }
-
-        .container { max-width: 800px; margin: auto; }
-
-        .back-link { color: var(--primary); text-decoration: none; font-weight: bold; }
-
-        /* تنسيق الـ Panel الخاص بالـ GIF */
-        .gif-panel {
-            background-color: var(--bg-card);
-            border: 2px solid var(--primary);
-            border-radius: 20px;
-            padding: 20px;
-            text-align: center;
-            margin-top: 30px;
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+        .heading-font {
+            font-family: 'Orbitron', sans-serif;
         }
-
-        .gif-panel img {
-            width: 100%; /* سيجعل الـ GIF يأخذ عرض اللوحة بالكامل */
-            max-width: 500px; /* يمكنك التحكم في أكبر عرض هنا */
-            border-radius: 15px;
-            border: 1px solid var(--border);
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(56, 189, 248, 0.2);
         }
-
-        .bio-card {
-            background-color: var(--bg-card);
-            padding: 30px;
-            border-radius: 15px;
-            margin-top: 20px;
-            border: 1px solid var(--border);
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent);
         }
-
-        h1 { color: var(--primary); margin-bottom: 10px; }
-        p { line-height: 1.8; font-size: 1.1em; }
+        .animated-border {
+            border: 2px solid transparent;
+            background: linear-gradient(#1e293b, #1e293b) padding-box,
+                        linear-gradient(90deg, #38bdf8, #818cf8) border-box;
+        }
     </style>
 </head>
-<body id="pageBody">
+<body class="text-slate-200 min-h-screen hero-gradient">
 
-<div class="container">
-    <a href="index.html" class="back-link">← العودة للرئيسية</a>
+    <div class="max-w-5xl mx-auto px-6 py-12">
+        <a href="index.html" class="inline-flex items-center text-sky-400 hover:text-sky-300 transition mb-10 group">
+            <span class="mr-2 transform group-hover:-translate-x-1 transition">←</span> Back to Hub
+        </a>
 
-    <div class="gif-panel">
-        <img src="my-animation.gif.gif" alt="AI Animation">
-        <p style="margin-top: 15px; font-weight: bold; color: var(--primary);">مرحباً بكم في عالم الذكاء الاصطناعي 🚀</p>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+            <div class="lg:col-span-5 order-2 lg:order-1">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-sky-500 to-indigo-500 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                    <div class="relative glass rounded-3xl p-4 overflow-hidden shadow-2xl">
+                        <img src="my-animation.gif.gif" alt="AI Revolution" class="w-full rounded-2xl grayscale-[20%] hover:grayscale-0 transition duration-500">
+                        <div class="mt-4 text-center">
+                            <span class="inline-block px-3 py-1 bg-sky-500/10 text-sky-400 text-xs font-bold tracking-widest uppercase rounded-full border border-sky-500/20">System Active</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+                <h1 class="heading-font text-5xl lg:text-6xl font-black text-white leading-tight">
+                    ABOUT <span class="text-sky-400">US</span>
+                </h1>
+                <p class="text-xl text-slate-400 leading-relaxed italic">
+                    "Driving the digital revolution through the lens of Artificial Intelligence."
+                </p>
+                <div class="h-1 w-24 bg-sky-500 rounded-full"></div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="glass p-8 rounded-[2rem] shadow-xl hover:translate-y-[-5px] transition duration-300">
+                <div class="w-12 h-12 bg-sky-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="heading-font text-2xl font-bold text-white mb-4 italic">Who Are We?</h3>
+                <p class="text-slate-400 leading-relaxed">
+                    We are a collective of <span class="text-white font-semibold">AI Engineering Students</span> deeply passionate about the digital and software revolution. We are not just learners; we are innovators dedicated to shaping the future of technology.
+                </p>
+            </div>
+
+            <div class="glass p-8 rounded-[2rem] shadow-xl hover:translate-y-[-5px] transition duration-300">
+                <div class="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="heading-font text-2xl font-bold text-white mb-4 italic">Our Mission</h3>
+                <p class="text-slate-400 leading-relaxed">
+                    Our goal is to pivot the <span class="text-white font-semibold">AI Revolution</span> toward its best potential. We aim to bridge the gap between theoretical complex algorithms and practical, impactful solutions that serve humanity.
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-20 glass p-10 rounded-[2.5rem] relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-10">
+                <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5-10-5-10 5z"></path></svg>
+            </div>
+            <h3 class="heading-font text-3xl font-bold text-white mb-10 text-center">Technical Expertise</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="animated-border p-4 rounded-2xl text-center">
+                    <span class="block text-sky-400 font-bold mb-1 uppercase text-xs tracking-widest">Core</span>
+                    <span class="text-white font-semibold">Python / C++</span>
+                </div>
+                <div class="animated-border p-4 rounded-2xl text-center">
+                    <span class="block text-sky-400 font-bold mb-1 uppercase text-xs tracking-widest">Interface</span>
+                    <span class="text-white font-semibold">Modern Web UI</span>
+                </div>
+                <div class="animated-border p-4 rounded-2xl text-center">
+                    <span class="block text-sky-400 font-bold mb-1 uppercase text-xs tracking-widest">Logic</span>
+                    <span class="text-white font-semibold">Neural Networks</span>
+                </div>
+                <div class="animated-border p-4 rounded-2xl text-center">
+                    <span class="block text-sky-400 font-bold mb-1 uppercase text-xs tracking-widest">Science</span>
+                    <span class="text-white font-semibold">Data Analytics</span>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-20 text-center text-slate-500 text-sm tracking-[0.3em] uppercase">
+            Future University | AI Engineering Lab
+        </footer>
     </div>
-
-    <div class="bio-card">
-        <h1>من أنا؟</h1>
-        <p>
-            أنا طالب في هندسة الذكاء الاصطناعي، مهتم ببناء الأنظمة الذكية وتطوير الويب. 
-            أسعى من خلال هذا الموقع لمشاركة كل ما أتعلمه مع زملائي لتعميم الفائدة.
-        </p>
-        <h2>المهارات التقنية:</h2>
-        <ul>
-            <li>لغة Python و C++</li>
-            <li>تطوير واجهات المواقع (HTML/CSS)</li>
-            <li>تحليل البيانات</li>
-        </ul>
-    </div>
-</div>
-
-<script>
-    // مزامنة النمط مع الصفحة الرئيسية
-    if (localStorage.getItem('theme') === 'light') {
-        document.getElementById('pageBody').classList.add('light-mode');
-    }
-</script>
 
 </body>
 </html>
