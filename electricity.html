@@ -3,58 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أسس الكهرباء - AI Engineering</title>
+    <title>أسس الكهرباء - مختبر AI</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900 text-white">
+<body class="bg-[#0f172a] text-white font-sans">
 
-    <nav class="p-4 border-b border-gray-800 flex justify-between items-center bg-gray-900">
-        <h1 class="text-xl font-bold text-sky-500 italic">مختبر الأسس الكهربائية ⚡</h1>
-        <a href="index.html" class="text-sm text-gray-400 hover:text-white">العودة للرئيسية</a>
+    <nav class="p-6 bg-[#1e293b] border-b border-blue-500/30 flex justify-between items-center shadow-2xl">
+        <h1 class="text-2xl font-black text-blue-400 tracking-tighter italic">ELECTRICAL BASICS | AI UNIT</h1>
+        <a href="index.html" class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full text-sm font-bold transition">الرئيسية</a>
     </nav>
 
-    <main class="max-w-4xl mx-auto p-6 space-y-10">
+    <main class="max-w-7xl mx-auto p-4 md:p-8">
         
-        <section>
-            <h2 class="text-2xl font-bold mb-6 text-center text-sky-400 italic">جهاز الفولتميتر 3D</h2>
-            <div style="position: relative; padding-top: 56.25%; background: #000; border-radius: 20px; overflow: hidden; border: 2px solid #3b82f6;">
-                <iframe 
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-                    title="Voltmeter"
-                    src="https://sketchfab.com/models/0daed66fe7694398800b6bc2b3e823af/embed"
-                    frameborder="0" 
-                    allowfullscreen="true" 
-                    mozallowfullscreen="true" 
-                    webkitallowfullscreen="true" 
-                    allow="autoplay; fullscreen; xr-spatial-tracking">
-                </iframe>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <div class="space-y-4">
+                <div class="bg-black rounded-3xl border-2 border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.2)] overflow-hidden h-[500px] relative">
+                    <div class="absolute top-4 left-4 z-10 bg-blue-600/80 backdrop-blur px-3 py-1 rounded-md text-xs">عرض تفاعلي 3D</div>
+                    
+                    <iframe 
+                        class="w-full h-full"
+                        src="https://sketchfab.com/models/0daed66fe7694398800b6bc2b3e823af/embed?autostart=1&ui_theme=dark&dnt=1" 
+                        allowfullscreen 
+                        allow="autoplay; fullscreen; xr-spatial-tracking">
+                    </iframe>
+                </div>
+                <p class="text-gray-400 text-sm italic text-center">جهاز الفولتميتر المستخدم في قياس فرق الجهد الكهربائي</p>
             </div>
-        </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="p-6 bg-gray-800 rounded-2xl border-r-4 border-yellow-500">
-                <h3 class="text-lg font-bold mb-4 text-yellow-500 italic">ملخص المحاضرة 1:</h3>
-                <ul class="space-y-3 text-sm text-gray-300">
-                    <li><strong class="text-white">Voltage (V):</strong> فرق الجهد المقاس بالفولت.</li>
-                    <li><strong class="text-white">Current (I):</strong> تدفق الشحنات المقاس بالأمبير.</li>
-                    <li><strong class="text-white">Resistance (R):</strong> المقاومة المقاسة بالأوم.</li>
-                </ul>
+            <div class="bg-[#1e293b] rounded-3xl border border-gray-700 p-8 shadow-xl overflow-y-auto h-[500px] custom-scrollbar">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-3 h-8 bg-blue-500 rounded-full"></div>
+                    <h2 class="text-2xl font-bold text-blue-400 italic">مادة أسس الكهرباء - المحاضرة الأولى</h2>
+                </div>
+
+                <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                    <div class="bg-blue-900/20 p-4 rounded-xl border-r-4 border-blue-500">
+                        <p class="font-bold text-white mb-2">أهداف المختبر الافتراضي:</p>
+                        <p class="text-sm">هذا القسم مخصص لفهم كيفية عمل أجهزة القياس وربطها بالجانب النظري الذي قدمته الدكتورة زهراء هاشم.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold text-white italic border-b border-gray-700 pb-2 italic text-blue-300">1. التيار الكهربائي (Electric Current)</h3>
+                        <p>هو المعدل الزمني لتدفق الشحنة الكهربائية عبر نقطة معينة في الدائرة. يُرمز له بالرمز <span class="text-yellow-400 font-bold">$I$</span> ويقاس بوحدة الأمبير (Ampere).</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold text-white italic border-b border-gray-700 pb-2 italic text-blue-300">2. الجهد الكهربائي (Voltage)</h3>
+                        <p>يُعرف بأنه فرق الجهد بين نقطتين، وهو القوة التي تدفع الإلكترونات للتحرك. يُرمز له بالرمز <span class="text-yellow-400 font-bold">$V$</span> ويقاس بوحدة الفولت.</p>
+                        
+                    </div>
+
+                    <div class="bg-gray-800/50 p-6 rounded-2xl border border-dashed border-gray-600">
+                        <p class="text-sm font-bold mb-2">ملاحظة هامة للمهندسين:</p>
+                        <p class="text-sm italic italic">"التيار يتناسب طردياً مع الجهد عند ثبوت المقاومة، وهذا ما يسمى قانون أوم."</p>
+                    </div>
+                </div>
             </div>
-            <div class="p-6 bg-sky-900/40 rounded-2xl border-r-4 border-sky-500 flex flex-col justify-center text-center">
-                <p class="text-sm mb-2 italic">قانون التناسب حسب المحاضرة:</p>
-                <p class="text-3xl font-mono font-bold">I ∝ V</p>
-                <p class="text-xs text-gray-400 mt-2">التيار يتناسب طردياً مع الجهد</p>
+
+        </div>
+
+        <div class="mt-12 bg-gradient-to-r from-blue-900/40 to-transparent p-8 rounded-3xl border border-blue-500/20">
+            <h3 class="text-xl font-bold mb-4 italic italic text-blue-400 text-center uppercase tracking-widest text-center italic">توصيل الأجهزة في المختبر</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                 <div class="text-center space-y-2">
+                    <p class="text-red-400 font-bold">Voltmeter Connection</p>
+                    <p class="text-sm">يوصل دائماً على التوازي (Parallel Connection)</p>
+                 </div>
+                 <div class="text-center space-y-2">
+                    <p class="text-green-400 font-bold">Ammeter Connection</p>
+                    <p class="text-sm">يوصل دائماً على التوالي (Series Connection)</p>
+                 </div>
             </div>
-        </section>
-        
-        
+            
+        </div>
 
     </main>
 
-    <footer class="p-10 text-center text-gray-600 text-xs italic">
-        جامعة المستقبل - قسم هندسة تقنيات الذكاء الاصطناعي
+    <footer class="p-8 text-center text-gray-500 text-xs italic tracking-widest">
+        UNIVERSITY OF THE FUTURE | AI ENGINEERING DEPARTMENT
     </footer>
 
 </body>
 </html>
-
