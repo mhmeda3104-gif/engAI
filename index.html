@@ -1,109 +1,136 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دليل طلاب هندسة الذكاء الاصطناعي</title>
-
-    <!-- Tailwind CSS -->
+    <title>AI Engineering Hub | Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Flowbite CSS -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.3/dist/flowbite.min.css" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        .heading-font { font-family: 'Orbitron', sans-serif; }
+        
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+        }
 
-    <meta name="description" content="منصة إرشاد لطلاب هندسة الذكاء الاصطناعي">
+        .hero-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(56, 189, 248, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .hero-card:hover {
+            border-color: #38bdf8;
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+            background: rgba(30, 41, 59, 0.6);
+        }
+
+        .btn-cyber {
+            background: linear-gradient(90deg, #0ea5e9, #2563eb);
+            box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+            transition: 0.3s;
+        }
+
+        .btn-cyber:hover {
+            box-shadow: 0 0 25px rgba(14, 165, 233, 0.6);
+            transform: scale(1.05);
+        }
+    </style>
 </head>
+<body class="text-slate-200">
 
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
-
-<!-- ================== NAVBAR ================== -->
-<nav class="bg-white border-b border-gray-200 dark:bg-gray-900 dark:border-gray-700 fixed w-full z-50">
+<nav class="glass-nav fixed w-full z-50 top-0">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-
-    <!-- Logo -->
-    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <span class="self-center text-xl font-bold text-sky-500">
-        هندسة الذكاء الاصطناعي
-      </span>
+    <a href="#" class="flex items-center space-x-3 group">
+      <div class="w-10 h-10 bg-sky-500 rounded-lg flex items-center justify-center group-hover:rotate-90 transition duration-500">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5-10-5-10 5z"></path></svg>
+      </div>
+      <span class="heading-font self-center text-xl font-bold text-white tracking-tighter">AI <span class="text-sky-400">HUB</span></span>
     </a>
 
-    <!-- Mobile Button -->
-    <button data-collapse-toggle="main-menu" type="button"
-      class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-sky-500"
-      aria-controls="main-menu" aria-expanded="false">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
+    <button data-collapse-toggle="main-menu" type="button" class="inline-flex items-center p-2 text-sky-500 rounded-lg md:hidden">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
     </button>
 
-    <!-- Menu -->
     <div class="hidden w-full md:block md:w-auto" id="main-menu">
-      <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 font-medium">
-        <li><a href="#" class="block py-2 px-3 hover:text-sky-500">الرئيسية</a></li>
-        <li><a href="#" class="block py-2 px-3 hover:text-sky-500">المواد</a></li>
-        <li><a href="library.html" class="block py-2 px-3 hover:text-sky-500">المكتبة</a></li>
-        <li><a href="ContactWithUs.html" class="block py-2 px-3 hover:text-sky-500">تواصل معنا</a></li>
-        <li><a href="about.html" class="block py-2 px-3 hover:text-sky-500">حول القسم</a></li>
+      <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 font-bold text-xs uppercase tracking-widest">
+        <li><a href="#" class="block py-2 px-3 text-sky-400 border-b-2 border-sky-500">Home</a></li>
+        <li><a href="library.html" class="block py-2 px-3 hover:text-sky-400 transition">Library</a></li>
+        <li><a href="ContactWithUs.html" class="block py-2 px-3 hover:text-sky-400 transition">Contact</a></li>
+        <li><a href="about.html" class="block py-2 px-3 hover:text-sky-400 transition">About Us</a></li>
       </ul>
     </div>
-
   </div>
 </nav>
-<!-- ================== END NAVBAR ================== -->
 
-
-<!-- ================== HEADER ================== -->
-<header class="pt-28 pb-16 bg-gradient-to-l from-sky-500 to-blue-600 text-white text-center">
-    <h1 class="text-3xl font-bold mb-3">منصة إرشاد هندسة الذكاء الاصطناعي</h1>
-    <p class="opacity-90">مرحباً بمهندسي المستقبل — الموقع قيد الإنشاء</p>
+<header class="pt-40 pb-20 relative overflow-hidden text-center">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+    <div class="relative z-10 px-4">
+        <h1 class="heading-font text-4xl md:text-6xl font-black text-white mb-4 drop-shadow-[0_0_20px_rgba(56,189,248,0.4)]">
+            AI ENGINEERING <span class="text-sky-400">PORTAL</span>
+        </h1>
+        <p class="text-sky-200/60 max-w-2xl mx-auto italic font-light tracking-wide">
+            Empowering the next generation of engineers with advanced resources and digital tools.
+        </p>
+        <div class="mt-8 flex justify-center gap-2">
+            <span class="h-1 w-12 bg-sky-500 rounded-full"></span>
+            <span class="h-1 w-4 bg-sky-500/30 rounded-full"></span>
+        </div>
+    </div>
 </header>
 
-<!-- ================== CONTENT ================== -->
-<main class="max-w-screen-lg mx-auto p-6 space-y-6">
+<main class="max-w-screen-xl mx-auto p-6 md:p-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
 
-    <!-- Card -->
-    <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition">
-        <h2 class="text-xl font-bold text-sky-500 mb-2">مواضيع هامة</h2>
-        <p class="mb-2">خارطة طريق لتعلم Math for AI في الفصل الأول.</p>
-        <p class="mb-4">كيف تختار اللابتوب المناسب لتدريب نماذج Deep Learning؟</p>
-        <a href="#" class="inline-block bg-sky-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-sky-600">
-            اقرأ المزيد
-        </a>
+        <div class="hero-card rounded-[2rem] p-8 relative overflow-hidden group">
+            <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:scale-125 transition duration-500">
+                <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/></svg>
+            </div>
+            <h2 class="heading-font text-2xl font-bold text-sky-400 mb-4">Core Mathematics</h2>
+            <p class="text-slate-400 mb-6 text-sm leading-relaxed italic">Roadmap for learning Linear Algebra and Calculus for AI in the first semester.</p>
+            <a href="#" class="btn-cyber inline-block text-white text-[10px] font-black px-6 py-3 rounded-xl tracking-widest uppercase">Explore Roadmap</a>
+        </div>
+
+        <div class="hero-card rounded-[2rem] p-8 relative overflow-hidden group border-indigo-500/20">
+            <h2 class="heading-font text-2xl font-bold text-indigo-400 mb-4">Deep Learning Gear</h2>
+            <p class="text-slate-400 mb-6 text-sm leading-relaxed italic">How to choose the perfect laptop for training heavy neural networks?</p>
+            <a href="#" class="btn-cyber inline-block text-white text-[10px] font-black px-6 py-3 rounded-xl tracking-widest uppercase">Hardware Guide</a>
+        </div>
+
+        <div class="hero-card rounded-[2rem] p-8 relative overflow-hidden group border-green-500/20">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+                <h2 class="heading-font text-2xl font-bold text-green-400">Electrical Basics</h2>
+            </div>
+            <p class="text-slate-400 mb-6 text-sm leading-relaxed italic">Essential concepts, 3D measurements, and lab tutorials for freshman engineers.</p>
+            <a href="electricity.html" class="btn-cyber inline-block text-white text-[10px] font-black px-6 py-3 rounded-xl tracking-widest uppercase">Enter Laboratory</a>
+        </div>
+
+        <div class="hero-card rounded-[2rem] p-8 relative overflow-hidden group border-purple-500/20">
+            <h2 class="heading-font text-2xl font-bold text-purple-400">Team Reports</h2>
+            <p class="text-slate-400 mb-6 text-sm leading-relaxed italic">Showcasing group activities, research reports, and university projects.</p>
+            <a href="report.html" class="btn-cyber inline-block text-white text-[10px] font-black px-6 py-3 rounded-xl tracking-widest uppercase">View Archives</a>
+        </div>
+
     </div>
-
-    <!-- Card -->
-    <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition">
-        <h2 class="text-xl font-bold text-sky-500 mb-2">مصادر ومراجع</h2>
-        <p class="mb-4">كتب، ملخصات، نماذج امتحانات سابقة وروابط مفيدة.</p>
-        <a href="#" class="inline-block bg-sky-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-sky-600">
-            تصفح المصادر
-        </a>
-    </div>
-
-    <!-- Card -->
-    <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition">
-        <h2 class="text-xl font-bold text-sky-500 mb-2">تقارير الطلاب</h2>
-        <p class="mb-4">تقارير الكروبات ونشاطاتهم داخل الجامعة.</p>
-        <a href="report.html" class="inline-block bg-sky-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-sky-600">
-            عرض التقارير
-        </a>
-    </div>
-
-    <!-- Card -->
-    <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition">
-        <h2 class="text-xl font-bold text-sky-500 mb-2"> أسس الكهرباء</h2>
-        <p class="mb-4">مفاهيم مهمة لطلبة المرحلة الأولى.</p>
-        <a href="electricity.html" class="inline-block bg-sky-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-sky-600">
-            الدخول
-        </a>
-    </div>
-
 </main>
 
-<!-- Flowbite JS -->
-<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.3/dist/flowbite.min.js"></script>
+<footer class="mt-20 border-t border-sky-500/20 py-10 text-center">
+    <p class="text-sky-500/40 text-[10px] tracking-[0.6em] uppercase font-bold">University of the Future | AI Engineering v2.0</p>
+</footer>
 
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.3/dist/flowbite.min.js"></script>
 </body>
 </html>
-
-
