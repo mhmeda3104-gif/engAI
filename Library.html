@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Library | Digital Assets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;600&family=Noto+Sans+Arabic:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+            background: #050a15; /* لون أغمق لإعطاء هيبة للمكتبة */
+            color: #f8fafc;
+        }
+
+        .premium-serif { font-family: 'Lora', serif; }
+
+        .resource-card {
+            background: rgba(30, 41, 59, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .resource-card:hover {
+            background: rgba(56, 189, 248, 0.05);
+            border-color: #38bdf8;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="p-6">
+
+    <header class="max-w-7xl mx-auto py-16 text-center">
+        <h1 class="premium-serif text-6xl mb-4">The <span class="italic text-sky-500 text-7xl">Knowledge</span> Base</h1>
+        <p class="text-slate-500 italic">أرشيف المحاضرات، الكتب، والمصادر البرمجية لطلبة هندسة الذكاء الاصطناعي.</p>
+    </header>
+
+    <div class="max-w-7xl mx-auto mb-12 flex flex-wrap justify-center gap-4">
+        <button class="px-6 py-2 rounded-full border border-sky-500 text-sky-500 text-xs font-bold uppercase tracking-widest hover:bg-sky-500 hover:text-white transition">Level 1</button>
+        <button class="px-6 py-2 rounded-full border border-white/10 text-white/40 text-xs font-bold uppercase tracking-widest hover:border-white transition">Level 2</button>
+        <button class="px-6 py-2 rounded-full border border-white/10 text-white/40 text-xs font-bold uppercase tracking-widest hover:border-white transition">Software Tools</button>
+    </div>
+
+    <main class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="resource-card p-8 rounded-3xl relative overflow-hidden">
+            <span class="absolute top-4 right-6 text-[10px] font-black text-sky-500/20 tracking-tighter uppercase">Freshman</span>
+            <h2 class="premium-serif text-3xl mb-2">Calculus I</h2>
+            <p class="text-slate-500 text-xs mb-8 italic">تفاضل وتكامل 1 - المرحلة الأولى.</p>
+            
+            <div class="space-y-3">
+                <a href="files/math-lec1.pdf" class="flex justify-between items-center p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition">
+                    <span class="text-xs font-semibold tracking-wide uppercase">Lecture 01 - Basics</span>
+                    <svg class="w-4 h-4 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M7 16l-4-4m0 0l4-4m-4 4h18"></path></svg>
+                </a>
+                <a href="#" class="flex justify-between items-center p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition">
+                    <span class="text-xs font-semibold tracking-wide uppercase">Practice Questions</span>
+                    <svg class="w-4 h-4 text-sky-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11V9h1V7h-2v2h1v1h-1v2h2v-2h-1V9h1V7h-1z"></path></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="resource-card p-8 rounded-3xl relative overflow-hidden">
+             <span class="absolute top-4 right-6 text-[10px] font-black text-emerald-500/20 tracking-tighter uppercase">AI Tools</span>
+            <h2 class="premium-serif text-3xl mb-2">Python for AI</h2>
+            <p class="text-slate-500 text-xs mb-8 italic">أساسيات لغة بايثون الموجهة للذكاء الاصطناعي.</p>
+            
+            <div class="space-y-3">
+                <a href="#" class="flex justify-between items-center p-4 bg-emerald-500/5 rounded-2xl hover:bg-emerald-500/10 transition">
+                    <span class="text-xs font-semibold tracking-wide uppercase text-emerald-400">Environment Setup</span>
+                    <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>
