@@ -1,172 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact With Us</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | AI Engineering Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at center, #1e3a8a 0%, #0f172a 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        .heading-font { font-family: 'Orbitron', sans-serif; }
+        
+        .glass {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
 
-  <style>
+        .input-field {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            transition: all 0.3s ease;
+        }
 
+        .input-field:focus {
+            border-color: #38bdf8;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+            background: rgba(30, 41, 59, 0.8);
+            outline: none;
+        }
 
-    .back-home-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: #38bdf8; /* لون أزرق تقني */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    padding: 10px 15px;
-    border-radius: 8px;
-    background: rgba(56, 189, 248, 0.1); /* خلفية شفافة خفيفة */
-    transition: 0.3s all ease;
-    border: 1px solid transparent;
-    margin-bottom: 20px;
-}
+        .glow-button {
+            background: linear-gradient(90deg, #0ea5e9, #2563eb);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
-.back-home-btn:hover {
-    background: rgba(56, 189, 248, 0.2);
-    border-color: #38bdf8;
-    transform: translateX(5px); /* حركة بسيطة عند التأشير */
-}
-    * {
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body {
-      margin: 0;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .contact-container {
-      background: rgba(0, 0, 0, 0.45);
-      backdrop-filter: blur(10px);
-      padding: 40px;
-      width: 100%;
-      max-width: 900px;
-      border-radius: 16px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-    }
-
-    .contact-info h2 {
-      margin-top: 0;
-      font-size: 28px;
-    }
-
-    .contact-info p {
-      line-height: 1.7;
-      color: #dddddd;
-    }
-
-    .info-item {
-      margin: 20px 0;
-    }
-
-    .info-item strong {
-      display: block;
-      margin-bottom: 6px;
-      color: #00c6ff;
-    }
-
-    form h2 {
-      margin-top: 0;
-      font-size: 26px;
-    }
-
-    form input,
-    form textarea {
-      width: 100%;
-      padding: 12px 14px;
-      margin-bottom: 15px;
-      border: none;
-      border-radius: 8px;
-      outline: none;
-      font-size: 14px;
-    }
-
-    form textarea {
-      resize: none;
-      height: 120px;
-    }
-
-    form button {
-      width: 100%;
-      padding: 14px;
-      border: none;
-      border-radius: 8px;
-      background: #00c6ff;
-      color: #000;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    form button:hover {
-      background: #00a3d9;
-    }
-
-    @media (max-width: 768px) {
-      .contact-container {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+        .glow-button:hover {
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.6);
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
-<body> 
+<body class="text-slate-200 flex items-center justify-center p-6">
 
+    <div class="max-w-5xl w-full">
+        <a href="index.html" class="inline-flex items-center text-sky-400 hover:text-white mb-8 transition group font-bold">
+            <span class="mr-2 transform group-hover:-translate-x-1 transition">←</span> BACK TO MAIN HUB
+        </a>
 
+        <div class="glass rounded-[2.5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-12 shadow-2xl">
+            
+            <div class="lg:col-span-5 bg-sky-600/10 p-10 lg:p-12 border-b lg:border-b-0 lg:border-r border-sky-500/20 relative overflow-hidden">
+                <div class="absolute -top-10 -left-10 w-40 h-40 bg-sky-500/10 rounded-full blur-3xl"></div>
+                
+                <h2 class="heading-font text-3xl font-bold text-white mb-6 italic">GET IN <span class="text-sky-400">TOUCH</span></h2>
+                <p class="text-sky-100/60 mb-10 leading-relaxed italic">
+                    Have questions about the AI Revolution or laboratory experiments? Reach out to our engineering team.
+                </p>
 
-<div class="container">
-    <a href="index.html" class="back-home-btn">
-   <span>&larr;</span> العودة للرئيسية
-</a>
-    <!-- Contact Info -->
-    <div class="contact-info">
-      <h2>Contact With Us</h2>
-      <p>
-        If you have any questions, feedback, or business inquiries,
-        feel free to contact us. We will respond as soon as possible.
-      </p>
+                <div class="space-y-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-sky-500/20 flex items-center justify-center text-sky-400">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs uppercase tracking-widest text-sky-500 font-bold mb-1">Email Official</p>
+                            <p class="text-white font-medium">mhmeda3104@gmail.com</p>
+                        </div>
+                    </div>
 
-      <div class="info-item">
-        <strong>Email</strong>
-        mhmeda3104@gmail.com
-      </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-sky-500/20 flex items-center justify-center text-sky-400">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs uppercase tracking-widest text-sky-500 font-bold mb-1">Phone Line</p>
+                            <p class="text-white font-medium">+964 7766251455</p>
+                        </div>
+                    </div>
 
-      <div class="info-item">
-        <strong>Phone</strong>
-        +964 7766251455
-      </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-sky-500/20 flex items-center justify-center text-sky-400">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs uppercase tracking-widest text-sky-500 font-bold mb-1">HQ Location</p>
+                            <p class="text-white font-medium italic">Najaf, Iraq</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-      <div class="info-item">
-        <strong>Location</strong>
-        Iraq
-      </div>
+            <div class="lg:col-span-7 p-10 lg:p-12">
+                <form action="https://formspree.io/f/YOUR_ID" method="POST" class="space-y-6">
+                    <h2 class="heading-font text-2xl font-bold text-white mb-8">SEND <span class="text-sky-400 italic">ENQUIRY</span></h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-sky-500 uppercase tracking-widest ml-1">Full Name</label>
+                            <input type="text" name="name" placeholder="John Doe" required 
+                                class="input-field w-full px-5 py-3 rounded-xl text-white">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-sky-500 uppercase tracking-widest ml-1">Email Address</label>
+                            <input type="email" name="email" placeholder="name@example.com" required 
+                                class="input-field w-full px-5 py-3 rounded-xl text-white">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold text-sky-500 uppercase tracking-widest ml-1">Subject</label>
+                        <input type="text" name="subject" placeholder="Project Inquiry" 
+                            class="input-field w-full px-5 py-3 rounded-xl text-white">
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold text-sky-500 uppercase tracking-widest ml-1">Message</label>
+                        <textarea name="message" rows="4" placeholder="How can we help you?" required 
+                            class="input-field w-full px-5 py-3 rounded-xl text-white resize-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="glow-button w-full py-4 rounded-xl text-white font-black text-sm">
+                        Transmit Message
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <p class="mt-8 text-center text-sky-500/40 text-[10px] tracking-[0.4em] uppercase font-bold">
+            Encryption Active | Future University AI Hub
+        </p>
     </div>
-
-    <!-- Contact Form -->
-    <form>
-      <h2>Send Message</h2>
-
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <input type="text" placeholder="Subject">
-      <textarea placeholder="Your Message" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-
-  </div>
 
 </body>
 </html>
