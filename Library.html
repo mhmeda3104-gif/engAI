@@ -3,85 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Library | Digital Assets</title>
+    <title>AI Engineering | Digital Library</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;600&family=Noto+Sans+Arabic:wght@400;700&display=swap');
         
-        body <div class="max-w-7xl mx-auto px-6 pt-6">
-    <a href="index.html" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-500 hover:text-sky-400 transition group">
-        <svg class="w-4 h-4 transform group-hover:-translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
-        </svg>
-        Back to Main Hub
-    </a>
-</div>{
+        body {
             font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
-            background: #050a15; /* لون أغمق لإعطاء هيبة للمكتبة */
+            background: #030712; /* أسود عميق للفخامة */
             color: #f8fafc;
+            min-height: 100vh;
         }
 
-        .premium-serif { font-family: 'Lora', serif; }
+        .premium-serif { font-family: 'Lora', serif; letter-spacing: -0.01em; }
 
-        .resource-card {
-            background: rgba(30, 41, 59, 0.3);
+        /* تأثير الزجاج للبطاقات */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .resource-card:hover {
-            background: rgba(56, 189, 248, 0.05);
+        .glass-card:hover {
             border-color: #38bdf8;
-            transform: scale(1.02);
+            background: rgba(30, 41, 59, 0.6);
+            transform: translateY(-5px);
         }
+
+        /* تخصيص شريط التمرير */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #030712; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
     </style>
 </head>
-<body class="p-6">
+<body class="antialiased pb-20">
 
-    <header class="max-w-7xl mx-auto py-16 text-center">
-        <h1 class="premium-serif text-6xl mb-4">The <span class="italic text-sky-500 text-7xl">Knowledge</span> Base</h1>
-        <p class="text-slate-500 italic">أرشيف المحاضرات، الكتب، والمصادر البرمجية لطلبة هندسة الذكاء الاصطناعي.</p>
+    <nav class="max-w-7xl mx-auto p-8 flex justify-between items-center">
+        <a href="index.html" class="group flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 hover:text-sky-400 transition">
+            <svg class="w-5 h-5 transform group-hover:-translate-x-2 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+            </svg>
+            Back to Main Hub
+        </a>
+        <div class="premium-serif text-xl opacity-50">AI <span class="text-sky-500">Archive</span></div>
+    </nav>
+
+    <header class="max-w-4xl mx-auto text-center pt-10 pb-16 px-6">
+        <h1 class="premium-serif text-5xl md:text-7xl mb-6">
+            Digital <span class="italic text-sky-500">Library</span>
+        </h1>
+        <p class="text-slate-500 italic mb-10 text-sm md:text-base">استكشف وجمل المصادر التعليمية والمحاضرات الخاصة بقسم هندسة الذكاء الاصطناعي.</p>
+        
+        <div class="relative group max-w-2xl mx-auto">
+            <input type="text" id="searchInput" placeholder="Search for lectures, books, or code..." 
+                   class="w-full bg-white/5 border border-white/10 rounded-2xl py-5 px-8 text-sm focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-all placeholder:text-slate-600 shadow-2xl">
+            <div class="absolute right-6 top-5 text-slate-600 group-focus-within:text-sky-500 transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </div>
+        </div>
     </header>
 
-    <div class="max-w-7xl mx-auto mb-12 flex flex-wrap justify-center gap-4">
-        <button class="px-6 py-2 rounded-full border border-sky-500 text-sky-500 text-xs font-bold uppercase tracking-widest hover:bg-sky-500 hover:text-white transition">Level 1</button>
-        <button class="px-6 py-2 rounded-full border border-white/10 text-white/40 text-xs font-bold uppercase tracking-widest hover:border-white transition">Level 2</button>
-        <button class="px-6 py-2 rounded-full border border-white/10 text-white/40 text-xs font-bold uppercase tracking-widest hover:border-white transition">Software Tools</button>
+    <div class="max-w-7xl mx-auto mb-12 flex flex-wrap justify-center gap-3 px-6">
+        <button class="px-5 py-2 rounded-full bg-sky-500 text-white text-[10px] font-bold uppercase tracking-widest">All Resources</button>
+        <button class="px-5 py-2 rounded-full border border-white/10 text-slate-400 text-[10px] font-bold uppercase tracking-widest hover:border-white transition">Level 1</button>
+        <button class="px-5 py-2 rounded-full border border-white/10 text-slate-400 text-[10px] font-bold uppercase tracking-widest hover:border-white transition">Level 2</button>
+        <button class="px-5 py-2 rounded-full border border-white/10 text-slate-400 text-[10px] font-bold uppercase tracking-widest hover:border-white transition">Software & Tools</button>
     </div>
 
-    <main class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <main class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
         
-        <div class="resource-card p-8 rounded-3xl relative overflow-hidden">
-            <span class="absolute top-4 right-6 text-[10px] font-black text-sky-500/20 tracking-tighter uppercase">Freshman</span>
-            <h2 class="premium-serif text-3xl mb-2">Calculus I</h2>
-            <p class="text-slate-500 text-xs mb-8 italic">تفاضل وتكامل 1 - المرحلة الأولى.</p>
+        <div class="glass-card p-8 rounded-[2rem] flex flex-col justify-between">
+            <div>
+                <div class="flex justify-between items-start mb-6">
+                    <div class="w-12 h-12 bg-sky-500/10 rounded-2xl flex items-center justify-center text-sky-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 13h.01M12 13h.01M15 13h.01M12 7v10m-3 0v-3m0-4h.01M12 10h.01M15 10h.01M12 7h.01"></path></svg>
+                    </div>
+                    <span class="text-[9px] font-black bg-white/5 px-3 py-1 rounded-full uppercase tracking-tighter text-slate-500">4 Files</span>
+                </div>
+                <h3 class="premium-serif text-2xl mb-2">Calculus I</h3>
+                <p class="text-slate-500 text-xs mb-6 italic">محاضرات التفاضل والتكامل - المرحلة الاولى.</p>
+            </div>
             
-            <div class="space-y-3">
-                <a href="files/math-lec1.pdf" class="flex justify-between items-center p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition">
-                    <span class="text-xs font-semibold tracking-wide uppercase">Lecture 01 - Basics</span>
-                    <svg class="w-4 h-4 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M7 16l-4-4m0 0l4-4m-4 4h18"></path></svg>
+            <div class="space-y-2">
+                <a href="#" class="flex items-center justify-between p-3 bg-white/5 rounded-xl hover:bg-white/10 transition group">
+                    <span class="text-[10px] font-bold uppercase tracking-wide">Lecture 01.pdf</span>
+                    <svg class="w-4 h-4 text-sky-500 opacity-0 group-hover:opacity-100 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 </a>
-                <a href="#" class="flex justify-between items-center p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition">
-                    <span class="text-xs font-semibold tracking-wide uppercase">Practice Questions</span>
-                    <svg class="w-4 h-4 text-sky-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11V9h1V7h-2v2h1v1h-1v2h2v-2h-1V9h1V7h-1z"></path></svg>
+                <a href="#" class="flex items-center justify-between p-3 bg-white/5 rounded-xl hover:bg-white/10 transition group">
+                    <span class="text-[10px] font-bold uppercase tracking-wide">Tutorial Video</span>
+                    <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"></path></svg>
                 </a>
             </div>
         </div>
 
-        <div class="resource-card p-8 rounded-3xl relative overflow-hidden">
-             <span class="absolute top-4 right-6 text-[10px] font-black text-emerald-500/20 tracking-tighter uppercase">AI Tools</span>
-            <h2 class="premium-serif text-3xl mb-2">Python for AI</h2>
-            <p class="text-slate-500 text-xs mb-8 italic">أساسيات لغة بايثون الموجهة للذكاء الاصطناعي.</p>
+        <div class="glass-card p-8 rounded-[2rem] flex flex-col justify-between border-emerald-500/10">
+            <div>
+                <div class="flex justify-between items-start mb-6">
+                    <div class="w-12 h-12 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <span class="text-[9px] font-black bg-white/5 px-3 py-1 rounded-full uppercase tracking-tighter text-slate-500">2 Files</span>
+                </div>
+                <h3 class="premium-serif text-2xl mb-2">Python for AI</h3>
+                <p class="text-slate-500 text-xs mb-6 italic">أساسيات لغة بايثون والمكتبات البرمجية.</p>
+            </div>
             
-            <div class="space-y-3">
-                <a href="#" class="flex justify-between items-center p-4 bg-emerald-500/5 rounded-2xl hover:bg-emerald-500/10 transition">
-                    <span class="text-xs font-semibold tracking-wide uppercase text-emerald-400">Environment Setup</span>
-                    <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+            <div class="space-y-2">
+                <a href="#" class="flex items-center justify-between p-3 bg-emerald-500/5 rounded-xl hover:bg-emerald-500/10 transition group">
+                    <span class="text-[10px] font-bold uppercase tracking-wide text-emerald-400">Source Code (GitHub)</span>
+                    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="glass-card p-8 rounded-[2rem] flex flex-col justify-between border-amber-500/10">
+            <div>
+                <div class="flex justify-between items-start mb-6">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-2xl flex items-center justify-center text-amber-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <span class="text-[9px] font-black bg-white/5 px-3 py-1 rounded-full uppercase tracking-tighter text-slate-500">1 File</span>
+                </div>
+                <h3 class="premium-serif text-2xl mb-2">Electricity Basics</h3>
+                <p class="text-slate-500 text-xs mb-6 italic">الدوائر الكهربائية والقياسات العملية.</p>
+            </div>
+            
+            <div class="space-y-2">
+                <a href="#" class="flex items-center justify-between p-3 bg-amber-500/5 rounded-xl hover:bg-amber-500/10 transition group">
+                    <span class="text-[10px] font-bold uppercase tracking-wide text-amber-400">Lab Experiments.pdf</span>
+                    <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 </a>
             </div>
         </div>
 
     </main>
+
+    <footer class="mt-20 text-center py-10 opacity-20">
+        <div class="h-[1px] w-20 bg-white mx-auto mb-6"></div>
+        <p class="text-[10px] uppercase tracking-[0.5em]">Knowledge Base &copy; 2024</p>
+    </footer>
 
 </body>
 </html>
