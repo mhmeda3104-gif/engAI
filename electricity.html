@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundamentals of Electricity</title>
+    <title>Fundamentals of Electricity | AI Engineering</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
+    </style>
 </head>
 <body class="bg-[#0f172a] text-white font-sans">
 
     <nav class="p-6 bg-[#1e293b] border-b border-blue-500/30 flex justify-between items-center shadow-2xl">
         <h1 class="text-2xl font-black text-blue-400 tracking-tighter italic">ELECTRICAL BASICS | AI UNIT</h1>
-        <a href="index.html" class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full text-sm font-bold transition">الرئيسية</a>
+        <a href="index.html" class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full text-sm font-bold transition">Home</a>
     </nav>
 
     <main class="max-w-7xl mx-auto p-4 md:p-8">
         
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             <div class="space-y-4">
                 <div class="bg-black rounded-3xl border-2 border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.2)] overflow-hidden h-[500px] relative">
-                    <div class="absolute top-4 left-4 z-10 bg-blue-600/80 backdrop-blur px-3 py-1 rounded-md text-xs">Interactive presentation 3D</div>
-                    
+                    <div class="absolute top-4 left-4 z-10 bg-blue-600/80 backdrop-blur px-3 py-1 rounded-md text-xs font-bold">3D Interactive Presentation</div>
                     <iframe 
                         class="w-full h-full"
                         src="https://sketchfab.com/models/0daed66fe7694398800b6bc2b3e823af/embed?autostart=1&ui_theme=dark&dnt=1" 
@@ -28,162 +30,138 @@
                         allow="autoplay; fullscreen; xr-spatial-tracking">
                     </iframe>
                 </div>
-                <p class="text-gray-400 text-sm italic text-center">The voltmeter used to measure the electrical potential difference</p>
+                <p class="text-gray-400 text-sm italic text-center">Voltmeter: Used to measure electrical potential difference (Voltage)</p>
             </div>
 
             <div class="bg-[#1e293b] rounded-3xl border border-gray-700 p-8 shadow-xl overflow-y-auto h-[500px] custom-scrollbar">
                 <div class="flex items-center gap-3 mb-6">
                     <div class="w-3 h-8 bg-blue-500 rounded-full"></div>
-                    <h2 class="text-2xl font-bold text-blue-400 italic">Fundamentals of Electricity - Lecture One</h2>
+                    <h2 class="text-2xl font-bold text-blue-400 italic font-serif">Voltage & Ohm's Law - Lecture 01</h2>
                 </div>
-
                 <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
-                    <div class="bg-blue-900/20 p-4 rounded-xl border-r-4 border-blue-500">
-                        <p class="font-bold text-white mb-2">Objectives of the Virtual Lab:</p>
-                        <p class="text-sm">This section is dedicated to understanding how measuring instruments work and connecting them to the theoretical aspect presented by Dr. Zahraa Hashem..</p>
+                    <div class="bg-blue-900/20 p-4 rounded-xl border-l-4 border-blue-500">
+                        <p class="font-bold text-white mb-2 underline">Virtual Lab Objectives:</p>
+                        <p class="text-sm italic">Understand the operation of measuring instruments as presented by Dr. Zahraa Hashem.</p>
                     </div>
-
-                    <div class="space-y-4">
-                        <h3 class="text-xl font-bold text-white italic border-b border-gray-700 pb-2 italic text-blue-300">1. (Electric Current)</h3>
-                        <p>It is the rate of flow of electric charge through a specific point in the circuit. It is denoted by the symbol <span class="text-yellow-400 font-bold">$I$</span> It is measured in amperes. (Ampere).</p>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-bold text-blue-300 italic border-b border-gray-700 pb-1">1. Electric Current (I)</h3>
+                        <p class="text-base">The rate of flow of electric charge through a point in the circuit. Measured in <span class="text-yellow-400 font-bold">Amperes (A)</span>.</p>
                     </div>
-
-                    <div class="space-y-4">
-                        <h3 class="text-xl font-bold text-white italic border-b border-gray-700 pb-2 italic text-blue-300">2.Electric voltage (Voltage)</h3>
-                        <p>It is known as the voltage between two points, and it is the force that drives electrons to move. It is symbolized by the symbol <span class="text-yellow-400 font-bold">$V$</span> ويقاس بوحدة الفولت.</p>
-                        
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-bold text-blue-300 italic border-b border-gray-700 pb-1">2. Electric Voltage (V)</h3>
+                        <p class="text-base">The potential difference between two points; the force that drives electrons. Measured in <span class="text-yellow-400 font-bold">Volts (V)</span>.</p>
                     </div>
-
-                    <div class="bg-gray-800/50 p-6 rounded-2xl border border-dashed border-gray-600">
-                        <p class="text-sm font-bold mb-2">Important note for engineersن:</p>
-                        <p class="text-sm italic italic">"The current is directly proportional to the voltage when the resistance is constant, and this is what is called Ohm's law.."</p>
+                    <div class="bg-gray-800/50 p-5 rounded-2xl border border-dashed border-gray-600">
+                        <p class="text-sm font-bold text-white mb-2">Engineering Note:</p>
+                        <p class="text-sm italic">"Current is directly proportional to voltage when resistance is constant ($I \propto V$)."</p>
                     </div>
                 </div>
             </div>
-
         </div>
 
-        <div class="mt-12 bg-gradient-to-r from-blue-900/40 to-transparent p-8 rounded-3xl border border-blue-500/20">
-            <h3 class="text-xl font-bold mb-4 italic italic text-blue-400 text-center uppercase tracking-widest text-center italic">Connecting devices in the laboratory</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                 <div class="text-center space-y-2">
-                    <p class="text-red-400 font-bold">Voltmeter Connection</p>
-                    <p class="text-sm">يوصل دائماً على التوازي (Parallel Connection)</p>
+        <div class="bg-gradient-to-r from-blue-900/40 to-transparent p-8 rounded-3xl border border-blue-500/20 mb-12">
+            <h3 class="text-xl font-bold mb-6 text-blue-400 text-center uppercase tracking-widest italic">Laboratory Connection Protocols</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                 <div class="p-4 bg-red-900/10 rounded-xl border border-red-500/30">
+                    <p class="text-red-400 font-bold text-lg mb-1 italic">Voltmeter</p>
+                    <p class="text-sm text-gray-400">Must be connected in <span class="text-white font-bold">PARALLEL</span></p>
                  </div>
-                 <div class="text-center space-y-2">
-                    <p class="text-green-400 font-bold">Ammeter Connection</p>
-                    <p class="text-sm">يوصل دائماً على التوالي (Series Connection)</p>
+                 <div class="p-4 bg-green-900/10 rounded-xl border border-green-500/30">
+                    <p class="text-green-400 font-bold text-lg mb-1 italic">Ammeter</p>
+                    <p class="text-sm text-gray-400">Must be connected in <span class="text-white font-bold">SERIES</span></p>
                  </div>
             </div>
-            
         </div>
 
-    </main<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
-    
-    <div class="space-y-4 order-1 lg:order-2"> <div class="bg-black rounded-3xl border-2 border-green-500/50 shadow-[0_0_20px_rgba(34,197,94,0.2)] overflow-hidden h-[500px] relative">
-            <div class="absolute top-4 left-4 z-10 bg-green-600/80 backdrop-blur px-3 py-1 rounded-md text-xs">عرض تفاعلي 3D</div>
-            
-            <iframe 
-                class="w-full h-full"
-                src="https://sketchfab.com/models/0ed72ff930fd40b5b11c813e08e701ab/embed?autostart=1" 
-                allowfullscreen 
-                allow="autoplay; fullscreen; xr-spatial-tracking">
-            </iframe>
-        </div>
-        <p class="text-gray-400 text-sm italic text-center">جهاز الأميتر المستخدم في قياس شدة التيار الكهربائي</p>
-    </div>
-
-    <div class="bg-[#1e293b] rounded-3xl border border-gray-700 p-8 shadow-xl overflow-y-auto h-[500px] order-2 lg:order-1">
-        <div class="flex items-center gap-3 mb-6">
-            <div class="w-3 h-8 bg-green-500 rounded-full"></div>
-            <h2 class="text-2xl font-bold text-green-400 italic">الأميتر (Ammeter) - المحاضرة الأولى</h2>
-        </div>
-
-        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
-            <div class="bg-green-900/20 p-4 rounded-xl border-r-4 border-green-500">
-                <p class="font-bold text-white mb-2">تعريف الجهاز:</p>
-                <p class="text-sm">الأميتر هو جهاز يُستخدم لقياس شدة التيار الكهربائي ($I$) الذي يتدفق في الدائرة المغلقة.</p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div class="bg-[#1e293b] rounded-3xl border border-gray-700 p-8 shadow-xl overflow-y-auto h-[500px] order-2 lg:order-1 custom-scrollbar">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-3 h-8 bg-green-500 rounded-full"></div>
+                    <h2 class="text-2xl font-bold text-green-400 italic font-serif">Ammeter & Current Measurement</h2>
+                </div>
+                <div class="space-y-6 text-gray-300 text-lg">
+                    <div class="bg-green-900/20 p-4 rounded-xl border-l-4 border-green-500">
+                        <p class="font-bold text-white mb-1 underline">Device Definition:</p>
+                        <p class="text-sm italic">An instrument used to measure the intensity of the electric current ($I$) flowing in a closed circuit.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-green-300 italic border-b border-gray-700 pb-1">Connection Method (Page 12)</h3>
+                        <p class="text-base font-semibold italic text-white underline decoration-green-500">Always connect in SERIES with the load.</p>
+                        <div class="bg-red-900/30 p-4 rounded-lg border border-red-900/50">
+                            <p class="text-xs font-bold text-red-400 mb-1">PRO-TIP / WARNING:</p>
+                            <p class="text-xs italic leading-tight text-gray-200">Never connect an ammeter in parallel with the source; its very low internal resistance will cause a Short Circuit!</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-bold text-green-300 italic border-b border-gray-700 pb-1">Ohm's Relationship</h3>
+                        <p class="text-base italic">Current is <span class="text-white font-bold">inversely</span> proportional to Resistance ($I \propto 1/R$). High resistance results in lower current readings.</p>
+                    </div>
+                </div>
             </div>
-
-            <div class="space-y-4 text-sm">
-                <h3 class="text-xl font-bold text-white italic border-b border-gray-700 pb-2 text-green-300">طريقة الربط (ص 12 في المحاضرة)</h3>
-                <p>يجب ربط الأميتر دائماً على **التوالي (Series Connection)** مع الحمل أو المقاومة المراد قياس تيارها.</p>
-                <p class="bg-gray-800 p-3 rounded-lg border border-gray-700">
-                    <span class="text-red-400 font-bold">تحذير مهني:</span> لا تقم أبداً بربط الأميتر على التوازي مع المصدر، لأن مقاومته الداخلية صغيرة جداً مما قد يؤدي لـ Short Circuit.
-                </p>
+            <div class="space-y-4 order-1 lg:order-2">
+                <div class="bg-black rounded-3xl border-2 border-green-500/50 shadow-[0_0_20px_rgba(34,197,94,0.2)] overflow-hidden h-[500px] relative">
+                    <div class="absolute top-4 left-4 z-10 bg-green-600/80 backdrop-blur px-3 py-1 rounded-md text-xs font-bold uppercase">3D Ammeter View</div>
+                    <iframe 
+                        class="w-full h-full"
+                        src="https://sketchfab.com/models/0ed72ff930fd40b5b11c813e08e701ab/embed?autostart=1" 
+                        allowfullscreen 
+                        allow="autoplay; fullscreen; xr-spatial-tracking">
+                    </iframe>
+                </div>
+                <p class="text-gray-400 text-sm italic text-center italic">Ammeter: Visualizing current intensity in real-time</p>
             </div>
+        </div>
 
-            
-
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             <div class="space-y-4">
-                <h3 class="text-xl font-bold text-white italic border-b border-gray-700 pb-2 text-green-300">العلاقة مع المقاومة</h3>
-                <p>تذكر من قانون أوم أن التيار يتناسب **عكسياً** مع المقاومة ($I \propto 1/R$). كلما زادت مقاومة الدائرة، قلّ التيار الذي يسجله الأميتر.</p>
+                <div class="bg-black rounded-3xl border-2 border-purple-500/50 shadow-[0_0_20px_rgba(168,85,247,0.2)] overflow-hidden h-[500px] relative">
+                    <div class="absolute top-4 left-4 z-10 bg-purple-600/80 backdrop-blur px-3 py-1 rounded-md text-xs font-bold uppercase">3D Universal Device</div>
+                    <iframe 
+                        class="w-full h-full"
+                        src="https://sketchfab.com/models/a64ea082043542e1a6baf8b816217891/embed?autostart=1" 
+                        allowfullscreen 
+                        allow="autoplay; fullscreen; xr-spatial-tracking">
+                    </iframe>
+                </div>
+                <p class="text-gray-400 text-sm italic text-center">Digital Multimeter: Measuring Resistance, Voltage, and Current</p>
+            </div>
+            <div class="bg-[#1e293b] rounded-3xl border border-gray-700 p-8 shadow-xl overflow-y-auto h-[500px] custom-scrollbar">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-3 h-8 bg-purple-500 rounded-full"></div>
+                    <h2 class="text-2xl font-bold text-purple-400 italic font-serif italic">Multimeter & Resistance (R)</h2>
+                </div>
+                <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
+                    <div class="bg-purple-900/20 p-4 rounded-xl border-l-4 border-purple-500">
+                        <p class="font-bold text-white mb-1 underline">Why use a Multimeter?</p>
+                        <p class="text-sm italic italic leading-relaxed">It allows AI Engineers to verify resistor values and check for continuity in complex circuit boards.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-purple-300 italic border-b border-gray-700 pb-1">Ohm ($\Omega$) Measurement Setup</h3>
+                        <p class="text-sm italic">1. Turn the dial to the Ohm symbol (**$\Omega$**).<br>
+                        2. Connect Red lead to ($V\Omega$) and Black to (COM).<br>
+                        3. Touch the probes to both ends of the resistor.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-purple-300 italic border-b border-gray-700 pb-1">Golden Rule (Page 13)</h3>
+                        <p class="text-sm italic">Resistance is a physical property of the material and depends on:</p>
+                        <ul class="list-disc ml-5 text-sm space-y-1 font-semibold italic">
+                            <li>Resistivity (Material type).</li>
+                            <li>Length of the conductor.</li>
+                            <li>Cross-sectional area.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-purple-500/10 p-4 rounded-xl border border-purple-500/30 text-center">
+                        <p class="text-xs text-purple-300 italic tracking-widest font-bold underline italic">"Resistance acts as the guardian, preventing current surges that could damage sensors."</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12 mb-12">
-    
-    <div class="space-y-4">
-        <div class="bg-black rounded-3xl border-2 border-purple-500/50 shadow-[0_0_20px_rgba(168,85,247,0.2)] overflow-hidden h-[500px] relative">
-            <div class="absolute top-4 left-4 z-10 bg-purple-600/80 backdrop-blur px-3 py-1 rounded-md text-xs">جهاز شامل 3D</div>
-            
-            <iframe 
-                class="w-full h-full"
-                src="https://sketchfab.com/models/a64ea082043542e1a6baf8b816217891/embed?autostart=1" 
-                allowfullscreen 
-                allow="autoplay; fullscreen; xr-spatial-tracking">
-            </iframe>
-        </div>
-        <p class="text-gray-400 text-sm italic text-center">جهاز المولتيميتر الرقمي لقياس المقاومة والجهد والتيار</p>
-    </div>
 
-    <div class="bg-[#1e293b] rounded-3xl border border-gray-700 p-8 shadow-xl overflow-y-auto h-[500px] custom-scrollbar">
-        <div class="flex items-center gap-3 mb-6">
-            <div class="w-3 h-8 bg-purple-500 rounded-full"></div>
-            <h2 class="text-2xl font-bold text-purple-400 italic">المولتيميتر وقياس المقاومة (Resistance)</h2>
-        </div>
+    </main>
 
-        <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
-            <div class="bg-purple-900/20 p-4 rounded-xl border-r-4 border-purple-500">
-                <p class="font-bold text-white mb-2">لماذا نستخدم المولتيميتر؟</p>
-                <p class="text-sm">يسمح هذا الجهاز للمهندس بالتحقق من قيمة المقاومات (Resistors) والتأكد من سلامة التوصيلات (Continuity Test) في دوائر الذكاء الاصطناعي.</p>
-            </div>
-
-            <div class="space-y-4">
-                <h3 class="text-xl font-bold text-white italic border-b border-gray-700 pb-2 text-purple-300">كيفية ضبط الجهاز لقياس الأوم ($\Omega$)</h3>
-                <p class="text-sm">1. يتم تحويل المفتاح الدوار إلى علامة الأوم (**$\Omega$**).<br>
-                2. نضع السلك الأحمر في منفذ ($V\Omega$) والأسود في منفذ (COM).<br>
-                3. نقوم بلمس طرفي المقاومة بقطبي الجهاز.</p>
-            </div>
-
-            
-
-            <div class="space-y-4">
-                <h3 class="text-xl font-bold text-white italic border-b border-gray-700 pb-2 text-purple-300">قاعدة ذهبية من المحاضرة (ص 13)</h3>
-                <p class="text-sm">المقاومة لا تعتمد على الجهد أو التيار المسلط عليها، بل هي خاصية فيزيائية للمادة تعتمد على:</p>
-                <ul class="list-disc pr-5 text-sm space-y-1">
-                    <li>نوع المادة (Resistivity).</li>
-                    <li>طول الموصل (Length).</li>
-                    <li>مساحة المقطع (Cross-sectional area).</li>
-                </ul>
-            </div>
-
-            <div class="bg-purple-500/10 p-4 rounded-xl border border-purple-500/30 text-center">
-                <p class="text-xs text-purple-300 italic">"المقاومة هي الحارس الذي يمنع التيار من الاندفاع بشكل قد يحرق الحساسات (Sensors)."</p>
-            </div>
-        </div>
-    </div>
-</div>
-    <footer class="p-8 text-center text-gray-500 text-xs italic tracking-widest">
-        UNIVERSITY OF THE FUTURE | AI ENGINEERING DEPARTMENT
+    <footer class="p-8 text-center text-gray-500 text-xs italic tracking-widest border-t border-gray-800">
+        UNIVERSITY OF THE FUTURE | DEPARTMENT OF AI ENGINEERING
     </footer>
 
 </body>
 </html>
-
-
-
-
-
-
