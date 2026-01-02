@@ -3,149 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Engineering Portal | Home</title>
+    <title>AI Engineering Portal | Premium Look</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.3/dist/flowbite.min.css" rel="stylesheet" />
     <style>
-        /* استيراد خطوط تدعم الانكليزية والعربية ببراعة */
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Noto+Sans+Arabic:wght@400;700&display=swap');
+        /* استيراد خطوط تشبه الصورة (Lora للعناوين و Inter للنصوص) */
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;600&family=Noto+Sans+Arabic:wght@400;700&display=swap');
         
         body {
             font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
             background: radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%);
             background-attachment: fixed;
-            min-height: 100vh;
-        }
-        .heading-font { font-family: 'Orbitron', 'Noto Sans Arabic', sans-serif; }
-        
-        .glass-nav {
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+            color: #f8fafc;
         }
 
-        .hero-card {
-            background: rgba(30, 41, 59, 0.4);
-            backdrop-filter: blur(10px);
+        /* هذا هو الخط الذي يشبه الصورة تماماً */
+        .premium-serif {
+            font-family: 'Lora', serif;
+            letter-spacing: -0.02em; /* تقريب الأحرف مثل الصورة */
+            line-height: 1.1;
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(12px);
             border: 1px solid rgba(56, 189, 248, 0.1);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: 0.4s ease-out;
         }
 
-        .hero-card:hover {
-            border-color: #38bdf8;
-            transform: translateY(-10px);
-            box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
-        }
-
-        .btn-cyber {
-            background: linear-gradient(90deg, #0ea5e9, #2563eb);
-            box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
-            transition: 0.3s;
-        }
-
-        .btn-cyber:hover {
-            box-shadow: 0 0 25px rgba(14, 165, 233, 0.6);
-            transform: scale(1.05);
+        .glass-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            background: rgba(15, 23, 42, 0.6);
         }
     </style>
 </head>
-<body class="text-slate-200">
+<body class="antialiased">
 
-<nav class="glass-nav fixed w-full z-50 top-0">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="#" class="flex items-center space-x-3 group">
-      <div class="w-10 h-10 bg-sky-500 rounded-lg flex items-center justify-center group-hover:rotate-90 transition duration-500 shadow-[0_0_15px_rgba(56,189,248,0.5)]">
-        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5-10-5-10 5zM2 17l10 5 10-5-10-5-10 5z"></path></svg>
-      </div>
-      <span class="heading-font self-center text-xl font-bold text-white tracking-tighter uppercase">AI <span class="text-sky-400">Hub</span></span>
-    </a>
+    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="text-2xl font-bold tracking-tighter">AI <span class="text-sky-500">HUB</span></div>
+        <div class="hidden md:flex gap-8 text-xs font-semibold uppercase tracking-widest text-slate-400">
+            <a href="#" class="hover:text-white transition">Home</a>
+            <a href="#" class="hover:text-white transition">Library</a>
+            <a href="#" class="hover:text-white transition">Contact</a>
+        </div>
+    </nav>
 
-    <button data-collapse-toggle="main-menu" type="button" class="inline-flex items-center p-2 text-sky-500 rounded-lg md:hidden">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-    </button>
-
-    <div class="hidden w-full md:block md:w-auto" id="main-menu">
-      <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 font-bold text-xs tracking-widest uppercase">
-        <li><a href="#" class="block py-2 px-3 text-sky-400 border-b-2 border-sky-500">Home</a></li>
-        <li><a href="library.html" class="block py-2 px-3 hover:text-sky-400 transition">Digital Library</a></li>
-        <li><a href="ContactWithUs.html" class="block py-2 px-3 hover:text-sky-400 transition">Contact Us</a></li>
-        <li><a href="about.html" class="block py-2 px-3 hover:text-sky-400 transition">About Us</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<header class="pt-48 pb-24 relative overflow-hidden text-center">
-    <div class="relative z-10 px-4">
-        <h1 class="heading-font text-4xl md:text-6xl font-black text-white mb-4 drop-shadow-[0_0_20px_rgba(56,189,248,0.4)] uppercase">
-            AI Engineering <span class="text-sky-400 block md:inline">Portal</span>
+    <section class="max-w-5xl mx-auto pt-32 pb-20 px-6">
+        <h1 class="premium-serif text-5xl md:text-7xl mb-8 max-w-3xl">
+            Artificial intelligence <span class="italic text-sky-400">engineering</span> that feels like the future.
         </h1>
-        <p class="text-sky-200/60 max-w-2xl mx-auto italic font-light tracking-wide text-sm md:text-base">
-            Empowering the next generation of engineers with digital tools and advanced AI resources.
+        <p class="text-lg text-slate-400 max-w-xl leading-relaxed">
+            بوابة هندسية متطورة توفر لك كافة المصادر، المختبرات، والتقارير في مكان واحد.
         </p>
-        <div class="mt-8 flex justify-center gap-2">
-            <span class="h-1 w-12 bg-sky-500 rounded-full animate-pulse"></span>
-            <span class="h-1 w-4 bg-sky-500/30 rounded-full"></span>
-        </div>
-    </div>
-</header>
+    </section>
 
-<main class="max-w-screen-xl mx-auto p-6 md:p-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-        <div class="hero-card rounded-[2rem] p-8 relative overflow-hidden group">
-            <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:scale-125 transition duration-500 rotate-12">
-                <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/></svg>
-            </div>
-            <h2 class="heading-font text-2xl font-bold text-sky-400 mb-4 uppercase">Core Mathematics</h2>
-            <p class="text-slate-400 mb-6 text-sm leading-relaxed">Roadmap for Linear Algebra, Calculus, and Probability designed for AI systems.</p>
-            <a href="#" class="btn-cyber inline-block text-white text-[10px] font-black px-8 py-3 rounded-xl tracking-widest uppercase">Explore Roadmap</a>
+    <main class="max-w-7xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="glass-card p-10 rounded-3xl group">
+            <h2 class="premium-serif text-3xl mb-4 group-hover:text-sky-400 transition">Core Mathematics</h2>
+            <p class="text-slate-400 text-sm mb-6 leading-relaxed italic">
+                خارطة طريق شاملة لمواد الرياضيات الهندسية.
+            </p>
+            <div class="h-[1px] w-12 bg-sky-500 mb-6 group-hover:w-full transition-all duration-700"></div>
+            <a href="#" class="text-xs font-bold uppercase tracking-widest text-sky-500 hover:text-white">Explore Roadmap →</a>
         </div>
 
-        <div class="hero-card rounded-[2rem] p-8 relative overflow-hidden group border-indigo-500/20">
-            <h2 class="heading-font text-2xl font-bold text-indigo-400 mb-4 uppercase">Deep Learning Gear</h2>
-            <p class="text-slate-400 mb-6 text-sm leading-relaxed">A guide to choosing the best laptops and GPUs for training complex neural networks.</p>
-            <a href="#" class="btn-cyber inline-block text-white text-[10px] font-black px-8 py-3 rounded-xl tracking-widest uppercase">Hardware Guide</a>
-        </div>
-
-        <div class="hero-card rounded-[2rem] p-8 relative overflow-hidden group border-green-500/20">
-            <div class="flex items-center gap-2 mb-4">
-                <span class="flex h-3 w-3 rounded-full bg-green-500 animate-pulse shadow-[0_0_10px_#22c55e]"></span>
-                <h2 class="heading-font text-2xl font-bold text-green-400 uppercase">Electricity Basics</h2>
-            </div>
-            <p class="text-slate-400 mb-6 text-sm leading-relaxed">Fundamental concepts, 3D measurements, and laboratory tutorials for Level 1 students.</p>
-            <a href="electricity.html" class="btn-cyber inline-block text-white text-[10px] font-black px-8 py-3 rounded-xl tracking-widest uppercase">Enter Lab</a>
-        </div>
-
-        <div class="hero-card rounded-[2rem] p-8 relative overflow-hidden group border-purple-500/20 shadow-inner">
-            <h2 class="heading-font text-2xl font-bold text-purple-400 mb-4 uppercase">Student Reports</h2>
-            <p class="text-slate-400 mb-6 text-sm leading-relaxed">Showcasing team activities, research reports, and distinguished university projects.</p>
-            <button onclick="checkAccess()" class="btn-cyber inline-block text-white text-[10px] font-black px-8 py-3 rounded-xl tracking-widest uppercase flex items-center gap-2">
-                Unlock Archives <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2V7a5 5 0 00-5-5zM7 7a3 3 0 116 0v2H7V7z"></path></svg>
+        <div class="glass-card p-10 rounded-3xl group relative overflow-hidden">
+            <h2 class="premium-serif text-3xl mb-4 group-hover:text-purple-400 transition">Student Reports</h2>
+            <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                قسم التقارير والنشاطات الطلابية المحمي.
+            </p>
+            <div class="h-[1px] w-12 bg-purple-500 mb-6 group-hover:w-full transition-all duration-700"></div>
+            <button onclick="checkAccess()" class="text-xs font-bold uppercase tracking-widest text-purple-400 hover:text-white">
+                Unlock Archives 🔒
             </button>
         </div>
 
-    </div>
-</main>
+    </main>
 
-<footer class="mt-20 border-t border-sky-500/20 py-12 text-center">
-    <p class="text-sky-500/40 text-[10px] tracking-[0.5em] uppercase font-bold">University of the Future | AI Engineering Lab v2.5</p>
-</footer>
-
-<script>
-    function checkAccess() {
-        const password = "19711971"; 
-        const userInput = prompt("Access Restricted! Please enter authentication code:");
-
-        if (userInput === password) {
-            alert("Success! Transmitting data...");
-            window.location.href = "report.html";
-        } else if (userInput != null) {
-            alert("Access Denied! Incorrect Code.");
+    <script>
+        function checkAccess() {
+            const password = "19711971"; 
+            const userInput = prompt("Access Restricted! Enter Auth Code:");
+            if (userInput === password) {
+                alert("Access Granted.");
+                window.location.href = "report.html";
+            } else if (userInput != null) {
+                alert("Incorrect Code.");
+            }
         }
-    }
-</script>
+    </script>
 
-<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.3/dist/flowbite.min.js"></script>
 </body>
 </html>
