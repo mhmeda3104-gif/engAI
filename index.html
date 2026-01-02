@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artificial Intelligence Engineering Portal | main</title>
+    <title>AI Engineering Portal | Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.3/dist/flowbite.min.css" rel="stylesheet" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Noto+Sans+Arabic:wght@300;400;700&display=swap');
+        /* استيراد خطوط تدعم الانكليزية والعربية ببراعة */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Noto+Sans+Arabic:wght@400;700&display=swap');
         
         body {
-            font-family: 'Noto Sans Arabic', sans-serif;
+            font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
             background: radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%);
             background-attachment: fixed;
             min-height: 100vh;
@@ -52,11 +53,11 @@
 
 <nav class="glass-nav fixed w-full z-50 top-0">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse group">
+    <a href="#" class="flex items-center space-x-3 group">
       <div class="w-10 h-10 bg-sky-500 rounded-lg flex items-center justify-center group-hover:rotate-90 transition duration-500 shadow-[0_0_15px_rgba(56,189,248,0.5)]">
-        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5-10-5-10 5z"></path></svg>
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5-10-5-10 5zM2 17l10 5 10-5-10-5-10 5z"></path></svg>
       </div>
-      <span class="heading-font self-center text-xl font-bold text-white tracking-tighter">AI <span class="text-sky-400">HUB</span></span>
+      <span class="heading-font self-center text-xl font-bold text-white tracking-tighter uppercase">AI <span class="text-sky-400">Hub</span></span>
     </a>
 
     <button data-collapse-toggle="main-menu" type="button" class="inline-flex items-center p-2 text-sky-500 rounded-lg md:hidden">
@@ -64,23 +65,23 @@
     </button>
 
     <div class="hidden w-full md:block md:w-auto" id="main-menu">
-      <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse font-bold text-sm tracking-wide">
-        <li><a href="#" class="block py-2 px-3 text-sky-400 border-b-2 border-sky-500">الرئيسية</a></li>
-        <li><a href="library.html" class="block py-2 px-3 hover:text-sky-400 transition">المكتبة الرقمية</a></li>
-        <li><a href="ContactWithUs.html" class="block py-2 px-3 hover:text-sky-400 transition">تواصل معنا</a></li>
-        <li><a href="about.html" class="block py-2 px-3 hover:text-sky-400 transition">من نحن</a></li>
+      <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 font-bold text-xs tracking-widest uppercase">
+        <li><a href="#" class="block py-2 px-3 text-sky-400 border-b-2 border-sky-500">Home</a></li>
+        <li><a href="library.html" class="block py-2 px-3 hover:text-sky-400 transition">Digital Library</a></li>
+        <li><a href="ContactWithUs.html" class="block py-2 px-3 hover:text-sky-400 transition">Contact Us</a></li>
+        <li><a href="about.html" class="block py-2 px-3 hover:text-sky-400 transition">About Us</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<header class="pt-40 pb-20 relative overflow-hidden text-center">
+<header class="pt-48 pb-24 relative overflow-hidden text-center">
     <div class="relative z-10 px-4">
-        <h1 class="heading-font text-3xl md:text-6xl font-black text-white mb-4 drop-shadow-[0_0_20px_rgba(56,189,248,0.4)]">
-            بوابة هندسة <span class="text-sky-400 text-6xl">الذكاء الاصطناعي</span>
+        <h1 class="heading-font text-4xl md:text-6xl font-black text-white mb-4 drop-shadow-[0_0_20px_rgba(56,189,248,0.4)] uppercase">
+            AI Engineering <span class="text-sky-400 block md:inline">Portal</span>
         </h1>
-        <p class="text-sky-200/60 max-w-2xl mx-auto italic font-light tracking-wide">
-            تمكين جيل المهندسين القادم بالأدوات الرقمية والمصادر المتقدمة.
+        <p class="text-sky-200/60 max-w-2xl mx-auto italic font-light tracking-wide text-sm md:text-base">
+            Empowering the next generation of engineers with digital tools and advanced AI resources.
         </p>
         <div class="mt-8 flex justify-center gap-2">
             <span class="h-1 w-12 bg-sky-500 rounded-full animate-pulse"></span>
@@ -93,52 +94,54 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
         <div class="hero-card rounded-[2rem] p-8 relative overflow-hidden group">
-            <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:scale-125 transition duration-500">
+            <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:scale-125 transition duration-500 rotate-12">
                 <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/></svg>
             </div>
-            <h2 class="text-2xl font-bold text-sky-400 mb-4">الرياضيات الأساسية</h2>
-            <p class="text-slate-400 mb-6 text-sm leading-relaxed">خارطة طريق لتعلم الجبر الخطي والتفاضل والتكامل الموجه لأنظمة الذكاء الاصطناعي.</p>
-            <a href="#" class="btn-cyber inline-block text-white text-xs font-bold px-8 py-3 rounded-xl tracking-widest uppercase">تصفح الخارطة</a>
+            <h2 class="heading-font text-2xl font-bold text-sky-400 mb-4 uppercase">Core Mathematics</h2>
+            <p class="text-slate-400 mb-6 text-sm leading-relaxed">Roadmap for Linear Algebra, Calculus, and Probability designed for AI systems.</p>
+            <a href="#" class="btn-cyber inline-block text-white text-[10px] font-black px-8 py-3 rounded-xl tracking-widest uppercase">Explore Roadmap</a>
         </div>
 
         <div class="hero-card rounded-[2rem] p-8 relative overflow-hidden group border-indigo-500/20">
-            <h2 class="text-2xl font-bold text-indigo-400 mb-4">عتاد التعلم العميق</h2>
-            <p class="text-slate-400 mb-6 text-sm leading-relaxed">كيف تختار الحاسوب المحمول المثالي لتدريب الشبكات العصبية الثقيلة والمعالجات الرسومية؟</p>
-            <a href="#" class="btn-cyber inline-block text-white text-xs font-bold px-8 py-3 rounded-xl tracking-widest uppercase">دليل العتاد</a>
+            <h2 class="heading-font text-2xl font-bold text-indigo-400 mb-4 uppercase">Deep Learning Gear</h2>
+            <p class="text-slate-400 mb-6 text-sm leading-relaxed">A guide to choosing the best laptops and GPUs for training complex neural networks.</p>
+            <a href="#" class="btn-cyber inline-block text-white text-[10px] font-black px-8 py-3 rounded-xl tracking-widest uppercase">Hardware Guide</a>
         </div>
 
         <div class="hero-card rounded-[2rem] p-8 relative overflow-hidden group border-green-500/20">
             <div class="flex items-center gap-2 mb-4">
-                <span class="flex h-3 w-3 rounded-full bg-green-500 animate-pulse"></span>
-                <h2 class="text-2xl font-bold text-green-400">أسس الكهرباء</h2>
+                <span class="flex h-3 w-3 rounded-full bg-green-500 animate-pulse shadow-[0_0_10px_#22c55e]"></span>
+                <h2 class="heading-font text-2xl font-bold text-green-400 uppercase">Electricity Basics</h2>
             </div>
-            <p class="text-slate-400 mb-6 text-sm leading-relaxed">المفاهيم الأساسية، القياسات ثلاثية الأبعاد، وتجارب المختبر لطلاب المرحلة الأولى.</p>
-            <a href="electricity.html" class="btn-cyber inline-block text-white text-xs font-bold px-8 py-3 rounded-xl tracking-widest uppercase">دخول المختبر</a>
+            <p class="text-slate-400 mb-6 text-sm leading-relaxed">Fundamental concepts, 3D measurements, and laboratory tutorials for Level 1 students.</p>
+            <a href="electricity.html" class="btn-cyber inline-block text-white text-[10px] font-black px-8 py-3 rounded-xl tracking-widest uppercase">Enter Lab</a>
         </div>
 
-        <div class="hero-card rounded-[2rem] p-8 relative overflow-hidden group border-purple-500/20">
-            <h2 class="text-2xl font-bold text-purple-400">تقارير الفرق</h2>
-            <p class="text-slate-400 mb-6 text-sm leading-relaxed">استعراض نشاطات المجموعات، التقارير البحثية، والمشاريع الجامعية المتميزة.</p>
-            <button onclick="checkAccess()" class="btn-cyber inline-block text-white text-xs font-bold px-8 py-3 rounded-xl tracking-widest uppercase">فتح الأرشيف 🔒</button>
+        <div class="hero-card rounded-[2rem] p-8 relative overflow-hidden group border-purple-500/20 shadow-inner">
+            <h2 class="heading-font text-2xl font-bold text-purple-400 mb-4 uppercase">Student Reports</h2>
+            <p class="text-slate-400 mb-6 text-sm leading-relaxed">Showcasing team activities, research reports, and distinguished university projects.</p>
+            <button onclick="checkAccess()" class="btn-cyber inline-block text-white text-[10px] font-black px-8 py-3 rounded-xl tracking-widest uppercase flex items-center gap-2">
+                Unlock Archives <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2V7a5 5 0 00-5-5zM7 7a3 3 0 116 0v2H7V7z"></path></svg>
+            </button>
         </div>
 
     </div>
 </main>
 
-<footer class="mt-20 border-t border-sky-500/20 py-10 text-center">
-    <p class="text-sky-500/40 text-[10px] tracking-[0.6em] uppercase font-bold">جامعة المستقبل | مختبر هندسة الذكاء الاصطناعي</p>
+<footer class="mt-20 border-t border-sky-500/20 py-12 text-center">
+    <p class="text-sky-500/40 text-[10px] tracking-[0.5em] uppercase font-bold">University of the Future | AI Engineering Lab v2.5</p>
 </footer>
 
 <script>
     function checkAccess() {
         const password = "19711971"; 
-        const userInput = prompt("قسم التقارير محمي! أدخل كود المصادقة للدخول:");
+        const userInput = prompt("Access Restricted! Please enter authentication code:");
 
         if (userInput === password) {
-            alert("تم التحقق بنجاح! يتم الآن فتح الأرشيف...");
+            alert("Success! Transmitting data...");
             window.location.href = "report.html";
         } else if (userInput != null) {
-            alert("كود خاطئ! الدخول غير مصرح به.");
+            alert("Access Denied! Incorrect Code.");
         }
     }
 </script>
@@ -146,6 +149,3 @@
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.3/dist/flowbite.min.js"></script>
 </body>
 </html>
-
-
-
