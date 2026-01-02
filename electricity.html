@@ -6,95 +6,128 @@
     <title>أسس الكهرباء - هندسة الذكاء الاصطناعي</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.3/dist/flowbite.min.css" rel="stylesheet" />
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
     
     <style>
-        .model-box {
+        /* حاوية الموديل لضمان ملء الإطار بالكامل */
+        .embed-container {
+            position: relative;
             width: 100%;
-            height: 350px;
-            background: #111827;
+            padding-top: 75%; /* نسبة الأبعاد */
+            background: #000;
             border-radius: 1rem;
-            border: 2px solid #3b82f6;
+            overflow: hidden;
+        }
+        .embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
     </style>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
 
-<nav class="bg-white border-b border-gray-200 dark:bg-gray-800 fixed w-full z-50 top-0">
+<nav class="bg-white border-b border-gray-200 dark:bg-gray-800 fixed w-full z-50 top-0 shadow-sm">
   <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
-    <span class="text-xl font-bold text-yellow-400">أسس الهندسة الكهربائية</span>
-    <a href="index.html" class="text-sm text-sky-500 hover:underline">العودة للرئيسية</a>
+    <span class="text-xl font-bold text-yellow-500 flex items-center gap-2">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        أسس الهندسة الكهربائية
+    </span>
+    <a href="index.html" class="text-sm font-medium text-sky-500 hover:text-sky-600 transition">العودة للرئيسية ←</a>
   </div>
 </nav>
 
-<main class="max-w-screen-xl mx-auto px-4 pt-24 pb-12">
+<main class="max-w-screen-xl mx-auto px-4 pt-28 pb-12">
     
-    <header class="text-center mb-10">
-        <h1 class="text-3xl font-extrabold mb-2">مختبر القياسات <span class="text-yellow-400">الافتراضي</span></h1>
-        <p class="text-gray-500 italic">تعرف على أجهزة القياس الأساسية المستخدمة في الدوائر الكهربائية</p>
+    <header class="text-center mb-12">
+        <h1 class="text-4xl font-black mb-4">أجهزة القياس <span class="text-yellow-500 underline decoration-sky-500">الكهربائية</span></h1>
+        <p class="text-gray-500 max-w-2xl mx-auto">استكشف الأجهزة المستخدمة في مختبرات الجامعة لقياس التيار والجهد والمقاومة بشكل تفاعلي.</p>
     </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         
-        <div class="flex flex-col items-center">
-            <h3 class="font-bold mb-2">الفولتميتر (Voltmeter)</h3>
-            <div class="model-box">
-                <model-viewer 
-                    src="https://sketchfab.com/3d-models/voltmeter-electronic-device-48a737b7b0a14f6e925dd2efe0baa6f4" 
-                    alt="Voltmeter 3D" camera-controls auto-rotate style="width:100%; height:100%;">
-                </model-viewer>
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700">
+            <h3 class="text-lg font-bold mb-3 text-center">الفولتميتر (Analog Voltmeter)</h3>
+            <div class="embed-container border-2 border-yellow-500/20">
+                <iframe src="https://sketchfab.com/models/02f89196d27447959089771191062b9a/embed?autostart=1&ui_theme=dark"></iframe>
             </div>
-            <p class="text-xs mt-2 text-gray-500">يقيس فرق الجهد (V) ويوصل على التوازي.</p>
+            <div class="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
+                <p class="text-sm">يستخدم لقياس **فرق الجهد** بين نقطتين. يُربط في الدائرة على **التوازي**.</p>
+            </div>
         </div>
 
-        <div class="flex flex-col items-center">
-            <h3 class="font-bold mb-2">الأميتر (Ammeter)</h3>
-            <div class="model-box border-red-500">
-                <model-viewer 
-                    src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" 
-                    alt="Ammeter 3D" camera-controls auto-rotate style="width:100%; height:100%;">
-                </model-viewer>
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700">
+            <h3 class="text-lg font-bold mb-3 text-center">المولتيميتر (Multimeter)</h3>
+            <div class="embed-container border-2 border-sky-500/20">
+                <iframe src="https://sketchfab.com/models/7c32e5414d6448379377469608146a6f/embed?autostart=1&ui_theme=dark"></iframe>
             </div>
-            <p class="text-xs mt-2 text-gray-500">يقيس شدة التيار (I) ويوصل على التوالي.</p>
+            <div class="mt-4 p-3 bg-sky-50 dark:bg-sky-900/20 rounded-lg">
+                <p class="text-sm">الجهاز الأكثر أهمية، يقيس **التيار، الجهد، والمقاومة** في جهاز واحد.</p>
+            </div>
         </div>
 
-        <div class="flex flex-col items-center">
-            <h3 class="font-bold mb-2">المولتيميتر (Digital Multimeter)</h3>
-            <div class="model-box border-yellow-400">
-                <model-viewer 
-                    src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" 
-                    alt="Multimeter 3D" camera-controls auto-rotate style="width:100%; height:100%;">
-                </model-viewer>
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700">
+            <h3 class="text-lg font-bold mb-3 text-center">الأميتر (Ammeter)</h3>
+            <div class="embed-container border-2 border-red-500/20">
+                <iframe src="https://sketchfab.com/models/4d94b0d0147940e980753086e300d832/embed?autostart=1&ui_theme=dark"></iframe>
             </div>
-            <p class="text-xs mt-2 text-gray-500">الجهاز الشامل لقياس الجهد، التيار، والمقاومة.</p>
+            <div class="mt-4 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
+                <p class="text-sm">يستخدم لقياس **شدة التيار** المار في السلك. يُربط في الدائرة على **التوالي**.</p>
+            </div>
         </div>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border-r-4 border-yellow-400">
-            <h2 class="text-2xl font-bold mb-4 text-yellow-400">ملخص المحاضرة الأولى</h2>
-            <div class="space-y-4 text-gray-600 dark:text-gray-300">
-                <p>بناءً على محاضرة <strong>د. زهراء هاشم</strong>، إليك أهم المفاهيم:</p>
-                <ul class="list-disc list-inside space-y-2">
-                    <li><span class="font-bold text-white">الشحنة (Charge):</span> خاصية للمواد وتقاس بالكولوم (C).</li>
-                    <li><span class="font-bold text-white">التيار (Current):</span> هو تدفق الشحنات عبر موصل ويقاس بالأمبير (A).</li>
-                    <li><span class="font-bold text-white">الجهد (Voltage):</span> هو فرق الطاقة الذي يسبب حركة الإلكترونات ويقاس بالفولت (V).</li>
-                    <li><span class="font-bold text-white">المقاومة (Resistance):</span> هي معارضة المادة لمرور التيار وتقاس بالأوم (Ω).</li>
-                </ul>
+    <section class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-sm border border-gray-100 dark:border-gray-700">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-2 text-sky-500">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                    المفاهيم الأساسية (محاضرة 1)
+                </h2>
+                <div class="space-y-4">
+                    <div class="flex gap-4 p-4 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-xl transition">
+                        <div class="font-bold text-yellow-500 text-xl">01</div>
+                        <div>
+                            <h4 class="font-bold">الشحنة الكهربائية (Charge)</h4>
+                            <p class="text-sm text-gray-500 italic">تقاس بالكولوم (Coulomb) ورمزها C.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-4 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-xl transition">
+                        <div class="font-bold text-sky-500 text-xl">02</div>
+                        <div>
+                            <h4 class="font-bold">التيار الكهربائي (Current)</h4>
+                            <p class="text-sm text-gray-500 italic">تدفق الإلكترونات، يقاس بالأمبير (A) ورمزه I.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-4 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-xl transition">
+                        <div class="font-bold text-red-500 text-xl">03</div>
+                        <div>
+                            <h4 class="font-bold">فرق الجهد (Potential Difference)</h4>
+                            <p class="text-sm text-gray-500 italic">القوة الدافعة للتيار، يقاس بالفولت (V) ورمزه V.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-4 bg-sky-500/10 rounded-full blur-3xl"></div>
+                
+                <div class="relative bg-gray-900 p-6 rounded-2xl border border-gray-700">
+                    <h4 class="text-center text-yellow-500 font-bold mb-4">قاعدة التناسب (من المحاضرة)</h4>
+                    <p class="text-white text-center font-mono text-lg">Current ∝ Voltage (Directly)</p>
+                    <hr class="my-4 border-gray-700">
+                    <p class="text-white text-center font-mono text-lg">Current ∝ 1/Resistance (Inversely)</p>
+                </div>
             </div>
         </div>
-
-        <div class="bg-sky-900/20 p-8 rounded-2xl border border-sky-500/30">
-            <h2 class="text-2xl font-bold mb-4">قانون أوم (Ohm's Law)</h2>
-            
-            <p class="mt-4 leading-relaxed">
-                هو الركيزة الأساسية في الهندسة الكهربائية، حيث يربط بين الجهد والتيار والمقاومة بالعلاقة: 
-                <br><span class="text-2xl font-mono text-sky-400">V = I × R</span>
-            </p>
-        </div>
-    </div>
+    </section>
 
 </main>
+
+<footer class="bg-white dark:bg-gray-800 py-8 border-t dark:border-gray-700 text-center text-gray-400 text-sm">
+    جامعة المستقبل - قسم هندسة تقنيات الذكاء الاصطناعي
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.3/dist/flowbite.min.js"></script>
 </body>
