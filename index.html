@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,42 +9,77 @@
         @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;600&family=Noto+Sans+Arabic:wght@400;700&display=swap');
         
         body {
-            font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
-            background: radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%);
+            font-family: 'Inter', 'Noto Sans Arabic', sans-serif; [cite: 3]
+            background: radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%); 
             background-attachment: fixed;
             color: #f8fafc;
             margin: 0;
+            transition: background 0.5s ease;
         }
 
         .premium-serif {
-            font-family: 'Lora', serif;
-            letter-spacing: -0.02em;
+            font-family: 'Lora', serif; [cite: 5]
+            letter-spacing: -0.02em; [cite: 6]
             line-height: 1.1;
         }
 
         .glass-card {
-            background: rgba(15, 23, 42, 0.4);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(56, 189, 248, 0.1);
+            background: rgba(15, 23, 42, 0.4); [cite: 6]
+            backdrop-filter: blur(12px); [cite: 7]
+            border: 1px solid rgba(56, 189, 248, 0.1); [cite: 7]
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
 
         .glass-card:hover {
-            border-color: rgba(56, 189, 248, 0.5);
-            background: rgba(15, 23, 42, 0.6);
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(56, 189, 248, 0.5); [cite: 8]
+            background: rgba(15, 23, 42, 0.6); [cite: 9]
+            transform: translateY(-8px); [cite: 9]
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); [cite: 9]
         }
 
         .glow-text {
-            text-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+            text-shadow: 0 0 15px rgba(56, 189, 248, 0.5); [cite: 10]
+        }
+
+        /* Sidebar Styling */
+        #settingsSidebar {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
     </style>
 </head>
 <body class="antialiased">
+
+    <div id="settingsSidebar" class="fixed top-0 right-0 h-full w-80 glass-card translate-x-full z-50 p-8 shadow-2xl rounded-l-[2.5rem] border-l border-sky-500/20 text-right">
+        <div class="flex justify-between items-center mb-10 flex-row-reverse">
+            <h3 class="premium-serif text-2xl text-sky-400">الإعدادات</h3>
+            <button onclick="toggleSidebar()" class="text-slate-400 hover:text-white text-3xl">&times;</button>
+        </div>
+
+        <div class="space-y-8">
+            <div>
+                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-4">ثيم الموقع</p>
+                <div class="flex flex-wrap gap-4 justify-end">
+                    <button onclick="changeTheme('default')" class="w-10 h-10 rounded-full bg-blue-900 border-2 border-white/20 hover:scale-110 transition shadow-lg" title="Default Blue"></button>
+                    <button onclick="changeTheme('emerald')" class="w-10 h-10 rounded-full bg-emerald-900 border-2 border-white/20 hover:scale-110 transition shadow-lg" title="Emerald Green"></button>
+                    <button onclick="changeTheme('purple')" class="w-10 h-10 rounded-full bg-purple-900 border-2 border-white/20 hover:scale-110 transition shadow-lg" title="Royal Purple"></button>
+                </div>
+            </div>
+
+            <hr class="border-white/5">
+
+            <div>
+                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-4">تفضيلات إضافية</p>
+                <label class="flex items-center justify-end gap-3 cursor-pointer group">
+                    <span class="text-sm text-slate-300 group-hover:text-white transition">تفعيل التأثيرات الحركية</span>
+                    <input type="checkbox" checked class="w-4 h-4 accent-sky-500">
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="toggleSidebar()" class="fixed bottom-8 right-8 w-14 h-14 bg-sky-500/20 hover:bg-sky-500/40 backdrop-blur-md border border-sky-500/30 rounded-full flex items-center justify-center text-xl shadow-lg z-40 transition-all hover:rotate-90">
+        ⚙️
+    </button>
 
     <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto border-b border-white/5">
         <div class="text-2xl font-bold tracking-tighter premium-serif">AI <span class="text-sky-500">HUB</span></div>
@@ -52,29 +87,29 @@
             <a href="index.html" class="text-sky-400 border-b border-sky-400">Home</a>
             <a href="Library.html" class="hover:text-white transition">Library</a>
             <a href="ContactWithUs.html" class="hover:text-white transition">Contact</a>
-            <a href="about.html" class="hover:text-white transition">About</a>
+            <a href="about.html" class="hover:text-white transition">About</a> [cite: 12]
         </div>
     </nav>
 
-    <section class="max-w-6xl mx-auto pt-24 pb-16 px-6 text-center md:text-left">
+    <section class="max-w-6xl mx-auto pt-24 pb-16 px-6 text-center md:text-right">
         <h1 class="premium-serif text-5xl md:text-7xl mb-8 glow-text">
             Future of <span class="italic text-sky-400 underline decoration-sky-500/30">Intelligence</span> <br> 
-            Starts here.
+            Starts here. [cite: 12]
         </h1>
-        <p class="text-lg text-slate-400 max-w-2xl leading-relaxed italic">
-            بوابة هندسية متكاملة لطلاب هندسة الذكاء الاصطناعي - جامعة المستقبل. 
-            كل ما تحتاجه من مصادر، أدوات، وتقارير برمجية.
+        <p class="text-lg text-slate-400 max-w-2xl leading-relaxed italic ml-auto">
+            بوابة هندسية متكاملة لطلاب هندسة الذكاء الاصطناعي - جامعة المستقبل. [cite: 13]
+            <br>كل ما تحتاجه من مصادر، أدوات، وتقارير برمجية. [cite: 14]
         </p>
     </section>
 
     <main class="max-w-7xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
         
-        <div class="glass-card p-10 rounded-[2.5rem] group relative overflow-hidden">
+        <div class="glass-card p-10 rounded-[2.5rem] group relative overflow-hidden flex flex-col justify-between"> 
             <div class="absolute -top-10 -right-10 w-32 h-32 bg-sky-500/10 rounded-full blur-3xl"></div>
             <div>
-                <h2 class="premium-serif text-3xl mb-4 group-hover:text-sky-400 transition">Core Mathematics</h2>
+                <h2 class="premium-serif text-3xl mb-4 group-hover:text-sky-400 transition">Core Mathematics</h2> [cite: 14, 15]
                 <p class="text-slate-400 text-sm mb-8 leading-relaxed">
-                    خارطة طريق شاملة لمواد الرياضيات الهندسية، الجبر الخطي، والتفاضل المتقدم.
+                    خارطة طريق شاملة لمواد الرياضيات الهندسية، الجبر الخطي، والتفاضل المتقدم. [cite: 15]
                 </p>
             </div>
             <a href="#" class="text-[10px] font-bold uppercase tracking-widest text-sky-500 flex items-center gap-2 hover:gap-4 transition-all">
@@ -82,11 +117,11 @@
             </a>
         </div>
 
-        <div class="glass-card p-10 rounded-[2.5rem] group border-indigo-500/10">
+        <div class="glass-card p-10 rounded-[2.5rem] group border-indigo-500/10 flex flex-col justify-between">
             <div>
-                <h2 class="premium-serif text-3xl mb-4 group-hover:text-indigo-400 transition">Hardware Guide</h2>
-                <p class="text-slate-400 text-sm mb-8 leading-relaxed">
-                    دليل اختيار اللابتوب المثالي لبرمجة نماذج الذكاء الاصطناعي والتعامل مع الـ GPU.
+                <h2 class="premium-serif text-3xl mb-4 group-hover:text-indigo-400 transition text-right">Hardware Guide</h2> [cite: 17]
+                <p class="text-slate-400 text-sm mb-8 leading-relaxed text-right">
+                    دليل اختيار اللابتوب المثالي لبرمجة نماذج الذكاء الاصطناعي والتعامل مع الـ GPU. [cite: 17]
                 </p>
             </div>
             <a href="#" class="text-[10px] font-bold uppercase tracking-widest text-indigo-400 flex items-center gap-2">
@@ -94,27 +129,27 @@
             </a>
         </div>
 
-        <div class="glass-card p-10 rounded-[2.5rem] group border-emerald-500/10">
-            <div class="flex items-center gap-3 mb-4">
+        <div class="glass-card p-10 rounded-[2.5rem] group border-emerald-500/10 flex flex-col justify-between">
+            <div class="flex items-center gap-3 mb-4 flex-row-reverse">
                 <span class="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></span>
-                <h2 class="premium-serif text-3xl group-hover:text-emerald-400 transition">Electricity Lab</h2>
+                <h2 class="premium-serif text-3xl group-hover:text-emerald-400 transition">Electricity Lab</h2> [cite: 19]
             </div>
-            <p class="text-slate-400 text-sm mb-8 leading-relaxed">
-                أسس الكهرباء، القياسات، وتجارب المختبر العملي للمرحلة الأولى.
+            <p class="text-slate-400 text-sm mb-8 leading-relaxed text-right">
+                أسس الكهرباء، القياسات، وتجارب المختبر العملي للمرحلة الأولى. [cite: 19]
             </p>
-            <a href="electricity.html" class="text-[10px] font-bold uppercase tracking-widest text-emerald-400">
+            <a href="electricity.html" class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 text-right">
                 Enter Laboratory <span>→</span>
             </a>
         </div>
 
-        <div class="glass-card p-10 rounded-[2.5rem] group border-purple-500/10">
+        <div class="glass-card p-10 rounded-[2.5rem] group border-purple-500/10 flex flex-col justify-between">
             <div>
-                <h2 class="premium-serif text-3xl mb-4 group-hover:text-purple-400 transition">Student Reports</h2>
-                <p class="text-slate-400 text-sm mb-8 leading-relaxed">
-                    أرشيف تقارير الطلاب ونشاطات الكروبات الجامعية - قسم محمي.
+                <h2 class="premium-serif text-3xl mb-4 group-hover:text-purple-400 transition text-right">Student Reports</h2> [cite: 21]
+                <p class="text-slate-400 text-sm mb-8 leading-relaxed text-right">
+                    أرشيف تقارير الطلاب ونشاطات الكروبات الجامعية - قسم محمي. [cite: 21]
                 </p>
             </div>
-            <button onclick="checkAccess()" class="bg-purple-500/10 hover:bg-purple-500 hover:text-white transition-all text-purple-400 text-[10px] font-bold uppercase tracking-widest py-3 px-6 rounded-xl self-start flex items-center gap-2">
+            <button onclick="checkAccess()" class="bg-purple-500/10 hover:bg-purple-500 hover:text-white transition-all text-purple-400 text-[10px] font-bold uppercase tracking-widest py-3 px-6 rounded-xl self-end flex items-center gap-2">
                 Unlock Archives 🔒
             </button>
         </div>
@@ -122,22 +157,39 @@
     </main>
 
     <footer class="p-12 text-center border-t border-white/5">
-        <p class="text-slate-600 text-[9px] uppercase tracking-[0.8em]">AI Engineering Portal | 2024 Version</p>
+        <p class="text-slate-600 text-[9px] uppercase tracking-[0.8em]">AI Engineering Portal | 2024 Version</p> [cite: 23]
     </footer>
 
     <script>
+        // Sidebar Controls
+        function toggleSidebar() {
+            const sidebar = document.getElementById('settingsSidebar');
+            sidebar.classList.toggle('translate-x-full');
+        }
+
+        // Theme Changer
+        function changeTheme(theme) {
+            const body = document.body;
+            if (theme === 'emerald') {
+                body.style.background = 'radial-gradient(circle at top, #064e3b 0%, #022c22 100%)';
+            } else if (theme === 'purple') {
+                body.style.background = 'radial-gradient(circle at top, #4c1d95 0%, #1e1b4b 100%)';
+            } else {
+                body.style.background = 'radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%)';
+            }
+        }
+
+        // Original Access Function
         function checkAccess() {
-            const password = "19711971"; 
-            const userInput = prompt("Access Restricted! Enter Authentication Code:");
+            const password = "19711971"; [cite: 24]
+            const userInput = prompt("Access Restricted! Enter Authentication Code:"); [cite: 24]
             if (userInput === password) {
-                alert("Access Granted. Decrypting Files...");
-                window.location.href = "report.html";
+                alert("Access Granted. Decrypting Files..."); [cite: 24]
+                window.location.href = "report.html"; [cite: 25]
             } else if (userInput != null) {
-                alert("Access Denied. Incorrect Credentials.");
+                alert("Access Denied. Incorrect Credentials."); [cite: 25]
             }
         }
     </script>
 </body>
 </html>
-
-
