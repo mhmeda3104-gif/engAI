@@ -9,86 +9,61 @@
         @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;600&family=Noto+Sans+Arabic:wght@400;700&display=swap');
         
         body {
-            font-family: 'Inter', 'Noto Sans Arabic', sans-serif; [cite: 3]
-            background: radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%); 
-            background-attachment: fixed; 
-            color: #f8fafc; 
-            margin: 0; 
+            font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+            background: radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%);
+            background-attachment: fixed;
+            color: #f8fafc;
+            margin: 0;
         }
 
         .premium-serif {
-            font-family: 'Lora', serif; [cite: 5]
-            letter-spacing: -0.02em; [cite: 6]
-            line-height: 1.1; [cite: 6]
+            font-family: 'Lora', serif;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
         }
 
         .glass-card {
-            background: rgba(15, 23, 42, 0.4); [cite: 7]
-            backdrop-filter: blur(12px); [cite: 7]
-            border: 1px solid rgba(56, 189, 248, 0.1); [cite: 7]
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); [cite: 7]
-            display: flex; [cite: 7]
-            flex-direction: column; [cite: 7]
-            justify-content: space-between; [cite: 8]
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(56, 189, 248, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .glass-card:hover {
-            border-color: rgba(56, 189, 248, 0.5); [cite: 9]
-            background: rgba(15, 23, 42, 0.6); [cite: 9]
-            transform: translateY(-8px); [cite: 9]
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); [cite: 9]
+            border-color: rgba(56, 189, 248, 0.5);
+            background: rgba(15, 23, 42, 0.6);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
 
         .glow-text {
-            text-shadow: 0 0 15px rgba(56, 189, 248, 0.5); [cite: 10]
-        }
-
-        /* Slide Menu Animation */
-        #sideMenu {
-            transition: transform 0.5s ease-in-out;
-            z-index: 100;
+            text-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <div id="sideMenu" class="fixed top-0 right-0 h-full w-72 translate-x-full glass-card border-l border-white/10 p-8 shadow-2xl">
-        <div class="flex justify-between items-center mb-10">
-            <h2 class="premium-serif text-xl">Settings</h2>
-            <button onclick="toggleMenu()" class="text-2xl text-slate-400 hover:text-white">&times;</button>
-        </div>
-        
-        <div class="space-y-6">
-            <div>
-                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-3">Theme Options</p>
-                <div class="flex gap-3">
-                    <div onclick="changeBg('#1e3a8a', '#0f172a')" class="w-8 h-8 rounded-full bg-blue-700 cursor-pointer border border-white/20"></div>
-                    <div onclick="changeBg('#064e3b', '#022c22')" class="w-8 h-8 rounded-full bg-emerald-700 cursor-pointer border border-white/20"></div>
-                    <div onclick="changeBg('#4c1d95', '#1e1b4b')" class="w-8 h-8 rounded-full bg-purple-700 cursor-pointer border border-white/20"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto border-b border-white/5">
         <div class="text-2xl font-bold tracking-tighter premium-serif">AI <span class="text-sky-500">HUB</span></div>
-        <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 items-center">
+        <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
             <a href="index.html" class="text-sky-400 border-b border-sky-400">Home</a>
             <a href="Library.html" class="hover:text-white transition">Library</a>
             <a href="ContactWithUs.html" class="hover:text-white transition">Contact</a>
-            <a href="about.html" class="hover:text-white transition">About</a> [cite: 12]
-            <button onclick="toggleMenu()" class="bg-white/5 hover:bg-white/10 p-2 rounded-lg transition ml-4 text-white">⚙️</button>
+            <a href="about.html" class="hover:text-white transition">About</a>
         </div>
     </nav>
 
     <section class="max-w-6xl mx-auto pt-24 pb-16 px-6 text-center md:text-left">
         <h1 class="premium-serif text-5xl md:text-7xl mb-8 glow-text">
             Future of <span class="italic text-sky-400 underline decoration-sky-500/30">Intelligence</span> <br> 
-            Starts here. [cite: 12]
+            Starts here.
         </h1>
         <p class="text-lg text-slate-400 max-w-2xl leading-relaxed italic">
-            بوابة هندسية متكاملة لطلاب هندسة الذكاء الاصطناعي - جامعة المستقبل. [cite: 13]
-            كل ما تحتاجه من مصادر، أدوات، وتقارير برمجية. [cite: 14]
+            بوابة هندسية متكاملة لطلاب هندسة الذكاء الاصطناعي - جامعة المستقبل. 
+            كل ما تحتاجه من مصادر، أدوات، وتقارير برمجية.
         </p>
     </section>
 
@@ -97,9 +72,9 @@
         <div class="glass-card p-10 rounded-[2.5rem] group relative overflow-hidden">
             <div class="absolute -top-10 -right-10 w-32 h-32 bg-sky-500/10 rounded-full blur-3xl"></div>
             <div>
-                <h2 class="premium-serif text-3xl mb-4 group-hover:text-sky-400 transition">Core Mathematics</h2> [cite: 14, 15]
+                <h2 class="premium-serif text-3xl mb-4 group-hover:text-sky-400 transition">Core Mathematics</h2>
                 <p class="text-slate-400 text-sm mb-8 leading-relaxed">
-                    خارطة طريق شاملة لمواد الرياضيات الهندسية، الجبر الخطي، والتفاضل المتقدم. [cite: 15]
+                    خارطة طريق شاملة لمواد الرياضيات الهندسية، الجبر الخطي، والتفاضل المتقدم.
                 </p>
             </div>
             <a href="#" class="text-[10px] font-bold uppercase tracking-widest text-sky-500 flex items-center gap-2 hover:gap-4 transition-all">
@@ -107,11 +82,11 @@
             </a>
         </div>
 
-        <div class="glass-card p-10 rounded-[2.5rem] group border-indigo-500/10 text-right md:text-left">
+        <div class="glass-card p-10 rounded-[2.5rem] group border-indigo-500/10">
             <div>
-                <h2 class="premium-serif text-3xl mb-4 group-hover:text-indigo-400 transition">Hardware Guide</h2> [cite: 17]
+                <h2 class="premium-serif text-3xl mb-4 group-hover:text-indigo-400 transition">Hardware Guide</h2>
                 <p class="text-slate-400 text-sm mb-8 leading-relaxed">
-                    دليل اختيار اللابتوب المثالي لبرمجة نماذج الذكاء الاصطناعي والتعامل مع الـ GPU. [cite: 17]
+                    دليل اختيار اللابتوب المثالي لبرمجة نماذج الذكاء الاصطناعي والتعامل مع الـ GPU.
                 </p>
             </div>
             <a href="#" class="text-[10px] font-bold uppercase tracking-widest text-indigo-400 flex items-center gap-2">
@@ -122,10 +97,10 @@
         <div class="glass-card p-10 rounded-[2.5rem] group border-emerald-500/10">
             <div class="flex items-center gap-3 mb-4">
                 <span class="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></span>
-                <h2 class="premium-serif text-3xl group-hover:text-emerald-400 transition">Electricity Lab</h2> [cite: 19]
+                <h2 class="premium-serif text-3xl group-hover:text-emerald-400 transition">Electricity Lab</h2>
             </div>
             <p class="text-slate-400 text-sm mb-8 leading-relaxed">
-                أسس الكهرباء، القياسات، وتجارب المختبر العملي للمرحلة الأولى. [cite: 19]
+                أسس الكهرباء، القياسات، وتجارب المختبر العملي للمرحلة الأولى.
             </p>
             <a href="electricity.html" class="text-[10px] font-bold uppercase tracking-widest text-emerald-400">
                 Enter Laboratory <span>→</span>
@@ -134,9 +109,9 @@
 
         <div class="glass-card p-10 rounded-[2.5rem] group border-purple-500/10">
             <div>
-                <h2 class="premium-serif text-3xl mb-4 group-hover:text-purple-400 transition">Student Reports</h2> [cite: 20, 21]
+                <h2 class="premium-serif text-3xl mb-4 group-hover:text-purple-400 transition">Student Reports</h2>
                 <p class="text-slate-400 text-sm mb-8 leading-relaxed">
-                    أرشيف تقارير الطلاب ونشاطات الكروبات الجامعية - قسم محمي. [cite: 21]
+                    أرشيف تقارير الطلاب ونشاطات الكروبات الجامعية - قسم محمي.
                 </p>
             </div>
             <button onclick="checkAccess()" class="bg-purple-500/10 hover:bg-purple-500 hover:text-white transition-all text-purple-400 text-[10px] font-bold uppercase tracking-widest py-3 px-6 rounded-xl self-start flex items-center gap-2">
@@ -147,29 +122,21 @@
     </main>
 
     <footer class="p-12 text-center border-t border-white/5">
-        <p class="text-slate-600 text-[9px] uppercase tracking-[0.8em]">AI Engineering Portal | 2024 Version</p> [cite: 23]
+        <p class="text-slate-600 text-[9px] uppercase tracking-[0.8em]">AI Engineering Portal | 2024 Version</p>
     </footer>
 
     <script>
-        function toggleMenu() {
-            const menu = document.getElementById('sideMenu');
-            menu.classList.toggle('translate-x-full');
-        }
-
-        function changeBg(color1, color2) {
-            document.body.style.background = `radial-gradient(circle at top, ${color1} 0%, ${color2} 100%)`;
-        }
-
         function checkAccess() {
-            const password = "19711971"; [cite: 23]
-            const userInput = prompt("Access Restricted! Enter Authentication Code:"); [cite: 24]
+            const password = "19711971"; 
+            const userInput = prompt("Access Restricted! Enter Authentication Code:");
             if (userInput === password) {
-                alert("Access Granted. Decrypting Files..."); [cite: 24]
-                window.location.href = "report.html"; [cite: 25]
+                alert("Access Granted. Decrypting Files...");
+                window.location.href = "report.html";
             } else if (userInput != null) {
-                alert("Access Denied. Incorrect Credentials."); [cite: 25]
+                alert("Access Denied. Incorrect Credentials.");
             }
         }
     </script>
 </body>
 </html>
+
