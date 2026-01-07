@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Engineering Hub | Full Portal</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
+        /* --- Font Imports --- */
         @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;600&family=Noto+Sans+Arabic:wght@400;700&display=swap');
         
+        /* --- Base Styles --- */
         body {
             font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+            margin: 0;
+            transition: background 0.5s ease, color 0.5s ease;
+            /* Standard Theme (Default) */
             background: radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%);
             background-attachment: fixed;
             color: #f8fafc;
-            margin: 0;
         }
 
         .premium-serif {
@@ -22,6 +27,7 @@
             line-height: 1.1;
         }
 
+        /* --- Glass Card Base Style --- */
         .glass-card {
             background: rgba(15, 23, 42, 0.4);
             backdrop-filter: blur(12px);
@@ -41,28 +47,95 @@
 
         .glow-text {
             text-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+            transition: text-shadow 0.3s ease;
+        }
+
+        /* --- THEME OVERRIDES --- */
+
+        /* 1. Light Mode */
+        [data-theme="light"] body {
+            background: #f8fafc;
+            color: #0f172a;
+        }
+        [data-theme="light"] .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(203, 213, 225, 0.6);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        [data-theme="light"] .glass-card:hover {
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        [data-theme="light"] .text-slate-400 {
+            color: #475569; /* Make gray text darker for readability */
+        }
+        [data-theme="light"] .glow-text {
+            text-shadow: none; /* Remove glow in light mode */
+            color: #1e293b;
+        }
+
+        /* 2. Dark Mode (OLED) */
+        [data-theme="dark"] body {
+            background: #000000;
+            color: #e2e8f0;
+        }
+        [data-theme="dark"] .glass-card {
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* --- Floating Toggle Button --- */
+        .theme-toggle {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            backdrop-filter: blur(8px);
+            color: #38bdf8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 50;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        [data-theme="light"] .theme-toggle {
+            background: white;
+            color: #f59e0b; /* Orange/Yellow for Sun */
+            border-color: #fcd34d;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1) rotate(10deg);
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto border-b border-white/5">
+    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto border-b border-white/5 transition-colors duration-500" id="mainNav">
         <div class="text-2xl font-bold tracking-tighter premium-serif">AI <span class="text-sky-500">HUB</span></div>
         <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
             <a href="index.html" class="text-sky-400 border-b border-sky-400">Home</a>
-            <a href="Library.html" class="hover:text-white transition">Library</a>
-            <a href="ContactWithUs.html" class="hover:text-white transition">Contact</a>
-            <a href="about.html" class="hover:text-white transition">About</a>
+            <a href="Library.html" class="hover:text-sky-400 transition">Library</a>
+            <a href="ContactWithUs.html" class="hover:text-sky-400 transition">Contact</a>
+            <a href="about.html" class="hover:text-sky-400 transition">About</a>
         </div>
     </nav>
 
     <section class="max-w-6xl mx-auto pt-24 pb-16 px-6 text-center md:text-left">
-        <h1 class="premium-serif text-5xl md:text-7xl mb-8 glow-text">
+        <h1 class="premium-serif text-5xl md:text-7xl mb-8 glow-text transition-colors duration-500">
             Future of <span class="italic text-sky-400 underline decoration-sky-500/30">Intelligence</span> <br> 
             Starts here.
         </h1>
-        <p class="text-lg text-slate-400 max-w-2xl leading-relaxed italic">
-            بوابة هندسية متكاملة لطلاب هندسة تقنيات الذكاء الاصطناعي - جامعة المستقبل. 
+        <p class="text-lg text-slate-400 max-w-2xl leading-relaxed italic transition-colors duration-500">
+            بوابة هندسية متكاملة لطلاب هندسة الذكاء الاصطناعي - جامعة المستقبل. 
             كل ما تحتاجه من مصادر، أدوات، وتقارير برمجية.
         </p>
     </section>
@@ -72,7 +145,7 @@
         <div class="glass-card p-10 rounded-[2.5rem] group relative overflow-hidden">
             <div class="absolute -top-10 -right-10 w-32 h-32 bg-sky-500/10 rounded-full blur-3xl"></div>
             <div>
-                <h2 class="premium-serif text-3xl mb-4 group-hover:text-sky-400 transition">Core Mathematics</h2>
+                <h2 class="premium-serif text-3xl mb-4 group-hover:text-sky-400 transition-colors">Core Mathematics</h2>
                 <p class="text-slate-400 text-sm mb-8 leading-relaxed">
                     خارطة طريق شاملة لمواد الرياضيات الهندسية، الجبر الخطي، والتفاضل المتقدم.
                 </p>
@@ -84,7 +157,7 @@
 
         <div class="glass-card p-10 rounded-[2.5rem] group border-indigo-500/10">
             <div>
-                <h2 class="premium-serif text-3xl mb-4 group-hover:text-indigo-400 transition">Hardware Guide</h2>
+                <h2 class="premium-serif text-3xl mb-4 group-hover:text-indigo-400 transition-colors">Hardware Guide</h2>
                 <p class="text-slate-400 text-sm mb-8 leading-relaxed">
                     دليل اختيار اللابتوب المثالي لبرمجة نماذج الذكاء الاصطناعي والتعامل مع الـ GPU.
                 </p>
@@ -97,7 +170,7 @@
         <div class="glass-card p-10 rounded-[2.5rem] group border-emerald-500/10">
             <div class="flex items-center gap-3 mb-4">
                 <span class="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></span>
-                <h2 class="premium-serif text-3xl group-hover:text-emerald-400 transition">Electricity Lab</h2>
+                <h2 class="premium-serif text-3xl group-hover:text-emerald-400 transition-colors">Electricity Lab</h2>
             </div>
             <p class="text-slate-400 text-sm mb-8 leading-relaxed">
                 أسس الكهرباء، القياسات، وتجارب المختبر العملي للمرحلة الأولى.
@@ -109,23 +182,27 @@
 
         <div class="glass-card p-10 rounded-[2.5rem] group border-purple-500/10">
             <div>
-                <h2 class="premium-serif text-3xl mb-4 group-hover:text-purple-400 transition">Student Reports</h2>
+                <h2 class="premium-serif text-3xl mb-4 group-hover:text-purple-400 transition-colors">Student Reports</h2>
                 <p class="text-slate-400 text-sm mb-8 leading-relaxed">
                     أرشيف تقارير الطلاب ونشاطات الكروبات الجامعية - قسم محمي.
                 </p>
             </div>
-            <button onclick="checkAccess()" class="bg-purple-500/10 hover:bg-purple-500 hover:text-white transition-all text-purple-400 text-[10px] font-bold uppercase tracking-widest py-3 px-6 rounded-xl self-start flex items-center gap-2">
+            <button onclick="checkAccess()" class="bg-purple-500/10 hover:bg-purple-500 hover:text-white transition-all text-purple-400 text-[10px] font-bold uppercase tracking-widest py-3 px-6 rounded-xl self-start flex items-center gap-2 cursor-pointer">
                 Unlock Archives 🔒
             </button>
         </div>
 
     </main>
 
-    <footer class="p-12 text-center border-t border-white/5">
+    <footer class="p-12 text-center border-t border-white/5 transition-colors duration-500">
         <p class="text-slate-600 text-[9px] uppercase tracking-[0.8em]">AI Engineering Portal | 2024 Version</p>
     </footer>
 
+    <button onclick="cycleTheme()" class="theme-toggle" id="themeBtn" title="Switch Theme">
+        </button>
+
     <script>
+        /* --- Access Control Logic --- */
         function checkAccess() {
             const password = "19711971"; 
             const userInput = prompt("Access Restricted! Enter Authentication Code:");
@@ -136,8 +213,43 @@
                 alert("Access Denied. Incorrect Credentials.");
             }
         }
+
+        /* --- Theme Switching Logic --- */
+        const themes = ['standard', 'light', 'dark'];
+        let currentThemeIndex = parseInt(localStorage.getItem('themeIndex')) || 0;
+
+        function applyTheme(index) {
+            const theme = themes[index];
+            const html = document.documentElement;
+            const btn = document.getElementById('themeBtn');
+            
+            // Set the theme attribute
+            html.removeAttribute('data-theme');
+            if (theme !== 'standard') {
+                html.setAttribute('data-theme', theme);
+            }
+
+            // Update Icon based on theme
+            if (theme === 'light') {
+                // Sun Icon
+                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>';
+            } else if (theme === 'dark') {
+                // Moon Icon
+                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" /></svg>';
+            } else {
+                // Star/Standard Icon
+                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" /></svg>';
+            }
+        }
+
+        function cycleTheme() {
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            localStorage.setItem('themeIndex', currentThemeIndex);
+            applyTheme(currentThemeIndex);
+        }
+
+        // Initialize theme on load
+        applyTheme(currentThemeIndex);
     </script>
 </body>
 </html>
-
-
