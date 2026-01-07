@@ -8,16 +8,18 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;600&family=Noto+Sans+Arabic:wght@400;700&display=swap');
         
+        /* --- Base Styles (Standard Theme) --- */
         body {
             font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
-            background: #030712; /* أسود عميق للفخامة */
+            background: #030712; /* Standard: Deep Black/Blue */
             color: #f8fafc;
             min-height: 100vh;
+            transition: background 0.5s ease, color 0.5s ease;
         }
 
         .premium-serif { font-family: 'Lora', serif; letter-spacing: -0.01em; }
 
-        /* تأثير الزجاج للبطاقات */
+        /* --- Glass Card Base --- */
         .glass-card {
             background: rgba(30, 41, 59, 0.4);
             backdrop-filter: blur(12px);
@@ -31,11 +33,97 @@
             transform: translateY(-5px);
         }
 
-        /* تخصيص شريط التمرير */
+        /* Input & Elements Transitions */
+        input, button, .group {
+            transition: all 0.3s ease;
+        }
+
+        /* --- Scrollbar --- */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #030712; }
         ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
+
+        /* =========================================
+           THEME OVERRIDES
+           ========================================= */
+
+        /* --- 1. Light Mode --- */
+        [data-theme="light"] body {
+            background: #f8fafc;
+            color: #0f172a;
+        }
+        [data-theme="light"] .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(203, 213, 225, 0.6);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        [data-theme="light"] .glass-card:hover {
+            background: #ffffff;
+            border-color: #0ea5e9; /* Sky-500 */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        [data-theme="light"] .text-slate-500, 
+        [data-theme="light"] .text-slate-400 {
+            color: #475569; /* Darker gray for readability */
+        }
+        /* Search Input Fix for Light Mode */
+        [data-theme="light"] input#searchInput {
+            background: #ffffff;
+            border-color: #cbd5e1;
+            color: #0f172a;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        /* Inner List Items Fix */
+        [data-theme="light"] .bg-white\/5 {
+            background: rgba(0, 0, 0, 0.05); /* Darken bg for contrast */
+        }
+        [data-theme="light"] .bg-white\/5:hover {
+            background: rgba(0, 0, 0, 0.08);
+        }
+
+        /* --- 2. Dark Mode (OLED Pure Black) --- */
+        [data-theme="dark"] body {
+            background: #000000;
+            color: #e2e8f0;
+        }
+        [data-theme="dark"] .glass-card {
+            background: rgba(20, 20, 20, 0.8);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        [data-theme="dark"] ::-webkit-scrollbar-track { background: #000000; }
+
+        /* --- Toggle Button Style --- */
+        .theme-toggle {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            backdrop-filter: blur(8px);
+            color: #38bdf8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 50;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+        
+        [data-theme="light"] .theme-toggle {
+            background: white;
+            color: #f59e0b;
+            border-color: #fcd34d;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1) rotate(10deg);
+        }
     </style>
 </head>
 <body class="antialiased pb-20">
@@ -51,10 +139,10 @@
     </nav>
 
     <header class="max-w-4xl mx-auto text-center pt-10 pb-16 px-6">
-        <h1 class="premium-serif text-5xl md:text-7xl mb-6">
+        <h1 class="premium-serif text-5xl md:text-7xl mb-6 transition-colors">
             Digital <span class="italic text-sky-500">Library</span>
         </h1>
-        <p class="text-slate-500 italic mb-10 text-sm md:text-base">استكشف وجمل المصادر التعليمية والمحاضرات الخاصة بقسم هندسة الذكاء الاصطناعي.</p>
+        <p class="text-slate-500 italic mb-10 text-sm md:text-base transition-colors">استكشف مجمل المصادر التعليمية والمحاضرات الخاصة بقسم هندسة الذكاء الاصطناعي.</p>
         
         <div class="relative group max-w-2xl mx-auto">
             <input type="text" id="searchInput" placeholder="Search for lectures, books, or code..." 
@@ -66,10 +154,10 @@
     </header>
 
     <div class="max-w-7xl mx-auto mb-12 flex flex-wrap justify-center gap-3 px-6">
-        <button class="px-5 py-2 rounded-full bg-sky-500 text-white text-[10px] font-bold uppercase tracking-widest">All Resources</button>
-        <button class="px-5 py-2 rounded-full border border-white/10 text-slate-400 text-[10px] font-bold uppercase tracking-widest hover:border-white transition">Level 1</button>
-        <button class="px-5 py-2 rounded-full border border-white/10 text-slate-400 text-[10px] font-bold uppercase tracking-widest hover:border-white transition">Level 2</button>
-        <button class="px-5 py-2 rounded-full border border-white/10 text-slate-400 text-[10px] font-bold uppercase tracking-widest hover:border-white transition">Software & Tools</button>
+        <button class="px-5 py-2 rounded-full bg-sky-500 text-white text-[10px] font-bold uppercase tracking-widest hover:bg-sky-600 transition">All Resources</button>
+        <button class="px-5 py-2 rounded-full border border-white/10 text-slate-500 hover:text-sky-500 text-[10px] font-bold uppercase tracking-widest hover:border-sky-500 transition">Level 1</button>
+        <button class="px-5 py-2 rounded-full border border-white/10 text-slate-500 hover:text-sky-500 text-[10px] font-bold uppercase tracking-widest hover:border-sky-500 transition">Level 2</button>
+        <button class="px-5 py-2 rounded-full border border-white/10 text-slate-500 hover:text-sky-500 text-[10px] font-bold uppercase tracking-widest hover:border-sky-500 transition">Software & Tools</button>
     </div>
 
     <main class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
@@ -144,6 +232,49 @@
         <div class="h-[1px] w-20 bg-white mx-auto mb-6"></div>
         <p class="text-[10px] uppercase tracking-[0.5em]">Knowledge Base &copy; 2024</p>
     </footer>
+
+    <button onclick="cycleTheme()" class="theme-toggle" id="themeBtn" title="Switch Theme">
+        </button>
+
+    <script>
+        /* --- Theme Switching Logic --- */
+        // Same logic as Home Page to keep consistency
+        const themes = ['standard', 'light', 'dark'];
+        let currentThemeIndex = parseInt(localStorage.getItem('themeIndex')) || 0;
+
+        function applyTheme(index) {
+            const theme = themes[index];
+            const html = document.documentElement;
+            const btn = document.getElementById('themeBtn');
+            
+            // Set the theme attribute
+            html.removeAttribute('data-theme');
+            if (theme !== 'standard') {
+                html.setAttribute('data-theme', theme);
+            }
+
+            // Update Icon based on theme
+            if (theme === 'light') {
+                // Sun Icon
+                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>';
+            } else if (theme === 'dark') {
+                // Moon Icon
+                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" /></svg>';
+            } else {
+                // Star/Standard Icon
+                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" /></svg>';
+            }
+        }
+
+        function cycleTheme() {
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            localStorage.setItem('themeIndex', currentThemeIndex);
+            applyTheme(currentThemeIndex);
+        }
+
+        // Initialize
+        applyTheme(currentThemeIndex);
+    </script>
 
 </body>
 </html>
