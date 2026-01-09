@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Hub | Intelligence Learning</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
+        /* استيراد الخطوط كما في ملفك الأصلي [cite: 2] */
         @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;600&family=Noto+Sans+Arabic:wght@400;700&display=swap');
-        
+
         body {
-            font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
-            margin: 0; [cite: 3, 4]
+            font-family: 'Inter', 'Noto Sans Arabic', sans-serif; [cite: 3]
+            margin: 0; [cite: 4]
+            transition: background 0.5s ease, color 0.5s ease; [cite: 4]
             background: radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%); [cite: 4]
             background-attachment: fixed; [cite: 5]
             color: #f8fafc; [cite: 5]
-            transition: background 0.5s ease;
         }
 
         .premium-serif {
@@ -26,106 +28,144 @@
             background: rgba(15, 23, 42, 0.4); [cite: 6]
             backdrop-filter: blur(12px); [cite: 7]
             border: 1px solid rgba(56, 189, 248, 0.1); [cite: 7]
-            border-radius: 2.5rem;
-            transition: all 0.4s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); [cite: 7]
         }
 
         .glass-card:hover {
             border-color: rgba(56, 189, 248, 0.5); [cite: 8]
-            transform: translateY(-5px); [cite: 9]
+            background: rgba(15, 23, 42, 0.6); [cite: 9]
+            transform: translateY(-8px); [cite: 9]
         }
 
         .glow-text {
             text-shadow: 0 0 15px rgba(56, 189, 248, 0.5); [cite: 10]
         }
 
-        /* حاوية التضمين Embed Container */
+        /* إعدادات الثيمات (Light & Dark) مأخوذة من الكود الخاص بك [cite: 11-20] */
+        [data-theme="light"] body { background: #f8fafc; color: #0f172a; }
+        [data-theme="light"] .glass-card { background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(203, 213, 225, 0.6); }
+        [data-theme="light"] .text-slate-400, [data-theme="light"] .text-slate-300 { color: #475569; }
+        [data-theme="light"] .glow-text { text-shadow: none; color: #1e293b; }
+
+        [data-theme="dark"] body { background: #000000; color: #e2e8f0; }
+        [data-theme="dark"] .glass-card { background: rgba(20, 20, 20, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); }
+
+        /* زر التبديل العائم [cite: 21-27] */
+        .theme-toggle {
+            position: fixed; bottom: 2rem; right: 2rem; width: 3.5rem; height: 3.5rem;
+            border-radius: 50%; background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(56, 189, 248, 0.3); color: #38bdf8;
+            display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 50;
+        }
+
         .embed-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 1rem;
-            background: rgba(0,0,0,0.3);
+            position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1.5rem; background: rgba(0,0,0,0.2);
         }
-        .embed-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
+        .embed-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
     </style>
 </head>
 <body class="antialiased">
 
-    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto border-b border-white/5">
+    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto border-b border-white/5 transition-colors duration-500">
         <div class="text-2xl font-bold tracking-tighter premium-serif">AI <span class="text-sky-500">HUB</span></div>
         <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
             <a href="index.html" class="hover:text-sky-400 transition">Home</a>
             <a href="Artificial_intelligence.html" class="text-sky-400 border-b border-sky-400">Intelligence</a>
             <a href="Library.html" class="hover:text-sky-400 transition">Library</a>
+            <a href="ContactWithUs.html" class="hover:text-sky-400 transition">Contact</a>
         </div>
     </nav>
 
     <section class="max-w-6xl mx-auto pt-20 pb-12 px-6">
-        <h1 class="premium-serif text-5xl md:text-6xl mb-6 glow-text">Mastering <span class="italic text-sky-400">AI & Deep Learning</span></h1>
-        <p class="text-lg text-slate-400 max-w-3xl leading-relaxed italic">
-            رحلتك في فهم خوارزميات تعلم الآلة والشبكات العصبية العميقة تبدأ من هنا. [cite: 29, 30]
+        <h1 class="premium-serif text-5xl md:text-7xl mb-8 glow-text transition-colors duration-500">
+            Deep <span class="italic text-sky-400 underline decoration-sky-500/30">Learning</span> & <br> Machine Learning.
+        </h1>
+        <p class="text-lg text-slate-400 max-w-2xl leading-relaxed italic transition-colors duration-500">
+            بوابة تعليمية مخصصة لطلاب قسم هندسة تقنيات الذكاء الاصطناعي - جامعة المستقبل. [cite: 30]
         </p>
     </section>
 
-    <main class="max-w-7xl mx-auto p-6 space-y-12">
+    
+
+    <main class="max-w-7xl mx-auto p-6 space-y-12 mb-20">
         
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div class="glass-card p-8">
-                <h2 class="premium-serif text-3xl mb-4 text-sky-400">01. Machine Learning</h2>
-                <p class="text-slate-300 mb-6 leading-relaxed">
-                    تعلم الآلة هو فرع من الذكاء الاصطناعي يركز على بناء أنظمة تتعلم من البيانات وتحسن أداءها مع الوقت. [cite: 31, 32]
-                    سنتناول هنا الـ Supervised و Unsupervised Learning.
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="glass-card p-10 rounded-[2.5rem] relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-sky-500/10 rounded-full blur-3xl"></div>
+                <h2 class="premium-serif text-3xl mb-4 group-hover:text-sky-400 transition-colors">01. Machine Learning</h2>
+                <p class="text-slate-400 text-sm mb-8 leading-relaxed">
+                    خارطة طريق شاملة لتعلم الآلة، من البيانات الأساسية إلى الخوارزميات المعقدة. [cite: 32]
                 </p>
-                <div class="rounded-2xl overflow-hidden border border-white/10">
-                    <img src="https://via.placeholder.com/600x300/1e3a8a/ffffff?text=Machine+Learning+Diagram" alt="ML Diagram" class="w-full">
-                </div>
-            </div>
-            
-            <div class="glass-card p-8">
-                <h3 class="text-sm font-bold uppercase tracking-widest text-sky-500 mb-4">Interactive Tools (Embed)</h3>
-                <div class="embed-container">
-                    <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> 
-                </div>
-                <p class="mt-4 text-xs text-slate-500 italic text-center">Interactive Machine Learning Visualizer</p>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-             <div class="glass-card p-8 order-2 lg:order-1">
-                <h3 class="text-sm font-bold uppercase tracking-widest text-indigo-400 mb-4">Neural Networks (Embed)</h3>
-                <div class="embed-container">
-                    <div class="flex items-center justify-center h-full text-slate-500 italic">
-                        [ Place AI Model Widget Here ]
-                    </div>
+                <div class="rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&q=80&w=800" alt="Code AI" class="w-full h-48 object-cover">
                 </div>
             </div>
 
-            <div class="glass-card p-8 order-1 lg:order-2 border-indigo-500/10">
-                <h2 class="premium-serif text-3xl mb-4 text-indigo-400">02. Deep Learning</h2>
-                <p class="text-slate-300 mb-6 leading-relaxed">
-                    التعلم العميق يحاكي طريقة عمل الدماغ البشري باستخدام الشبكات العصبية الاصطناعية (ANN). [cite: 33, 34]
-                    هو المحرك الأساسي لتقنيات التعرف على الصور ومعالجة اللغات الطبيعية.
-                </p>
-                <div class="rounded-2xl overflow-hidden border border-white/10">
-                    <img src="https://via.placeholder.com/600x300/312e81/ffffff?text=Deep+Learning+Architecture" alt="DL Architecture" class="w-full">
+            <div class="glass-card p-10 rounded-[2.5rem]">
+                <h3 class="text-[10px] font-bold uppercase tracking-widest text-sky-500 mb-6">Interactive Embed (Visualizer)</h3>
+                <div class="embed-container">
+                    <iframe src="https://www.youtube.com/embed/aircAruvnKk" title="AI Explained"></iframe>
                 </div>
             </div>
         </div>
 
+        
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+             <div class="glass-card p-10 rounded-[2.5rem] order-2 lg:order-1">
+                <h3 class="text-[10px] font-bold uppercase tracking-widest text-indigo-400 mb-6">Neural Network Architecture</h3>
+                <div class="embed-container">
+                    <iframe src="https://www.youtube.com/embed/6M5VXAPfJ20" title="Neural Networks"></iframe>
+                </div>
+            </div>
+
+            <div class="glass-card p-10 rounded-[2.5rem] border-indigo-500/10 order-1 lg:order-2">
+                <h2 class="premium-serif text-3xl mb-4">02. Deep Learning</h2>
+                <p class="text-slate-400 text-sm mb-8 leading-relaxed">
+                    استكشاف الشبكات العصبية العميقة والتعامل مع المكتبات المتقدمة مثل TensorFlow و PyTorch. [cite: 34]
+                </p>
+                <div class="rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800" alt="Neural Networks" class="w-full h-48 object-cover">
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer class="p-12 text-center border-t border-white/5 mt-20">
-        <p class="text-slate-600 text-[9px] uppercase tracking-[0.8em]">AI Engineering Portal | Intelligence Module</p> [cite: 39, 40]
+    <footer class="p-12 text-center border-t border-white/5 transition-colors duration-500">
+        <p class="text-slate-600 text-[9px] uppercase tracking-[0.8em]">AI Engineering Portal | 2024 Version</p>
     </footer>
 
+    <button onclick="cycleTheme()" class="theme-toggle" id="themeBtn" title="Switch Theme"></button>
+
+    <script>
+        const themes = ['standard', 'light', 'dark'];
+        let currentThemeIndex = parseInt(localStorage.getItem('themeIndex')) || 0;
+
+        function applyTheme(index) {
+            const theme = themes[index];
+            const html = document.documentElement;
+            const btn = document.getElementById('themeBtn');
+            
+            html.removeAttribute('data-theme');
+            if (theme !== 'standard') html.setAttribute('data-theme', theme);
+
+            // Icons based on theme [cite: 48-51]
+            if (theme === 'light') {
+                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>';
+            } else if (theme === 'dark') {
+                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" /></svg>';
+            } else {
+                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" /></svg>';
+            }
+        }
+
+        function cycleTheme() {
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            localStorage.setItem('themeIndex', currentThemeIndex);
+            applyTheme(currentThemeIndex);
+        }
+
+        applyTheme(currentThemeIndex);
+    </script>
 </body>
 </html>
