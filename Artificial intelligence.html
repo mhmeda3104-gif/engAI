@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Hub | Intelligence Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;600&family=Noto+Sans+Arabic:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+            margin: 0; [cite: 3, 4]
+            background: radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%); [cite: 4]
+            background-attachment: fixed; [cite: 5]
+            color: #f8fafc; [cite: 5]
+            transition: background 0.5s ease;
+        }
 
+        .premium-serif {
+            font-family: 'Lora', serif; [cite: 5]
+            letter-spacing: -0.02em; [cite: 6]
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.4); [cite: 6]
+            backdrop-filter: blur(12px); [cite: 7]
+            border: 1px solid rgba(56, 189, 248, 0.1); [cite: 7]
+            border-radius: 2.5rem;
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(56, 189, 248, 0.5); [cite: 8]
+            transform: translateY(-5px); [cite: 9]
+        }
+
+        .glow-text {
+            text-shadow: 0 0 15px rgba(56, 189, 248, 0.5); [cite: 10]
+        }
+
+        /* حاوية التضمين Embed Container */
+        .embed-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+            background: rgba(0,0,0,0.3);
+        }
+        .embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto border-b border-white/5">
+        <div class="text-2xl font-bold tracking-tighter premium-serif">AI <span class="text-sky-500">HUB</span></div>
+        <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+            <a href="index.html" class="hover:text-sky-400 transition">Home</a>
+            <a href="Artificial_intelligence.html" class="text-sky-400 border-b border-sky-400">Intelligence</a>
+            <a href="Library.html" class="hover:text-sky-400 transition">Library</a>
+        </div>
+    </nav>
+
+    <section class="max-w-6xl mx-auto pt-20 pb-12 px-6">
+        <h1 class="premium-serif text-5xl md:text-6xl mb-6 glow-text">Mastering <span class="italic text-sky-400">AI & Deep Learning</span></h1>
+        <p class="text-lg text-slate-400 max-w-3xl leading-relaxed italic">
+            رحلتك في فهم خوارزميات تعلم الآلة والشبكات العصبية العميقة تبدأ من هنا. [cite: 29, 30]
+        </p>
+    </section>
+
+    <main class="max-w-7xl mx-auto p-6 space-y-12">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div class="glass-card p-8">
+                <h2 class="premium-serif text-3xl mb-4 text-sky-400">01. Machine Learning</h2>
+                <p class="text-slate-300 mb-6 leading-relaxed">
+                    تعلم الآلة هو فرع من الذكاء الاصطناعي يركز على بناء أنظمة تتعلم من البيانات وتحسن أداءها مع الوقت. [cite: 31, 32]
+                    سنتناول هنا الـ Supervised و Unsupervised Learning.
+                </p>
+                <div class="rounded-2xl overflow-hidden border border-white/10">
+                    <img src="https://via.placeholder.com/600x300/1e3a8a/ffffff?text=Machine+Learning+Diagram" alt="ML Diagram" class="w-full">
+                </div>
+            </div>
+            
+            <div class="glass-card p-8">
+                <h3 class="text-sm font-bold uppercase tracking-widest text-sky-500 mb-4">Interactive Tools (Embed)</h3>
+                <div class="embed-container">
+                    <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> 
+                </div>
+                <p class="mt-4 text-xs text-slate-500 italic text-center">Interactive Machine Learning Visualizer</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+             <div class="glass-card p-8 order-2 lg:order-1">
+                <h3 class="text-sm font-bold uppercase tracking-widest text-indigo-400 mb-4">Neural Networks (Embed)</h3>
+                <div class="embed-container">
+                    <div class="flex items-center justify-center h-full text-slate-500 italic">
+                        [ Place AI Model Widget Here ]
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 order-1 lg:order-2 border-indigo-500/10">
+                <h2 class="premium-serif text-3xl mb-4 text-indigo-400">02. Deep Learning</h2>
+                <p class="text-slate-300 mb-6 leading-relaxed">
+                    التعلم العميق يحاكي طريقة عمل الدماغ البشري باستخدام الشبكات العصبية الاصطناعية (ANN). [cite: 33, 34]
+                    هو المحرك الأساسي لتقنيات التعرف على الصور ومعالجة اللغات الطبيعية.
+                </p>
+                <div class="rounded-2xl overflow-hidden border border-white/10">
+                    <img src="https://via.placeholder.com/600x300/312e81/ffffff?text=Deep+Learning+Architecture" alt="DL Architecture" class="w-full">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="p-12 text-center border-t border-white/5 mt-20">
+        <p class="text-slate-600 text-[9px] uppercase tracking-[0.8em]">AI Engineering Portal | Intelligence Module</p> [cite: 39, 40]
+    </footer>
+
+</body>
+</html>
